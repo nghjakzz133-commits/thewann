@@ -13,17 +13,18 @@
     }
 
     body {
-      height: 100vh;
       overflow: hidden;
       font-family: Arial, sans-serif;
     }
 
-    /* VIDEO BACKGROUND */
     .video-bg {
       position: fixed;
-      inset: 0;
-      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       overflow: hidden;
+      z-index: 0;
     }
 
     .video-bg video {
@@ -32,7 +33,6 @@
       object-fit: cover;
     }
 
-    /* CONTENT */
     .content {
       position: relative;
       z-index: 1;
@@ -52,10 +52,9 @@
     }
 
     p {
-      margin-top: 12px;
+      margin-top: 10px;
       letter-spacing: 3px;
       color: #ddd;
-      font-size: 14px;
     }
   </style>
 </head>
