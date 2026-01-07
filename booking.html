@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Booking VIP | THE WANN</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <title>VIP Booking | THE WANN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
 <div id="header"></div>
 
-<section class="section booking glass">
-  <h1>BOOK VIP TABLE</h1>
-  <p>Đặt bàn nhanh – Xác nhận trực tiếp qua Zalo</p>
+<section class="section glass booking-section">
+  <h1 data-lang="booking_title"></h1>
+  <p data-lang="booking_desc"></p>
 
-  <form id="bookingForm">
-    <input type="text" placeholder="Tên của bạn" required>
-    <input type="tel" placeholder="Số điện thoại" required>
-    <input type="date" required>
-    <input type="number" placeholder="Số khách" required>
-    <button type="submit" class="btn-primary">BOOK VIA ZALO</button>
-  </form>
+  <div class="booking-form">
+    <input type="date" id="date">
+    <input type="time" id="time">
+    <input type="number" id="guest" placeholder="Số khách">
 
-  <p class="note">Hotline / Zalo / WhatsApp: <strong>0778 307 889</strong></p>
+    <button onclick="bookZalo()" class="btn-primary">
+      💬 ĐẶT BÀN QUA ZALO
+    </button>
+  </div>
 </section>
 
 <div id="footer"></div>
 
-<script src="js/booking.js"></script>
-<script src="js/ui.js"></script>
 <script src="js/lang.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/booking.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
