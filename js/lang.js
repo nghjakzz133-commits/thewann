@@ -15,6 +15,11 @@ const LANG = {
     booking_title: "ĐẶT BÀN VIP",
     booking_desc: "Xác nhận nhanh qua Zalo"
   },
+about_title: "GIỚI THIỆU THE WANN",
+about_desc: "THE WANN là luxury VIP lounge dành cho giới tinh hoa tại trung tâm Quận 1.",
+
+contact_title: "LIÊN HỆ",
+contact_open: "Mở cửa hàng ngày từ 19:00 – 04:00",
 
   en: {
     menu_home: "Home",
@@ -33,3 +38,8 @@ const LANG = {
     booking_desc: "Instant confirmation via Zalo"
   }
 };
+about_title: "ABOUT THE WANN",
+about_desc: "THE WANN is a luxury VIP lounge for elite guests in the heart of District 1.",
+
+contact_title: "CONTACT US",
+contact_open: "Open daily from 7:00 PM – 4:00 AM",
