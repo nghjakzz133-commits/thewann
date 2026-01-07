@@ -1,1 +1,14 @@
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 20px;
+  }
+
+  .gallery-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    width: 90%;
+  }
+}
 
