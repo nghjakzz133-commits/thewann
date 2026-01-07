@@ -104,3 +104,29 @@ h1,h2 {
 .lang-switch button:hover {
   opacity: 1;
 }
+/* ===== BOOKING VIP SECTION ===== */
+.booking-section {
+  text-align: center;
+  max-width: 420px;
+  margin: auto;
+}
+
+.booking-form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #c9a24d, #ffd777);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
