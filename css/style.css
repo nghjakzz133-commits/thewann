@@ -260,3 +260,55 @@ h1,h2 {
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(255,210,120,0.4);
 }
+/* ===== HEADER VIP ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  border-radius: 18px;
+  margin: 16px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.logo {
+  height: 36px;
+}
+
+.header-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.header-center a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.header-center a:hover {
+  color: #f5c76a;
+}
+
+.header-right {
+  flex: 1;
+  text-align: right;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.lang-switch span {
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.lang-switch span:hover {
+  color: #f5c76a;
+}
