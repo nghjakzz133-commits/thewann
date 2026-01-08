@@ -1,19 +1,20 @@
-let currentLang = localStorage.getItem("lang") || "vi";
+document.addEventListener("DOMContentLoaded", () => {
+  const btnBooking = document.getElementById("btnBooking");
+  const bookingForm = document.getElementById("bookingForm");
 
-function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem("lang", lang);
-  applyLang();
-}
+  if (btnBooking) {
+    btnBooking.addEventListener("click", () => {
+      document
+        .getElementById("booking")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  }
 
-function applyLang() {
-  document.querySelectorAll("[data-lang]").forEach(el => {
-    const key = el.getAttribute("data-lang");
-    if (LANG[currentLang] && LANG[currentLang][key]) {
-      el.innerText = LANG[currentLang][key];
-    }
-  });
-}
-
-document.addEventListener("DOMContentLoaded", applyLang);
-
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Đặt phòng thành công! Chúng tôi sẽ liên hệ sớm.");
+      bookingForm.reset();
+    });
+  }
+});
