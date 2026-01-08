@@ -20,7 +20,10 @@ const LANG = {
 
     contact_title: "LIÊN HỆ",
     contact_open: "Mở cửa hàng ngày từ 19:00 – 04:00"
-  },
+  name: "Họ và tên",
+email: "Email",
+guests: "Số khách"
+},
 
   en: {
     menu_home: "Home",
@@ -43,5 +46,8 @@ const LANG = {
 
     contact_title: "CONTACT US",
     contact_open: "Open daily from 7:00 PM – 4:00 AM"
-  }
+ name: "Full Name",
+email: "Email Address",
+guests: "Number of guests"
+ }
 };
