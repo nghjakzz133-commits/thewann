@@ -11,37 +11,51 @@
 
 <body>
 
-<div id="header"></div>
+  <!-- HEADER LOAD BẰNG JS -->
+  <div id="header"></div>
 
-<section class="section glass booking-section">
-  <h1 data-lang="booking_title"></h1>
-<p data-lang="booking_desc"></p>
+  <!-- BOOKING SECTION -->
+  <section class="section glass booking-section">
 
-  <!-- 🔥 FORM GỬI MAIL -->
-  <form action="https://formspree.io/f/xgovglgn" method="POST">
-   <input type="text" name="name" data-lang-placeholder="name">
-    <input type="email" name="email" data-lang-placeholder="email">
-    <input type="date" name="date">
-    <input type="time" name="time"> 
-    <input type="number" name="guests" data-lang-placeholder="guests">
+    <h1 data-lang="booking_title">VIP TABLE BOOKING</h1>
+    <p data-lang="booking_desc">Our team will confirm your booking</p>
 
-    <!-- Hidden info -->
-    <input type="hidden" name="club" value="THE WANN">
-    <input type="hidden" name="location" value="51 Bùi Thị Xuân, Quận 1">
-    <input type="hidden" name="_captcha" value="false">
+    <!-- 🔥 VIP BOOKING FORM -->
+    <div class="booking-form vip-form">
 
-    <button type="submit" class="btn-primary">
-      📩 BOOK VIP TABLE
-    </button>
-  </form>
-</section>
+      <div class="form-group">
+        <input type="text" id="name" data-lang="name" placeholder="Họ và tên">
+      </div>
 
-<div id="footer"></div>
+      <div class="form-row">
+        <input type="date" id="date">
+        <input type="time" id="time">
+      </div>
 
-<script src="js/ui.js"></script>
+      <div class="form-group">
+        <input type="number" id="guest" data-lang="guests" placeholder="Số khách">
+      </div>
 
-<script src="js/lang.js"></script>
-<script src="js/booking.js"></script>
-<script src="js/ui.js"></script>
+      <div class="form-group">
+        <textarea id="note" rows="3"
+          placeholder="Loại bàn / Ghi chú (VIP sofa, sinh nhật, champagne...)"></textarea>
+      </div>
+
+      <button onclick="smartBooking()" class="btn-book">
+        🍾 BOOK VIP TABLE
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER LOAD BẰNG JS -->
+  <div id="footer"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/lang.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
