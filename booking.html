@@ -14,27 +14,31 @@
 <div id="header"></div>
 
 <section class="section glass booking-section">
-  <h1 data-lang="booking_title"></h1>
-  <p data-lang="booking_desc"></p>
+  <h1>VIP TABLE BOOKING</h1>
+  <p>Our team will confirm your booking via email</p>
 
-  <div class="booking-form">
-    <input type="date" id="date">
-    <input type="time" id="time">
-    <input type="number" id="guest" placeholder="Số khách">
+  <!-- 🔥 FORM GỬI MAIL -->
+  <form action="https://formspree.io/f/xgovglgn" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="date" name="date" required>
+    <input type="time" name="time" required>
+    <input type="number" name="guests" placeholder="Number of guests" required>
 
- <button onclick="smartBooking()" class="btn-book">
-  📲 BOOK VIP TABLE
-</button>
+    <!-- Hidden info -->
+    <input type="hidden" name="club" value="THE WANN">
+    <input type="hidden" name="location" value="51 Bùi Thị Xuân, Quận 1">
+    <input type="hidden" name="_captcha" value="false">
 
-  </div>
+    <button type="submit" class="btn-primary">
+      📩 BOOK VIP TABLE
+    </button>
+  </form>
 </section>
 
 <div id="footer"></div>
 
-<script src="js/lang.js"></script>
 <script src="js/ui.js"></script>
-<script src="js/booking.js"></script>
-<script src="js/main.js"></script>
 
 </body>
 </html>
