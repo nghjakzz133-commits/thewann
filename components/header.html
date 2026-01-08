@@ -1,12 +1,11 @@
-<header class="header glass">
+<header class="header">
   <div class="header-left">
-    <img src="assets/images/logo.png" class="logo">
+    <img src="assets/images/logo.png" class="logo" alt="THE WANN">
   </div>
 
   <div class="header-right">
     <div class="lang-switch">
-      <span onclick="setLang('vi')">VI</span>
-      <span>|</span>
+      <span onclick="setLang('vi')">VI</span> |
       <span onclick="setLang('en')">EN</span>
     </div>
 
@@ -18,12 +17,11 @@
   </div>
 </header>
 
-<!-- SLIDE MENU -->
-<div id="slideMenu" class="slide-menu">
+<div class="menu-overlay" onclick="toggleMenu()"></div>
+
+<nav class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="booking.html">Booking</a>
   <a href="contact.html">Contact</a>
-</div>
-
-<div id="menuOverlay" onclick="toggleMenu()"></div>
+</nav>
