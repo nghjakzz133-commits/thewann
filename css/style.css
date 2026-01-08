@@ -312,3 +312,88 @@ h1,h2 {
 .lang-switch span:hover {
   color: #f5c76a;
 }
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+  margin: 16px;
+  border-radius: 18px;
+}
+
+.logo {
+  height: 36px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Language */
+.lang-switch {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.lang-switch span {
+  cursor: pointer;
+}
+
+.lang-switch span:hover {
+  color: #f5c76a;
+}
+
+/* Hamburger */
+.hamburger {
+  width: 26px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 2px;
+  background: #f5c76a;
+  border-radius: 2px;
+}
+
+/* Slide Menu */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: rgba(15,15,15,0.95);
+  backdrop-filter: blur(12px);
+  padding: 90px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: right 0.35s ease;
+  z-index: 1001;
+}
+
+.slide-menu a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.slide-menu a:hover {
+  color: #f5c76a;
+}
+
+/* Overlay */
+#menuOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  z-index: 1000;
