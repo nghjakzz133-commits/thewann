@@ -3,16 +3,27 @@
     <img src="assets/images/logo.png" class="logo">
   </div>
 
-  <nav class="header-center">
-    <a href="index.html" data-lang="menu_home">Home</a>
-    <a href="about.html" data-lang="menu_about">About</a>
-    <a href="booking.html" data-lang="menu_booking">Booking</a>
-    <a href="contact.html" data-lang="menu_contact">Contact</a>
-  </nav>
+  <div class="header-right">
+    <div class="lang-switch">
+      <span onclick="setLang('vi')">VI</span>
+      <span>|</span>
+      <span onclick="setLang('en')">EN</span>
+    </div>
 
-  <div class="header-right lang-switch">
-    <span onclick="setLang('vi')">VI</span>
-    <span>|</span>
-    <span onclick="setLang('en')">EN</span>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
+
+<!-- SLIDE MENU -->
+<div id="slideMenu" class="slide-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="booking.html">Booking</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div id="menuOverlay" onclick="toggleMenu()"></div>
