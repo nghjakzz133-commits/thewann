@@ -217,3 +217,46 @@ h1,h2 {
     padding: 80px 12px;
   }
 }
+.vip-form {
+  background: rgba(20,20,20,0.7);
+  border-radius: 22px;
+  padding: 26px;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,215,130,0.15);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.vip-form input,
+.vip-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: #0e0e0e;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 15px;
+}
+
+.vip-form input::placeholder,
+.vip-form textarea::placeholder {
+  color: #aaa;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-book {
+  width: 100%;
+  padding: 16px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#f7d27d,#c89b3c);
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255,210,120,0.4);
+}
