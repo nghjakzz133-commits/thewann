@@ -2,3 +2,14 @@
   .section{padding:60px 20px;}
   .gallery-preview{grid-template-columns:1fr;}
 }
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+}
