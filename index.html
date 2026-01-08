@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>THE WANN | Luxury VIP Lounge Club Saigon</title>
-<meta name="description" content="THE WANN – Luxury VIP Lounge tại Quận 1. Đặt bàn VIP nhanh qua Zalo. Open 19:00 – 04:00.">
+<meta name="description" content="THE WANN – Luxury VIP Lounge tại Quận 1. Đặt bàn VIP nhanh. Open 19:00 – 04:00.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="css/reset.css">
@@ -14,12 +14,43 @@
 
 <body>
 
-<div id="header"></div>
+<!-- HEADER -->
+<header>
+  <div class="header-left">
+    <img src="assets/images/logo.png" alt="THE WANN">
+  </div>
 
+  <div class="header-right">
+    <div class="lang-switch">
+      <span class="active" onclick="setLang('vi')">VI</span> |
+      <span onclick="setLang('en')">EN</span>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<!-- OVERLAY -->
+<div class="menu-overlay" onclick="toggleMenu()"></div>
+
+<!-- SLIDE MENU -->
+<nav class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="booking.html">Booking</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
   <video autoplay muted loop playsinline class="hero-video">
     <source src="assets/videos/hero.mp4" type="video/mp4">
   </video>
+
   <div class="hero-overlay"></div>
 
   <div class="hero-content glass fade-in">
@@ -52,17 +83,23 @@
   <a href="booking.html" class="btn-primary">RESERVE NOW</a>
 </section>
 
-<div id="footer"></div>
-
+<!-- FLOATING CONTACT -->
 <div class="floating-contact">
   <a href="tel:0778307889">📞</a>
   <a href="https://zalo.me/0778307889" target="_blank">Z</a>
   <a href="https://wa.me/84778307889" target="_blank">W</a>
 </div>
 
-<script src="js/ui.js"></script>
-<script src="js/main.js"></script>
+<!-- JS -->
+<script>
+function toggleMenu() {
+  document.querySelector('.mobile-menu').classList.toggle('active');
+  document.querySelector('.menu-overlay').classList.toggle('active');
+}
+</script>
+
 <script src="js/lang.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
