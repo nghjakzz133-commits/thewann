@@ -9,4 +9,8 @@ function toggleMenu() {
   document.getElementById("slideMenu").classList.toggle("active");
   document.getElementById("menuOverlay").classList.toggle("active");
 }
+function toggleMenu() {
+  document.querySelector(".mobile-menu").classList.toggle("active");
+  document.querySelector(".menu-overlay").classList.toggle("active");
+}
 
