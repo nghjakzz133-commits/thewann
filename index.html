@@ -1,88 +1,69 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>THE WANN | Luxury VIP Lounge Club Saigon</title>
-<meta name="description" content="THE WANN – Luxury VIP Lounge tại Quận 1. Đặt bàn VIP nhanh. Open 19:00 – 04:00.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Wann</title>
 
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/responsive.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
 </head>
-
 <body>
 
-<!-- HEADER -->
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">THE WANN</h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Live the Moment</h2>
+      <p>Luxury • Nature • Experience</p>
+      <button id="btnBooking">Đặt phòng ngay</button>
+    </div>
+  </section>
 
-<!-- OVERLAY -->
-<div class="menu-overlay" onclick="toggleMenu()"></div>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>Về chúng tôi</h2>
+      <p>
+        The Wann mang đến trải nghiệm nghỉ dưỡng cao cấp,
+        hòa mình vào thiên nhiên và sự yên bình.
+      </p>
+    </div>
+  </section>
 
-<!-- SLIDE MENU -->
-<nav class="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="booking.html">Booking</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- BOOKING -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <h2>Đặt phòng</h2>
+      <form id="bookingForm">
+        <input type="text" placeholder="Họ tên" required />
+        <input type="date" required />
+        <input type="date" required />
+        <button type="submit">Gửi</button>
+      </form>
+    </div>
+  </section>
 
-<!-- HERO -->
-<section class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="assets/videos/hero.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content glass fade-in">
-    <h1>THE WANN</h1>
-    <p class="tagline">Luxury • Private • Exclusive</p>
-    <p class="open-time">Open 19:00 – 04:00</p>
-    <a href="booking.html" class="btn-primary">BOOK VIP TABLE</a>
-  </div>
-</section>
-
-<section class="section dark">
-  <h2>WELCOME TO THE WANN</h2>
-  <p class="text-center">
-    Một không gian VIP lounge dành cho giới tinh hoa.<br>
-    Riêng tư – sang trọng – chuẩn nightlife Quận 1.
-  </p>
-</section>
-
-<section class="section">
-  <h2>THE SPACE</h2>
-  <div class="gallery-preview">
-    <img src="assets/images/gallery/1.jpg">
-    <img src="assets/images/gallery/2.jpg">
-    <img src="assets/images/gallery/3.jpg">
-  </div>
-</section>
-
-<section class="cta glass">
-  <h2>Reserve Your VIP Experience</h2>
-  <a href="booking.html" class="btn-primary">RESERVE NOW</a>
-</section>
-
-<!-- FLOATING CONTACT -->
-<div class="floating-contact">
-  <a href="tel:0778307889">📞</a>
-  <a href="https://zalo.me/0778307889" target="_blank">Z</a>
-  <a href="https://wa.me/84778307889" target="_blank">W</a>
-</div>
-
-<!-- JS -->
-<script>
-function toggleMenu() {
-  document.querySelector('.mobile-menu').classList.toggle('active');
-  document.querySelector('.menu-overlay').classList.toggle('active');
-}
-</script>
-
-<script src="js/lang.js"></script>
-<script src="js/main.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <p>© 2026 The Wann. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
