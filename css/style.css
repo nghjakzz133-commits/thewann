@@ -486,15 +486,25 @@ footer {
   border: 1px solid var(--gold);
 }
 /* =========================
-   FIX HERO CONTACT HEIGHT
+   CONTACT HERO – COMPACT
    ========================= */
 
-.hero-about {
-  height: 40vh;
-  min-height: 260px;
+.contact-page .hero-about {
+  height: 26vh;
+  min-height: 160px;
 }
 
-.hero-about .hero-content {
-  top: 55%;
+.contact-page .hero-about .hero-content {
+  top: 60%;
   transform: translateY(-50%);
+}
+
+.contact-page .hero-about h1 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.contact-page .hero-about p {
+  font-size: 13px;
+  color: #aaa;
 }
