@@ -473,3 +473,26 @@ body {
 .hero-about .hero-content {
   top: 55%;
 }
+/* =========================
+   HERO LOGO TOP RIGHT
+   ========================= */
+
+.hero-logo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 999;
+}
+
+.hero-logo img {
+  width: 64px;
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.7));
+}
+
+/* Mobile nhỏ hơn */
+@media (max-width: 768px) {
+  .hero-logo img {
+    width: 52px;
+  }
+}
