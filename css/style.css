@@ -314,3 +314,64 @@ footer p {
 .gallery-item:hover img {
   transform: scale(1.08);
 }
+/* =========================
+   LUXURY NAVBAR
+   ========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.55)
+  );
+  backdrop-filter: blur(8px);
+}
+
+.navbar {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #cfcfcf;
+  padding: 6px 0;
+  transition: color .3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f5d77a, #d4af37);
+  transition: width .3s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #f5d77a;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
