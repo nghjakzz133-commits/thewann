@@ -461,3 +461,15 @@ body {
   filter: none;
   font-size: 24px;
 }
+/* =========================
+   HERO ABOUT – SHORTER
+   ========================= */
+
+.hero-about {
+  height: 45vh;
+  min-height: 320px;
+}
+
+.hero-about .hero-content {
+  top: 55%;
+}
