@@ -485,3 +485,16 @@ footer {
   color: var(--gold);
   border: 1px solid var(--gold);
 }
+/* =========================
+   FIX HERO CONTACT HEIGHT
+   ========================= */
+
+.hero-about {
+  height: 40vh;
+  min-height: 260px;
+}
+
+.hero-about .hero-content {
+  top: 55%;
+  transform: translateY(-50%);
+}
