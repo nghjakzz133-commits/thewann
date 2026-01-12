@@ -2,43 +2,37 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>VIP Booking | THE WANN</title>
+  <title>Booking – The WANN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
 
-  <!-- HEADER LOAD BẰNG JS -->
-  <div id="header"></div>
-
-  <!-- BOOKING SECTION -->
-  <section class="section glass booking-section">
-  <h1 data-lang="booking_title">VIP TABLE BOOKING</h1>
-  <p data-lang="booking_desc">Our team will confirm your booking</p>
-
-  <div class="booking-card">
-    <input type="text" id="name" placeholder="Full name">
-    <input type="date" id="date">
-    <input type="time" id="time">
-    <input type="number" id="guest" placeholder="Number of guests">
-    <textarea id="note" placeholder="Table type / Notes"></textarea>
-
-    <button onclick="smartBooking()" class="btn-book">
-      🍾 BOOK VIP TABLE
-    </button>
+<header class="hero">
+  <div class="hero-content">
+    <h1>BOOKING</h1>
+    <p>Đặt bàn nhanh – Trải nghiệm nightlife đẳng cấp</p>
   </div>
+</header>
+
+<section>
+  <div class="section-title">
+    <h2>Thông tin <span>đặt bàn</span></h2>
+  </div>
+
+  <form>
+    <input type="text" placeholder="Họ và tên" required>
+    <input type="tel" placeholder="Số điện thoại" required>
+    <input type="date" required>
+    <input type="number" placeholder="Số lượng khách" required>
+    <textarea placeholder="Yêu cầu thêm (nếu có)"></textarea>
+    <button type="submit">Gửi yêu cầu booking</button>
+  </form>
 </section>
 
-  <!-- FOOTER LOAD BẰNG JS -->
-  <div id="footer"></div>
-
-  <!-- SCRIPTS -->
-  <script src="js/lang.js"></script>
-  <script src="js/booking.js"></script>
-  <script src="js/main.js"></script>
+<footer>
+  <p>Hotline / Zalo: 0899 996 977</p>
+</footer>
 
 </body>
 </html>
