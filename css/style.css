@@ -474,25 +474,36 @@ body {
   top: 55%;
 }
 /* =========================
-   HERO LOGO TOP RIGHT
+   HEADER LOGO ALIGN FIX
    ========================= */
 
-.hero-logo {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: 999;
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-.hero-logo img {
-  width: 64px;
+/* Logo chữ THE WANN */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Logo hình bên phải */
+.header-logo {
+  width: 46px;
   height: auto;
-  filter: drop-shadow(0 6px 16px rgba(0,0,0,.7));
+  margin-left: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.7));
 }
 
-/* Mobile nhỏ hơn */
-@media (max-width: 768px) {
-  .hero-logo img {
-    width: 52px;
-  }
+/* Menu nằm dưới logo chữ */
+.navbar {
+  position: absolute;
+  left: 0;
+  bottom: -36px;
+  display: flex;
+  gap: 28px;
 }
