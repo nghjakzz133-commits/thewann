@@ -401,3 +401,87 @@ footer {
   transform: translateY(-2px);
   box-shadow: 0 22px 55px rgba(212,175,55,.85);
 }
+/* =========================
+   CONTACT – BUSINESS PROFILE
+   ========================= */
+
+.contact-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, #141414, #000);
+  border-radius: 22px;
+  padding: 28px 24px 32px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.8);
+  border: 1px solid rgba(212,175,55,.18);
+}
+
+.contact-card h2 {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.contact-card h2 span {
+  color: var(--gold);
+}
+
+.contact-sub {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 26px;
+}
+
+.contact-item {
+  margin-bottom: 18px;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.contact-item p {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.contact-item a {
+  color: var(--text);
+}
+
+.contact-note {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(212,175,55,.3);
+  font-size: 14px;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.contact-actions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
