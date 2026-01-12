@@ -375,3 +375,26 @@ footer p {
 .nav-link.active::after {
   width: 100%;
 }
+/* =========================
+   FIX HEADER CLICK MOBILE
+   ========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* CAO HƠN HERO */
+}
+
+.hero,
+.hero video,
+.hero::after {
+  z-index: 1;
+}
+body {
+  padding-top: 80px; /* đẩy nội dung xuống dưới header */
+}
+.hero video {
+  pointer-events: none;
+}
