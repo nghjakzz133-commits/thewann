@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Wann</title>
+  <title>The WANN</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
@@ -13,25 +13,25 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">THE WANN</h1>
-     <nav class="navbar">
-  <a href="index.html">Trang Chủ</a>
-  <a href="about.html">Giới Thiệu</a>
-  <a href="gallery.html">Thư Viện</a>
-  <a href="booking.html">Đặt Bàn</a>
-  <a href="contact.html">Liên Hệ</a>
-</nav>
-    </div>
-  </header>
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container">
+    <h1 class="logo">THE WANN</h1>
+    <nav class="navbar">
+      <a href="index.html">Trang Chủ</a>
+      <a href="about.html">Giới Thiệu</a>
+      <a href="gallery.html">Thư Viện</a>
+      <a href="booking.html">Đặt Bàn</a>
+      <a href="contact.html">Liên Hệ</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-  <video autoplay muted loop playsinline>
-  <source src="assets/videos/hero.mp4" type="video/mp4">
-</video>
+<!-- ================= HERO VIDEO ================= -->
+<section class="hero">
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="assets/videos/hero.mp4" type="video/mp4">
+  </video>
 
   <div class="hero-content">
     <h1>Live the Moment</h1>
@@ -39,6 +39,8 @@
     <a href="booking.html" class="btn">Đặt phòng ngay</a>
   </div>
 </section>
+
+<!-- ================= GALLERY ================= -->
 <section class="gallery-section">
   <div class="section-title">
     <h2>Không gian <span>quán</span></h2>
@@ -48,48 +50,47 @@
     <div class="gallery-item">
       <img src="assets/images/gallery/1.jpg" alt="The WANN gallery 1">
     </div>
-
     <div class="gallery-item">
       <img src="assets/images/gallery/2.jpg" alt="The WANN gallery 2">
     </div>
-
     <div class="gallery-item">
       <img src="assets/images/gallery/3.jpg" alt="The WANN gallery 3">
     </div>
-
     <div class="gallery-item">
       <img src="assets/images/gallery/4.jpg" alt="The WANN gallery 4">
     </div>
   </div>
 </section>
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2>Về chúng tôi</h2>
-      <p>
-        The Wann mang đến trải nghiệm nghỉ dưỡng cao cấp,
-        hòa mình vào thiên nhiên và sự yên bình.
-      </p>
-    </div>
-  </section>
 
-  <!-- BOOKING -->
-  <section class="booking" id="booking">
-    <div class="container">
-      <h2>Đặt phòng</h2>
-      <form id="bookingForm">
-        <input type="text" placeholder="Họ tên" required />
-        <input type="date" required />
-        <input type="date" required />
-        <button type="submit">Gửi</button>
-      </form>
-    </div>
-  </section>
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="container">
+    <h2>Về chúng tôi</h2>
+    <p>
+      The WANN là nền tảng booking nightlife & trải nghiệm giải trí cao cấp,
+      mang đến không gian sang trọng, dịch vụ chuyên nghiệp
+      và những khoảnh khắc đáng nhớ cho khách hàng.
+    </p>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <p>© 2026 The Wann. All rights reserved.</p>
-  </footer>
+<!-- ================= BOOKING ================= -->
+<section class="booking" id="booking">
+  <div class="container">
+    <h2>Đặt bàn</h2>
+    <form id="bookingForm">
+      <input type="text" placeholder="Họ tên" required />
+      <input type="tel" placeholder="Số điện thoại" required />
+      <input type="date" required />
+      <button type="submit" class="btn">Gửi yêu cầu</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="contact">
+  <p>© 2026 THE WANN. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
