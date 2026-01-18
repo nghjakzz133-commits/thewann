@@ -610,3 +610,59 @@ footer {
   margin-top: 12px;
   box-shadow: 0 0 18px rgba(212,167,61,0.35);
 }
+/* ===== MENU / NAVBAR UPGRADE (MOBILE SAFE) ===== */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.header-inner{
+  padding: 12px 14px;
+}
+
+.logo{
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+/* ✅ mobile: cuộn ngang, không bể layout */
+.navbar{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+}
+
+.navbar::-webkit-scrollbar{
+  display: none;
+}
+
+.navbar a{
+  flex: 0 0 auto;
+  position: relative;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover{
+  color: #111;
+  background: linear-gradient(90deg,#f7d77a,#d4a73d);
+  box-shadow: 0 0 18px rgba(212,167,61,0.22);
+}
+
+.navbar a.active{
+  color: #111;
+  background: linear-gradient(90deg,#f7d77a,#d4a73d);
+}
