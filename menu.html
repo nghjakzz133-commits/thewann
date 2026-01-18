@@ -24,18 +24,36 @@
   </div>
 </header>
 
-<section class="about" style="padding:80px 16px 120px;">
-  <div class="container">
-    <h2>Thực Đơn <span style="color:#d4a73d;">THE WANN</span></h2>
-    <p style="color:rgba(255,255,255,0.8); line-height:1.8;">
-      Đang cập nhật menu. Vui lòng liên hệ Hotline/Zalo để nhận menu chi tiết & ưu đãi.
-    </p>
+<section id="menu" class="menu-section">
+  <h2 class="menu-title">THỰC ĐƠN</h2>
 
-    <div style="margin-top:18px;">
-      <a href="tel:0899996977" class="hero-cta">Gọi nhận menu</a>
-    </div>
-  </div>
+  <div id="menuGrid" class="menu-grid"></div>
 </section>
+
+<script>
+  const menuGrid = document.getElementById("menuGrid");
+
+  // ✅ đổi số này đúng với ảnh cuối của mày
+  const start = 7734;
+  const end = 7802;
+
+  for (let i = start; i <= end; i++) {
+    const file = `IMG_${i}.jpeg`;
+    const src = `./assets/images/menu/${file}`;
+
+    const a = document.createElement("a");
+    a.href = src;
+    a.target = "_blank";
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = file;
+    img.loading = "lazy";
+
+    a.appendChild(img);
+    menuGrid.appendChild(a);
+  }
+</script>
 
 <div class="bottom-bar">
   <a href="https://maps.google.com/?q=Ho+Chi+Minh+City" target="_blank">
