@@ -666,3 +666,11 @@ footer {
   color: #111;
   background: linear-gradient(90deg,#f7d77a,#d4a73d);
 }
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+header, .header, .navbar{
+  padding-top: env(safe-area-inset-top);
+}
