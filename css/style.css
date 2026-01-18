@@ -562,3 +562,51 @@ footer {
   transform: translateY(-1px);
   box-shadow: 0 0 30px rgba(255, 200, 60, 0.35);
 }
+/* ===== ABOUT SECTION UPGRADE ===== */
+.about{
+  padding: 70px 16px;
+}
+
+.about h2{
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.about h2 span{
+  color: #d4a73d;
+  text-shadow: 0 0 18px rgba(212,167,61,0.35);
+}
+
+.about p{
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.82);
+  font-size: 15px;
+}
+
+/* box nền sang hơn */
+.about .container{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 22px;
+  padding: 28px 22px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.55);
+  backdrop-filter: blur(8px);
+}
+
+/* thêm line vàng nhỏ dưới tiêu đề */
+.about h2::after{
+  content:"";
+  display:block;
+  width: 70px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f7d77a, #d4a73d);
+  margin-top: 12px;
+  box-shadow: 0 0 18px rgba(212,167,61,0.35);
+}
