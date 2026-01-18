@@ -26,25 +26,68 @@
 </div>
 </header>
 
-<section class="booking-section">
+<section id="datban" class="booking-section">
   <div class="booking-card">
-    <h2>Đặt bàn <span>VIP</span></h2>
-    <p class="booking-desc">
-      Xác nhận nhanh – Giữ vị trí đẹp – Phục vụ chuyên nghiệp
-    </p>
+    <h2 class="booking-title">Đặt bàn <span>VIP</span></h2>
+    <p class="booking-subtitle">Xác nhận nhanh – Giữ vị trí đẹp – Phục vụ chuyên nghiệp</p>
 
-    <form class="booking-form">
-      <input type="text" placeholder="Họ tên khách" required>
-      <input type="tel" placeholder="Số điện thoại" required>
-      <input type="text" placeholder="Ngày & khung giờ (VD: 20h tối nay)">
-      <textarea placeholder="Yêu cầu thêm (sinh nhật, vị trí đẹp, VIP...)"></textarea>
+    <form id="bookingForm" class="booking-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Họ tên khách"
+        required
+      />
 
-      <button type="submit" class="booking-submit">
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Số điện thoại"
+        required
+      />
+
+      <input
+        type="text"
+        name="time"
+        placeholder="Ngày & khung giờ (VD: 20h tối nay)"
+        required
+      />
+
+      <textarea
+        name="note"
+        placeholder="Yêu cầu thêm (sinh nhật, vị trí đẹp, VIP...)"
+        rows="3"
+      ></textarea>
+
+      <button type="submit" class="btn-booking">
         GỬI YÊU CẦU ĐẶT BÀN
       </button>
     </form>
   </div>
 </section>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[name="name"]').value.trim();
+    const phone = document.querySelector('input[name="phone"]').value.trim();
+    const time = document.querySelector('input[name="time"]').value.trim();
+    const note = document.querySelector('textarea[name="note"]').value.trim();
+
+    const message =
+`📌 YÊU CẦU ĐẶT BÀN - THE WANN
+👤 Họ tên: ${name}
+📞 SĐT: ${phone}
+🕘 Ngày & giờ: ${time}
+📝 Yêu cầu thêm: ${note || "Không có"}`;
+
+    const zaloNumber = "0899996977";
+    const zaloLink = `https://zalo.me/${zaloNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(zaloLink, "_blank");
+  });
+</script>
 
 <footer>
   <p>Hotline / Zalo: 0899 996 977</p>
