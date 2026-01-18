@@ -2,31 +2,58 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
+
   <!-- SEO + SOCIAL SHARE -->
-<title>The WANN | Luxury Nightlife Booking</title>
+  <title>The WANN | Luxury Nightlife Booking</title>
 
-<meta name="description" content="The WANN – Nền tảng booking nightlife cao cấp. Trải nghiệm club, lounge, bar sang trọng với dịch vụ chuyên nghiệp & hỗ trợ nhanh chóng.">
+  <meta name="description" content="The WANN – Nền tảng booking nightlife cao cấp. Trải nghiệm club, lounge, bar sang trọng với dịch vụ chuyên nghiệp & hỗ trợ nhanh chóng.">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="The WANN | Luxury Nightlife Booking">
-<meta property="og:description" content="Nền tảng booking nightlife cao cấp – Club • Lounge • Bar • Trải nghiệm sang trọng">
-<meta property="og:url" content="https://thewann.pages.dev">
-<meta property="og:image" content="https://thewann.pages.dev/assets/images/logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="vi_VN">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The WANN | Luxury Nightlife Booking">
+  <meta property="og:description" content="Nền tảng booking nightlife cao cấp – Club • Lounge • Bar • Trải nghiệm sang trọng">
+  <meta property="og:url" content="https://thewann.pages.dev">
+  <meta property="og:image" content="https://thewann.pages.dev/assets/images/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="vi_VN">
 
-<!-- Twitter (dù m chủ yếu dùng FB) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The WANN | Luxury Nightlife Booking">
-<meta name="twitter:description" content="Booking nightlife cao cấp – Trải nghiệm sang trọng & chuyên nghiệp">
-<meta name="twitter:image" content="https://thewann.pages.dev/assets/images/logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The WANN | Luxury Nightlife Booking">
+  <meta name="twitter:description" content="Booking nightlife cao cấp – Trải nghiệm sang trọng & chuyên nghiệp">
+  <meta name="twitter:image" content="https://thewann.pages.dev/assets/images/logo.png">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The WANN</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ CTA BUTTON STYLE (NÚT VÀNG NỔI BẬT) -->
+  <style>
+    .hero-cta{
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #f7d77a, #d4a73d);
+      color: #111;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 22px rgba(255, 200, 60, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hero-cta:active{
+      transform: scale(0.98);
+    }
+
+    .hero-cta:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 0 30px rgba(255, 200, 60, 0.35);
+    }
+  </style>
 
   <!-- JS -->
   <script src="js/main.js" defer></script>
@@ -54,7 +81,6 @@
 
 <!-- ================= HERO VIDEO ================= -->
 <section class="hero">
-  
   <video autoplay muted loop playsinline preload="auto">
     <source src="assets/videos/hero.mp4" type="video/mp4">
   </video>
@@ -62,9 +88,9 @@
   <div class="hero-content">
     <h1>Live the Moment</h1>
     <p>Luxury • Nature • Experience</p>
-  <a href="tel:0899996977" class="hero-cta">
-  Đặt bàn trực tiếp
-</a>
+
+    <!-- ✅ BẤM LÀ GỌI LUÔN -->
+    <a href="tel:0899996977" class="hero-cta">Đặt bàn trực tiếp</a>
   </div>
 </section>
 
@@ -110,11 +136,12 @@
       Xác nhận nhanh – Giữ vị trí đẹp – Phục vụ chuyên nghiệp
     </p>
 
-    <form class="booking-form">
-      <input type="text" placeholder="Họ tên khách" required>
-      <input type="tel" placeholder="Số điện thoại" required>
-      <input type="text" placeholder="Ngày & khung giờ (VD: 20h tối nay)">
-      <textarea placeholder="Yêu cầu thêm (sinh nhật, vị trí đẹp, VIP...)"></textarea>
+    <!-- ✅ FORM GỬI THẲNG VỀ ZALO -->
+    <form id="bookingForm" class="booking-form">
+      <input type="text" name="name" placeholder="Họ tên khách" required>
+      <input type="tel" name="phone" placeholder="Số điện thoại" required>
+      <input type="text" name="time" placeholder="Ngày & khung giờ (VD: 20h tối nay)">
+      <textarea name="note" placeholder="Yêu cầu thêm (sinh nhật, vị trí đẹp, VIP...)"></textarea>
 
       <button type="submit" class="booking-submit">
         GỬI YÊU CẦU ĐẶT BÀN
@@ -150,5 +177,30 @@
     <span>Facebook</span>
   </a>
 </div>
+
+<!-- ✅ JS: BẤM GỬI FORM → MỞ ZALO + ĐIỀN SẴN NỘI DUNG -->
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[name="name"]').value.trim();
+    const phone = document.querySelector('input[name="phone"]').value.trim();
+    const time = document.querySelector('input[name="time"]').value.trim();
+    const note = document.querySelector('textarea[name="note"]').value.trim();
+
+    const message =
+`📌 YÊU CẦU ĐẶT BÀN - THE WANN
+👤 Họ tên: ${name}
+📞 SĐT: ${phone}
+🕘 Ngày & giờ: ${time || "Chưa chọn"}
+📝 Yêu cầu thêm: ${note || "Không có"}`;
+
+    const zaloNumber = "0899996977";
+    const zaloLink = `https://zalo.me/${zaloNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(zaloLink, "_blank");
+  });
+</script>
+
 </body>
 </html>
