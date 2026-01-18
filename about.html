@@ -1,87 +1,292 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>About – The WANN</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE WANN | Giới Thiệu</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .about-hero{
+      position: relative;
+      height: 62vh;
+      min-height: 440px;
+      overflow: hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding: 0 16px;
+    }
+
+    .about-hero video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter: brightness(0.55) saturate(1.15);
+    }
+
+    .about-hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at center, rgba(0,0,0,0.05), rgba(0,0,0,0.88));
+    }
+
+    .about-hero-content{
+      position:relative;
+      z-index:2;
+      max-width: 920px;
+    }
+
+    .about-logo{
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      border: 1px solid rgba(212,167,61,0.35);
+      box-shadow: 0 0 30px rgba(212,167,61,0.18);
+      margin-bottom: 14px;
+      background: rgba(0,0,0,0.35);
+      padding: 10px;
+    }
+
+    .about-hero h1{
+      margin: 0 0 10px;
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 0 25px rgba(255,255,255,0.08);
+    }
+
+    .about-hero p{
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      letter-spacing: 0.6px;
+      font-size: 15px;
+    }
+
+    .about-cta{
+      margin-top: 18px;
+      display:flex;
+      gap: 10px;
+      justify-content:center;
+      flex-wrap: wrap;
+    }
+
+    .about-btn{
+      display:inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration:none;
+      font-weight: 800;
+      letter-spacing: .3px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      transition: .2s ease;
+    }
+
+    .about-btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 0 22px rgba(0,0,0,0.6);
+    }
+
+    .about-btn.primary{
+      background: linear-gradient(90deg, #f7d77a, #d4a73d);
+      color: #111;
+      border: none;
+      box-shadow: 0 0 28px rgba(212,167,61,0.22);
+    }
+
+    /* CONTENT */
+    .about-main{
+      padding: 38px 16px 110px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-title{
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: .9px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+
+    .about-title span{
+      color: #d4a73d;
+      text-shadow: 0 0 18px rgba(212,167,61,0.35);
+    }
+
+    .about-desc{
+      margin: 0 0 18px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .about-box{
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 22px;
+      padding: 18px 16px;
+      box-shadow: 0 0 35px rgba(0,0,0,0.55);
+      backdrop-filter: blur(8px);
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    @media(min-width: 900px){
+      .about-grid{ grid-template-columns: repeat(3,1fr); }
+      .about-hero h1{ font-size: 50px; }
+    }
+
+    .about-card{
+      border-radius: 18px;
+      padding: 16px 16px;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(212,167,61,0.18);
+    }
+
+    .about-card h3{
+      margin: 0 0 8px;
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      font-size: 16px;
+    }
+
+    .about-card p{
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* mini highlight */
+    .about-highlight{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill{
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: rgba(255,255,255,0.9);
+      font-size: 13px;
+      letter-spacing: .3px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="hero hero-about">
-  <div class="hero-content">
-    <h1>THE WANN</h1>
-    <p>Luxury Nightlife • Booking • Experience</p>
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <h1 class="logo">THE WANN</h1>
+    <img src="assets/images/logo.png" alt="The WANN Logo" class="header-logo">
+    <nav class="navbar">
+      <a href="index.html">Trang Chủ</a>
+      <a href="about.html">Giới Thiệu</a>
+      <a href="gallery.html">Thư Viện</a>
+      <a href="booking.html">Đặt Bàn</a>
+      <a href="contact.html">Liên Hệ</a>
+    </nav>
   </div>
 </header>
 
-<section>
-  <div class="section-title">
-    <h2>Về <span>The WANN</span></h2>
-  </div>
+<!-- HERO -->
+<section class="about-hero">
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="assets/videos/hero.mp4" type="video/mp4">
+  </video>
 
-  <div class="box">
-    <p>
-      <strong>The WANN</strong> là nền tảng booking nightlife cao cấp, chuyên kết nối khách hàng
-      với các club, lounge, bar và sự kiện giải trí đẳng cấp.
-    </p>
+  <div class="about-hero-content">
+    <img src="assets/images/logo.png" alt="Logo THE WANN" class="about-logo">
+    <h1>Về THE WANN</h1>
+    <p>Luxury Nightlife • Booking • Experience</p>
 
-    <p>
-      Chúng tôi tập trung vào trải nghiệm sang trọng, riêng tư và chuyên nghiệp – nơi khách hàng
-      không chỉ đặt bàn, mà còn tận hưởng trọn vẹn không khí nightlife đúng chất.
-    </p>
-
-    <p>
-      Với mạng lưới đối tác đa dạng, The WANN mang đến giải pháp booking nhanh chóng, minh bạch,
-      hỗ trợ tận tâm và phù hợp cho cả khách cá nhân lẫn nhóm VIP.
-    </p>
-  </div>
-</section>
-
-<section>
-  <div class="section-title">
-    <h2>Giá trị <span>cốt lõi</span></h2>
-  </div>
-
-  <div class="box">
-    <ul>
-      <li>✔ Booking nhanh – xác nhận rõ ràng</li>
-      <li>✔ Hỗ trợ trực tiếp 1:1</li>
-      <li>✔ Trải nghiệm nightlife cao cấp</li>
-      <li>✔ Minh bạch chi phí – không phát sinh</li>
-      <li>✔ Phù hợp khách thường & khách VIP</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <div class="section-title">
-    <h2>Vị trí & <span>liên kết</span></h2>
-  </div>
-
-  <div class="box">
-    <p>
-      The WANN hoạt động linh hoạt tại các khu vực nightlife trọng điểm,
-      sẵn sàng hỗ trợ booking theo yêu cầu khách hàng.
-    </p>
-
-    <!-- GOOGLE MAP LOGO / EMBED -->
-    <div style="margin-top:20px; border-radius:16px; overflow:hidden;">
-      <iframe
-  src="https://www.google.com/maps?q=51%20Bùi%20Thị%20Xuân,%20Quận%201,%20TP.%20Hồ%20Chí%20Minh&output=embed"
-  width="100%"
-  height="320"
-  style="border:0; border-radius:16px;"
-  allowfullscreen
-  loading="lazy">
-</iframe>
+    <div class="about-cta">
+      <a href="tel:0899996977" class="about-btn primary">📞 Gọi đặt bàn</a>
+      <a href="https://zalo.me/0899996977" target="_blank" class="about-btn">💬 Nhắn Zalo</a>
     </div>
   </div>
 </section>
 
-<footer>
-  <p>© The WANN – Luxury Nightlife Booking</p>
-</footer>
+<!-- CONTENT -->
+<section class="about-main">
+  <div class="about-box">
+    <h2 class="about-title">Tại sao chọn <span>THE WANN</span>?</h2>
+    <p class="about-desc">
+      THE WANN là nền tảng booking nightlife cao cấp, chuyên kết nối khách hàng với club, lounge, bar
+      và các sự kiện giải trí đẳng cấp. Tụi mình tập trung vào trải nghiệm sang – nhanh – chuẩn vibe,
+      giúp khách có bàn đẹp và được phục vụ chuyên nghiệp.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>✅ Xác nhận nhanh</h3>
+        <p>Nhận phản hồi nhanh qua Hotline/Zalo, hỗ trợ đặt bàn liền.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>⭐ Giữ vị trí đẹp</h3>
+        <p>Ưu tiên bàn đẹp, phù hợp nhóm bạn / sinh nhật / khách VIP.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>🔥 Vibe chuẩn nightlife</h3>
+        <p>Không khí sang, âm nhạc chất, trải nghiệm đáng nhớ mỗi đêm.</p>
+      </div>
+    </div>
+
+    <div class="about-highlight">
+      <div class="pill">🎉 Sinh nhật / Event</div>
+      <div class="pill">🥂 VIP Service</div>
+      <div class="pill">🎶 DJ / Performance</div>
+      <div class="pill">📍 TP.HCM</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM BAR -->
+<div class="bottom-bar">
+  <a href="https://maps.google.com/?q=Ho+Chi+Minh+City" target="_blank">
+    <span class="icon">📍</span>
+    <span>Bản đồ</span>
+  </a>
+
+  <a href="https://zalo.me/0899996977" target="_blank">
+    <span class="icon">💬</span>
+    <span>Zalo</span>
+  </a>
+
+  <a href="tel:0899996977" class="hotline">
+    <span class="icon">📞</span>
+    <span>Hotline</span>
+  </a>
+
+  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">
+    <span class="icon">📘</span>
+    <span>Facebook</span>
+  </a>
+</div>
 
 </body>
 </html>
