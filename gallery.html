@@ -204,41 +204,60 @@
       font-size: 20px;
       cursor: pointer;
     }
-    /* ===== GALLERY VIDEO ===== */
-.gallery-video-section {
-  padding: 30px 0 10px;
-}
+    <!-- ================= GALLERY VIDEO ================= -->
+<section class="gallery-video-section">
+  <div class="section-title">
+    <h2>Video <span>Khoảnh Khắc</span></h2>
+  </div>
 
-.video-scroll {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding: 10px 16px 20px;
-  scroll-snap-type: x mandatory;
-}
+  <div class="video-scroll">
 
-.video-item {
-  flex: 0 0 70%;
-  max-width: 70%;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #000;
-  scroll-snap-align: start;
-}
+    <div class="video-item">
+      <video
+        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JEKCP8S4_725072.mov"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
 
-.video-item video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    <div class="video-item">
+      <video
+        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JF0EO8HG_725072.mov"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
 
-/* mobile tối ưu */
-@media (max-width: 768px) {
-  .video-item {
-    flex: 0 0 85%;
-    max-width: 85%;
-  }
-}
+    <div class="video-item">
+      <video
+        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
+
+    <div class="video-item">
+      <video
+        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/thewann.11.11(2).mov"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
+
+  </div>
+</section>
   </style>
 </head>
 
