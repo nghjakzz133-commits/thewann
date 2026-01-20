@@ -29,7 +29,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- CTA BUTTON -->
+  <!-- ✅ CTA BUTTON STYLE (NÚT VÀNG NỔI BẬT) -->
   <style>
     .hero-cta{
       display: inline-block;
@@ -44,12 +44,18 @@
       box-shadow: 0 0 22px rgba(255, 200, 60, 0.25);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .hero-cta:active{
+      transform: scale(0.98);
+    }
+
     .hero-cta:hover{
       transform: translateY(-1px);
       box-shadow: 0 0 30px rgba(255, 200, 60, 0.35);
     }
   </style>
 
+  <!-- JS -->
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -57,8 +63,11 @@
 <!-- ================= HEADER ================= -->
 <header class="header">
   <div class="container header-inner">
+
     <h1 class="logo">THE WANN</h1>
+
     <img src="assets/images/logo.png" alt="The WANN Logo" class="header-logo">
+
     <nav class="navbar">
       <a href="index.html">Trang Chủ</a>
       <a href="about.html">Giới Thiệu</a>
@@ -67,10 +76,11 @@
       <a href="booking.html">Đặt Bàn</a>
       <a href="contact.html">Liên Hệ</a>
     </nav>
+
   </div>
 </header>
 
-<!-- ================= HERO VIDEO (ĐÃ FIX) ================= -->
+<!-- ================= HERO VIDEO ================= -->
 <section class="hero">
   <video autoplay muted loop playsinline preload="auto">
     <source src="assets/videos/hero.mp4" type="video/mp4">
@@ -79,56 +89,61 @@
   <div class="hero-content">
     <h1>Live the Moment</h1>
     <p>Luxury • Nature • Experience</p>
+
+    <!-- ✅ BẤM LÀ GỌI LUÔN -->
     <a href="tel:0899996977" class="hero-cta">Đặt bàn trực tiếp</a>
   </div>
-
-  <!-- ===== HERO LUXURY INFO BAR (ĐÃ ĐƯA VÀO HERO) ===== -->
-  <div class="hero-luxury-bar">
-    <div class="luxury-item">
-      <span class="luxury-title">OPEN DAILY</span>
-      <span class="luxury-sub">20:00 – Late Night</span>
-    </div>
-    <div class="luxury-divider"></div>
-    <div class="luxury-item">
-      <span class="luxury-title">MUSIC</span>
-      <span class="luxury-sub">House • HipHop • EDM</span>
-    </div>
-    <div class="luxury-divider"></div>
-    <div class="luxury-item">
-      <span class="luxury-title">DRESS CODE</span>
-      <span class="luxury-sub">Elegant / Sexy / Luxury</span>
-    </div>
-  </div>
-
-  <!-- ===== HERO TRUST + PREVIEW (ĐÃ ĐƯA VÀO HERO) ===== -->
-  <div class="hero-extras">
-
-    <div class="hero-usp">
-      • VIP TABLE • DJ GUEST • PRIVATE ROOM • VIEW ĐẸP
-    </div>
-
-    <div class="hero-trust">
-      <div><span>★</span> 5.0 Google</div>
-      <div><span>👥</span> 5.000+ khách / tháng</div>
-      <div><span>🍾</span> VIP mỗi đêm</div>
-    </div>
-
-    <div class="hero-preview">
-      <div class="preview-track">
-        <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JEKCP8S4_725072.mov" autoplay muted loop playsinline></video>
-        <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JF0EO8HG_725072.mov" autoplay muted loop playsinline></video>
-        <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov" autoplay muted loop playsinline></video>
-        <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/thewann.11.11(2).mov" autoplay muted loop playsinline></video>
-      </div>
-    </div>
-
-    <div class="hero-quote">
-      “Nơi mỗi đêm đều là một kỷ niệm đáng giá.”
-    </div>
-
-  </div>
 </section>
+<!-- ===== HERO LUXURY INFO BAR ===== -->
+<div class="hero-luxury-bar">
 
+  <div class="luxury-item">
+    <span class="luxury-title">OPEN DAILY</span>
+    <span class="luxury-sub">20:00 – Late Night</span>
+  </div>
+
+  <div class="luxury-divider"></div>
+
+  <div class="luxury-item">
+    <span class="luxury-title">MUSIC</span>
+    <span class="luxury-sub">House • HipHop • EDM</span>
+  </div>
+
+  <div class="luxury-divider"></div>
+
+  <div class="luxury-item">
+    <span class="luxury-title">DRESS CODE</span>
+    <span class="luxury-sub">Elegant / Sexy / Luxury</span>
+  </div>
+
+</div>
+  <!-- ===== HERO TRUST + PREVIEW ===== -->
+<div class="hero-extras">
+
+  <div class="hero-usp">
+    • VIP TABLE • DJ GUEST • PRIVATE ROOM • VIEW ĐẸP
+  </div>
+
+  <div class="hero-trust">
+    <div><span>★</span> 5.0 Google</div>
+    <div><span>👥</span> 5.000+ khách / tháng</div>
+    <div><span>🍾</span> VIP mỗi đêm</div>
+  </div>
+
+  <div class="hero-preview">
+    <div class="preview-track">
+      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JEKCP8S4_725072.mov" autoplay muted loop playsinline></video>
+      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JF0EO8HG_725072.mov" autoplay muted loop playsinline></video>
+      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov" autoplay muted loop playsinline></video>
+      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/thewann.11.11(2).mov" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+
+  <div class="hero-quote">
+    “Nơi mỗi đêm đều là một kỷ niệm đáng giá.”
+  </div>
+
+</div>
 <!-- ================= GALLERY ================= -->
 <section class="gallery-section">
   <div class="section-title">
@@ -136,13 +151,50 @@
   </div>
 
   <div class="gallery-scroll">
-    <div class="gallery-item"><img src="assets/images/gallery/1.jpg"></div>
-    <div class="gallery-item"><img src="assets/images/gallery/2.jpg"></div>
-    <div class="gallery-item"><img src="assets/images/gallery/3.jpg"></div>
-    <div class="gallery-item"><img src="assets/images/gallery/4.jpg"></div>
+    <div class="gallery-item">
+      <img src="assets/images/gallery/1.jpg" alt="The WANN gallery 1">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/images/gallery/2.jpg" alt="The WANN gallery 2">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/images/gallery/3.jpg" alt="The WANN gallery 3">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/images/gallery/4.jpg" alt="The WANN gallery 4">
+    </div>
   </div>
 </section>
+<!-- ===== VIBE & KHÔNG GIAN ===== -->
+<section class="vibe-section">
+  <div class="vibe-track">
 
+    <div class="vibe-item">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JEKCP8S4_725072.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="vibe-item">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JF0EO8HG_725072.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="vibe-item">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="vibe-item">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/thewann.11.11(2).mov" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+</section>
 <!-- ================= ABOUT ================= -->
 <section class="about" id="about">
   <div class="container">
@@ -155,10 +207,76 @@
   </div>
 </section>
 
+<!-- ================= BOOKING ================= -->
+<section class="booking-section">
+  <div class="booking-cta">
+    <h2>Đặt bàn <span>VIP</span></h2>
+    <p>Xác nhận nhanh – Giữ vị trí đẹp – Phục vụ chuyên nghiệp</p>
+
+    <a href="tel:0778307889" class="cta-btn call">
+      📞 Gọi Hotline
+    </a>
+
+    <a href="https://zalo.me/0778307889" target="_blank" class="cta-btn zalo">
+      💬 Chat Zalo
+    </a>
+
+    <div class="cta-note">
+      Ưu tiên liên hệ trực tiếp để được hỗ trợ nhanh nhất
+    </div>
+  </div>
+</section>
 <!-- ================= FOOTER ================= -->
-<footer class="footer">
+<footer class="footer" id="contact">
   <p>© 2026 THE WANN. All rights reserved.</p>
 </footer>
+
+<!-- ===== FIXED BOTTOM BAR ===== -->
+<div class="bottom-bar">
+  <a href="https://maps.google.com/?q=Ho+Chi+Minh+City" target="_blank">
+    <span class="icon">📍</span>
+    <span>Bản đồ</span>
+  </a>
+
+  <a href="https://zalo.me/0899996977" target="_blank">
+    <span class="icon">💬</span>
+    <span>Zalo</span>
+  </a>
+
+  <a href="tel:0899996977" class="hotline">
+    <span class="icon">📞</span>
+    <span>Hotline</span>
+  </a>
+
+  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">
+    <span class="icon">📘</span>
+    <span>Facebook</span>
+  </a>
+</div>
+
+<!-- ✅ JS: BẤM GỬI FORM → MỞ ZALO + ĐIỀN SẴN NỘI DUNG -->
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[name="name"]').value.trim();
+    const phone = document.querySelector('input[name="phone"]').value.trim();
+    const time = document.querySelector('input[name="time"]').value.trim();
+    const note = document.querySelector('textarea[name="note"]').value.trim();
+
+    const message =
+`📌 YÊU CẦU ĐẶT BÀN - THE WANN
+👤 Họ tên: ${name}
+📞 SĐT: ${phone}
+🕘 Ngày & giờ: ${time || "Chưa chọn"}
+📝 Yêu cầu thêm: ${note || "Không có"}`;
+
+    const zaloNumber = "0899996977";
+    const zaloLink = `https://zalo.me/${zaloNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(zaloLink, "_blank");
+  });
+</script>
 
 </body>
 </html>
