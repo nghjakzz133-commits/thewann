@@ -1441,3 +1441,117 @@ body{
     height: 58px;
   }
 }
+/* ===== FIX BOTTOM BAR CHUẨN 4 NÚT + HOTLINE GIỮA ===== */
+.bottom-bar{
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 99999;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+
+  padding: 10px 14px !important;
+  border-radius: 999px !important;
+
+  background: rgba(0,0,0,0.75) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45) !important;
+}
+
+/* 4 nút thường */
+.bottom-bar a{
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+
+  padding: 10px 8px !important;
+  border-radius: 999px !important;
+
+  color: rgba(255,255,255,0.85) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+
+  background: rgba(255,255,255,0.06) !important;
+}
+
+/* icon */
+.bottom-bar .icon{
+  font-size: 16px !important;
+  opacity: 0.95 !important;
+}
+
+/* hotline tròn giữa */
+.bottom-bar a.hotline{
+  flex: 0 0 auto !important;
+  width: 64px !important;
+  height: 64px !important;
+
+  padding: 0 !important;
+  margin: 0 6px !important;
+
+  border-radius: 999px !important;
+  background: linear-gradient(180deg, #f7d77a, #d4a73d) !important;
+  color: #111 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-shadow: 0 10px 25px rgba(255,200,60,0.28) !important;
+}
+
+/* hotline chỉ hiện icon */
+.bottom-bar a.hotline span:last-child{
+  display: none !important;
+}
+
+.bottom-bar a.hotline .icon{
+  font-size: 20px !important;
+}
+
+/* hover */
+.bottom-bar a:hover{
+  background: rgba(255,255,255,0.12) !important;
+}
+
+.bottom-bar a.hotline:hover{
+  background: linear-gradient(180deg, #ffe08a, #d4a73d) !important;
+}
+
+/* chừa khoảng trống */
+body{
+  padding-bottom: 110px !important;
+}
+
+/* mobile: đảm bảo đủ 4 nút */
+@media (max-width: 480px){
+  .bottom-bar{
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    padding: 8px 10px !important;
+    gap: 8px !important;
+  }
+
+  .bottom-bar a{
+    font-size: 13px !important;
+    padding: 9px 6px !important;
+  }
+
+  .bottom-bar a.hotline{
+    width: 58px !important;
+    height: 58px !important;
+  }
+}
