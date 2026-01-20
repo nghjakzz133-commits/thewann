@@ -1339,3 +1339,105 @@ text-shadow:
 body{
   padding-bottom: 90px;
 }
+/* ===== BOTTOM BAR KIỂU CŨ (4 NÚT + HOTLINE TRÒN Ở GIỮA) ===== */
+.bottom-bar{
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 99999;
+
+  height: 68px;
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 999px;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+/* 4 nút thường */
+.bottom-bar a{
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+
+  padding: 10px 8px;
+  border-radius: 999px;
+}
+
+/* icon */
+.bottom-bar .icon{
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* HOTLINE TRÒN Ở GIỮA */
+.bottom-bar a.hotline{
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+
+  margin: 0 10px;
+  padding: 0;
+
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f7d77a, #d4a73d);
+  color: #111;
+
+  box-shadow: 0 10px 25px rgba(255,200,60,0.28);
+}
+
+/* hotline chỉ hiện icon (ẩn chữ) */
+.bottom-bar a.hotline span:last-child{
+  display: none;
+}
+
+.bottom-bar a.hotline .icon{
+  font-size: 20px;
+}
+
+/* hover nhẹ */
+.bottom-bar a:hover{
+  background: rgba(255,255,255,0.06);
+}
+
+.bottom-bar a.hotline:hover{
+  background: linear-gradient(180deg, #ffe08a, #d4a73d);
+}
+
+/* chống bị che nội dung */
+body{
+  padding-bottom: 95px;
+}
+
+/* mobile nhỏ hơn */
+@media (max-width: 420px){
+  .bottom-bar{
+    height: 64px;
+    padding: 8px 12px;
+  }
+  .bottom-bar a{
+    font-size: 13px;
+    padding: 9px 6px;
+  }
+  .bottom-bar a.hotline{
+    width: 58px;
+    height: 58px;
+  }
+}
