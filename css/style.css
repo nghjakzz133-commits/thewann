@@ -1265,3 +1265,25 @@ header, .header, .navbar{
     0 0 26px rgba(212,167,61,0.55),
     0 0 60px rgba(212,167,61,0.45) !important;
 }
+/* ===== FORCE LUXURY SHINE – HERO TEXT ===== */
+header *,
+.hero *,
+.hero-content *,
+section.hero * {
+  color: #fff !important;
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.35),
+    0 0 18px rgba(212,167,61,0.45),
+    0 0 36px rgba(212,167,61,0.35) !important;
+}
+
+/* GOLD HIGHLIGHT */
+header span,
+.hero span,
+.hero-content span {
+  color: #d4a73d !important;
+  text-shadow:
+    0 0 10px rgba(212,167,61,0.8),
+    0 0 30px rgba(212,167,61,0.6),
+    0 0 60px rgba(212,167,61,0.45) !important;
+}
