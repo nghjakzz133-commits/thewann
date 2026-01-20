@@ -766,3 +766,26 @@ header, .header, .navbar{
     padding:32px 20px;
   }
 }
+/* ===== VIBE & KHÔNG GIAN ===== */
+.vibe-section{
+  width:100%;
+  overflow-x:auto;
+  padding:20px 0 10px;
+  -webkit-overflow-scrolling:touch;
+}
+
+.vibe-track{
+  display:flex;
+  gap:16px;
+  padding:0 16px;
+}
+
+.vibe-track video{
+  width:75vw;
+  max-width:320px;
+  height:200px;
+  object-fit:cover;
+  border-radius:18px;
+  flex-shrink:0;
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
