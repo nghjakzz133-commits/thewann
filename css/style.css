@@ -1203,3 +1203,42 @@ header, .header, .navbar{
   transform:translateY(-2px);
   box-shadow:0 0 45px rgba(10,162,255,.55);
 }
+/* ===== LUXURY TEXT GLOW ===== */
+.luxury-text {
+  color: #fff;
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.35),
+    0 0 18px rgba(212,167,61,0.35),
+    0 0 32px rgba(212,167,61,0.25);
+}
+
+/* HERO TEXT */
+.hero h1,
+.hero h2,
+.hero p {
+  color: #fff;
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.4),
+    0 0 22px rgba(212,167,61,0.45),
+    0 0 40px rgba(212,167,61,0.25);
+}
+
+/* GOLD TEXT */
+.text-gold,
+.hero span {
+  color: #d4a73d;
+  text-shadow:
+    0 0 10px rgba(212,167,61,0.6),
+    0 0 26px rgba(212,167,61,0.45),
+    0 0 50px rgba(212,167,61,0.35);
+}
+
+/* HOVER SHINE */
+.hero h1:hover,
+.hero h2:hover {
+  text-shadow:
+    0 0 12px rgba(255,255,255,0.6),
+    0 0 30px rgba(212,167,61,0.6),
+    0 0 60px rgba(212,167,61,0.4);
+  transition: 0.3s ease;
+}
