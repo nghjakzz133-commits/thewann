@@ -1339,3 +1339,52 @@ text-shadow:
 body{
   padding-bottom: 90px;
 }
+/* ===== FIX CHỮ BỊ ĐEN TRÊN HERO / PAGE TITLE ===== */
+.hero-content,
+.hero-content h1,
+.hero-content p{
+  color: #fff !important;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.75) !important;
+}
+
+.section-title h2,
+.section-title h2 span{
+  color: #fff !important;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.75) !important;
+}
+
+/* nếu trang Thư viện đang dùng chữ kiểu này */
+.hero h1,
+.hero p{
+  color: #fff !important;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.75) !important;
+}
+
+/* tăng độ nổi của text trên nền video */
+.hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.6)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content{
+  position: relative;
+  z-index: 2;
+}
