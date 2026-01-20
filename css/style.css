@@ -900,3 +900,31 @@ header, .header, .navbar{
     height: 200px;
   }
 }
+/* FIX GALLERY VIDEO KHÔNG HIỆN */
+.gallery-video-section {
+  position: relative;
+  padding: 24px 0 120px;
+  min-height: 240px;
+}
+
+.video-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 16px;
+}
+
+.video-item {
+  flex: 0 0 80%;
+  max-width: 80%;
+  height: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
