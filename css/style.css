@@ -1100,3 +1100,53 @@ header, .header, .navbar{
     grid-template-columns: 1fr;
   }
 }
+/* ===== HERO INFO BAR ===== */
+.hero-info-bar{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 16px 22px;
+}
+
+.info-item{
+  text-align: center;
+  min-width: 90px;
+}
+
+.info-label{
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  color: rgba(255,255,255,0.6);
+}
+
+.info-value{
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.info-divider{
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.15);
+}
+
+@media(max-width:768px){
+  .hero-info-bar{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .info-divider{
+    width: 40px;
+    height: 1px;
+  }
+}
