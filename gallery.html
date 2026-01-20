@@ -48,50 +48,43 @@
       letter-spacing: 1.2px;
       text-transform: uppercase;
       color: #fff;
-      text-shadow: 0 0 25px rgba(255,255,255,0.08);
     }
 
     .gallery-hero-content p{
       margin: 0;
       color: rgba(255,255,255,0.85);
       font-size: 15px;
-      letter-spacing: 0.6px;
     }
 
     .gallery-wrap{
-      padding: 40px 16px 110px;
+      padding: 40px 16px 80px;
       max-width: 1150px;
       margin: 0 auto;
     }
 
     .gallery-head{
       display:flex;
-      align-items:center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 12px;
       margin-bottom: 18px;
-      flex-wrap: wrap;
     }
 
     .gallery-title{
       font-size: 22px;
       font-weight: 800;
       color: #fff;
-      letter-spacing: 0.8px;
-      margin: 0;
       text-transform: uppercase;
     }
 
     .gallery-title span{
       color: #d4a73d;
-      text-shadow: 0 0 18px rgba(212,167,61,0.35);
     }
 
     .gallery-filter{
       display:flex;
       gap: 8px;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     .filter-btn{
@@ -102,14 +95,11 @@
       border-radius: 999px;
       font-size: 13px;
       cursor: pointer;
-      transition: 0.2s ease;
-      user-select:none;
     }
 
     .filter-btn.active{
       background: linear-gradient(90deg, #f7d77a, #d4a73d);
       color: #111;
-      border-color: transparent;
       font-weight: 800;
     }
 
@@ -117,157 +107,75 @@
       display:grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
-      margin-top: 18px;
     }
 
-    @media(min-width: 900px){
-      .wann-grid{ grid-template-columns: repeat(4, 1fr); }
-      .gallery-hero-content h1{ font-size: 48px; }
+    @media(min-width:900px){
+      .wann-grid{grid-template-columns:repeat(4,1fr);}
     }
 
     .wann-card{
-      position: relative;
-      overflow: hidden;
       border-radius: 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
       cursor: pointer;
-      transform: translateZ(0);
+      position: relative;
     }
 
     .wann-card img{
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display:block;
-      transition: transform .35s ease, filter .35s ease;
-      filter: saturate(1.1) contrast(1.05);
-    }
-
-    @media(min-width: 900px){
-      .wann-card img{ height: 240px; }
-    }
-
-    .wann-card:hover img{
-      transform: scale(1.06);
-      filter: saturate(1.2) contrast(1.1) brightness(1.03);
+      width:100%;
+      height:260px;
+      object-fit:cover;
     }
 
     .wann-tag{
       position:absolute;
-      left: 12px;
-      top: 12px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.55);
-      border: 1px solid rgba(212,167,61,0.35);
-      color: #f5f5f5;
-      font-size: 12px;
-      letter-spacing: 0.4px;
-      backdrop-filter: blur(6px);
+      top:12px;
+      left:12px;
+      padding:6px 12px;
+      background:rgba(0,0,0,.6);
+      color:#fff;
+      font-size:12px;
+      border-radius:999px;
     }
 
-    /* Lightbox */
-    .wann-lightbox{
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.9);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      z-index: 9999;
-      padding: 20px;
+    /* VIDEO SECTION */
+    .gallery-video-section{
+      padding: 20px 0 120px;
     }
 
-    .wann-lightbox.active{ display:flex; }
-
-    .wann-lightbox img{
-      width: 100%;
-      max-width: 980px;
-      max-height: 85vh;
-      object-fit: contain;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 0 50px rgba(0,0,0,0.7);
+    .video-scroll{
+      display:flex;
+      gap:16px;
+      overflow-x:auto;
+      padding:10px 16px;
     }
 
-    .wann-close{
-      position:absolute;
-      top: 18px;
-      right: 18px;
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(0,0,0,0.35);
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
+    .video-item{
+      flex:0 0 70%;
+      max-width:70%;
+      height:220px;
+      border-radius:16px;
+      overflow:hidden;
+      background:#000;
     }
-    <!-- ================= GALLERY VIDEO ================= -->
-<section class="gallery-video-section">
-  <div class="section-title">
-    <h2>Video <span>Khoảnh Khắc</span></h2>
-  </div>
 
-  <div class="video-scroll">
+    .video-item video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
 
-    <div class="video-item">
-      <video
-        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JEKCP8S4_725072.mov"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      ></video>
-    </div>
-
-    <div class="video-item">
-      <video
-        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JF0EO8HG_725072.mov"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      ></video>
-    </div>
-
-    <div class="video-item">
-      <video
-        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      ></video>
-    </div>
-
-    <div class="video-item">
-      <video
-        src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/thewann.11.11(2).mov"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      ></video>
-    </div>
-
-  </div>
-</section>
+    @media(max-width:768px){
+      .video-item{flex:0 0 85%;max-width:85%;}
+    }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
     <h1 class="logo">THE WANN</h1>
-    <img src="assets/images/logo.png" alt="The WANN Logo" class="header-logo">
+    <img src="assets/images/logo.png" class="header-logo">
     <nav class="navbar">
       <a href="index.html">Trang Chủ</a>
       <a href="about.html">Giới Thiệu</a>
@@ -278,23 +186,19 @@
   </div>
 </header>
 
-<!-- HERO VIDEO -->
 <section class="gallery-hero">
-  <video autoplay muted loop playsinline preload="auto">
+  <video autoplay muted loop playsinline>
     <source src="assets/videos/hero.mp4" type="video/mp4">
   </video>
-
   <div class="gallery-hero-content">
-    <h1>Thư Viện Hình Ảnh</h1>
+    <h1>Thư Viện</h1>
     <p>Vibe • Ánh sáng • Trải nghiệm</p>
   </div>
 </section>
 
-<!-- CONTENT -->
 <section class="gallery-wrap">
   <div class="gallery-head">
     <h2 class="gallery-title">Khoảnh khắc tại <span>THE WANN</span></h2>
-
     <div class="gallery-filter">
       <div class="filter-btn active" data-filter="all">Tất cả</div>
       <div class="filter-btn" data-filter="party">Party</div>
@@ -303,167 +207,30 @@
     </div>
   </div>
 
-  <div class="wann-grid" id="wannGrid">
-
-    <!-- 5.jpg -->
-    <div class="wann-card" data-type="party">
-      <span class="wann-tag">Party</span>
-      <img src="assets/images/gallery/5.jpg" alt="The WANN 5">
-    </div>
-
-    <!-- 6.jpg -->
-    <div class="wann-card" data-type="vip">
-      <span class="wann-tag">VIP</span>
-      <img src="assets/images/gallery/6.jpg" alt="The WANN 6">
-    </div>
-
-    <!-- 7.jpg -->
-    <div class="wann-card" data-type="moment">
-      <span class="wann-tag">Moment</span>
-      <img src="assets/images/gallery/7.jpg" alt="The WANN 7">
-    </div>
-
-    <!-- 8.jpg -->
-    <div class="wann-card" data-type="party">
-      <span class="wann-tag">Party</span>
-      <img src="assets/images/gallery/8.jpg" alt="The WANN 8">
-    </div>
-
-    <!-- 9.jpg -->
-    <div class="wann-card" data-type="vip">
-      <span class="wann-tag">VIP</span>
-      <img src="assets/images/gallery/9.jpg" alt="The WANN 9">
-    </div>
-
-    <!-- 10.jpg -->
-    <div class="wann-card" data-type="party">
-      <span class="wann-tag">Party</span>
-      <img src="assets/images/gallery/10.jpg" alt="The WANN 10">
-    </div>
-
-    <!-- 11.jpg -->
-    <div class="wann-card" data-type="moment">
-      <span class="wann-tag">Moment</span>
-      <img src="assets/images/gallery/11.jpg" alt="The WANN 11">
-    </div>
-
-    <!-- 12.jpg -->
-    <div class="wann-card" data-type="vip">
-      <span class="wann-tag">VIP</span>
-      <img src="assets/images/gallery/12.jpg" alt="The WANN 12">
-    </div>
-
-    <!-- 13.jpg -->
-    <div class="wann-card" data-type="party">
-      <span class="wann-tag">Party</span>
-      <img src="assets/images/gallery/13.jpg" alt="The WANN 13">
-    </div>
-
-    <!-- 14.jpg -->
-    <div class="wann-card" data-type="moment">
-      <span class="wann-tag">Moment</span>
-      <img src="assets/images/gallery/14.jpg" alt="The WANN 14">
-    </div>
-
+  <div class="wann-grid">
+    <div class="wann-card" data-type="party"><span class="wann-tag">Party</span><img src="assets/images/gallery/5.jpg"></div>
+    <div class="wann-card" data-type="vip"><span class="wann-tag">VIP</span><img src="assets/images/gallery/6.jpg"></div>
+    <div class="wann-card" data-type="moment"><span class="wann-tag">Moment</span><img src="assets/images/gallery/7.jpg"></div>
+    <div class="wann-card" data-type="party"><span class="wann-tag">Party</span><img src="assets/images/gallery/8.jpg"></div>
+    <div class="wann-card" data-type="vip"><span class="wann-tag">VIP</span><img src="assets/images/gallery/9.jpg"></div>
+    <div class="wann-card" data-type="party"><span class="wann-tag">Party</span><img src="assets/images/gallery/10.jpg"></div>
+    <div class="wann-card" data-type="moment"><span class="wann-tag">Moment</span><img src="assets/images/gallery/11.jpg"></div>
+    <div class="wann-card" data-type="vip"><span class="wann-tag">VIP</span><img src="assets/images/gallery/12.jpg"></div>
   </div>
 </section>
-<!-- ================= GALLERY VIDEO ================= -->
+
 <section class="gallery-video-section">
   <div class="section-title">
     <h2>Video <span>Khoảnh Khắc</span></h2>
   </div>
 
   <div class="video-scroll">
-    <div class="video-item">
-      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JEKCP8S4_725072.mov" muted loop playsinline></video>
-    </div>
-
-    <div class="video-item">
-      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JF0EO8HG_725072.mov" muted loop playsinline></video>
-    </div>
-
-    <div class="video-item">
-      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov" muted loop playsinline></video>
-    </div>
-
-    <div class="video-item">
-      <video src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/thewann.11.11(2).mov" muted loop playsinline></video>
-    </div>
+    <div class="video-item"><video autoplay muted loop playsinline src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JEKCP8S4_725072.mov"></video></div>
+    <div class="video-item"><video autoplay muted loop playsinline src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1JF0EO8HG_725072.mov"></video></div>
+    <div class="video-item"><video autoplay muted loop playsinline src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov"></video></div>
+    <div class="video-item"><video autoplay muted loop playsinline src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/thewann.11.11(2).mov"></video></div>
   </div>
 </section>
-<!-- LIGHTBOX -->
-<div class="wann-lightbox" id="wannLightbox">
-  <button class="wann-close" id="wannClose">✕</button>
-  <img id="wannLightboxImg" src="" alt="Preview">
-</div>
-
-<!-- BOTTOM BAR -->
-<div class="bottom-bar">
-  <a href="https://maps.google.com/?q=Ho+Chi+Minh+City" target="_blank">
-    <span class="icon">📍</span>
-    <span>Bản đồ</span>
-  </a>
-
-  <a href="https://zalo.me/0899996977" target="_blank">
-    <span class="icon">💬</span>
-    <span>Zalo</span>
-  </a>
-
-  <a href="tel:0899996977" class="hotline">
-    <span class="icon">📞</span>
-    <span>Hotline</span>
-  </a>
-
-  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">
-    <span class="icon">📘</span>
-    <span>Facebook</span>
-  </a>
-</div>
-
-<script>
-  // Filter
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const galleryCards = document.querySelectorAll(".wann-card");
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const type = btn.dataset.filter;
-
-      galleryCards.forEach(card => {
-        const cardType = card.dataset.type;
-        if(type === "all" || type === cardType){
-          card.style.display = "block";
-        }else{
-          card.style.display = "none";
-        }
-      });
-    });
-  });
-
-  // Lightbox
-  const wannLightbox = document.getElementById("wannLightbox");
-  const wannLightboxImg = document.getElementById("wannLightboxImg");
-  const wannClose = document.getElementById("wannClose");
-
-  galleryCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const img = card.querySelector("img");
-      wannLightboxImg.src = img.src;
-      wannLightbox.classList.add("active");
-    });
-  });
-
-  wannClose.addEventListener("click", () => {
-    wannLightbox.classList.remove("active");
-  });
-
-  wannLightbox.addEventListener("click", (e) => {
-    if(e.target === wannLightbox) wannLightbox.classList.remove("active");
-  });
-</script>
 
 </body>
 </html>
