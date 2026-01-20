@@ -1150,3 +1150,56 @@ header, .header, .navbar{
     height: 1px;
   }
 }
+/* ===== LUXURY CTA BUTTONS ===== */
+.luxury-cta-box{
+  margin-top: 26px;
+  padding: 26px 20px;
+  border-radius: 22px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(0,0,0,0.6)
+  );
+  border: 1px solid rgba(212,167,61,0.35);
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.luxury-cta-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  padding:16px 18px;
+  margin-bottom:14px;
+  border-radius:999px;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  letter-spacing:0.4px;
+  transition:all .25s ease;
+}
+
+/* Hotline */
+.luxury-cta-btn.call{
+  background: linear-gradient(90deg,#f7d77a,#d4a73d);
+  color:#111;
+  box-shadow:0 0 30px rgba(212,167,61,.35);
+}
+
+.luxury-cta-btn.call:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 45px rgba(212,167,61,.55);
+}
+
+/* Zalo */
+.luxury-cta-btn.zalo{
+  background: linear-gradient(90deg,#0f5fff,#0aa2ff);
+  color:#fff;
+  box-shadow:0 0 28px rgba(10,162,255,.35);
+}
+
+.luxury-cta-btn.zalo:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 45px rgba(10,162,255,.55);
+}
