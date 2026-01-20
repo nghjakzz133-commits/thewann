@@ -1288,3 +1288,54 @@ text-shadow:
 0 0 30px rgba(212,167,61,0.6),
 0 0 60px rgba(212,167,61,0.45) !important;
 }
+/* ===== FIX HIỂN THỊ THANH NÚT DƯỚI ===== */
+.bottom-bar{
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 99999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.bottom-bar a{
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+
+  color: #e8e8e8;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.bottom-bar a:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+.bottom-bar .icon{
+  font-size: 16px;
+}
+
+body{
+  padding-bottom: 90px;
+}
