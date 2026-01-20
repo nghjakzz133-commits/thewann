@@ -2,12 +2,14 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Booking – The WANN</title>
+  <title>Booking – THE WANN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="booking-page">
 
+<!-- ================= HEADER / HERO ================= -->
 <header class="hero hero-about">
   <div class="hero-content">
     <h1>BOOKING</h1>
@@ -15,7 +17,7 @@
   </div>
 </header>
 
-
+<!-- ================= QUICK INFO ================= -->
 <div class="booking-info">
   <ul>
     <li>✔ Xác nhận nhanh trong 5–10 phút</li>
@@ -24,15 +26,16 @@
     <li>✔ Tư vấn trực tiếp qua Zalo / Hotline</li>
   </ul>
 </div>
-</header>
 
+<!-- ================= BOOKING CONTENT ================= -->
 <section class="booking-section">
   <div class="booking-content">
+
     <h2>Đặt bàn <span>VIP</span> tại THE WANN</h2>
 
     <p>
       THE WANN cung cấp dịch vụ đặt bàn VIP nhanh chóng, riêng tư và chuyên nghiệp
-      dành cho khách cá nhân, nhóm bạn, sinh nhật và sự kiện đặc biệt.
+      dành cho khách cá nhân, nhóm bạn, sinh nhật và các sự kiện đặc biệt.
     </p>
 
     <ul class="booking-list">
@@ -44,44 +47,29 @@
 
     <p>
       Để đảm bảo trải nghiệm tốt nhất, THE WANN khuyến khích khách hàng
-      liên hệ trực tiếp với bộ phận booking để được tư vấn chi tiết.
+      liên hệ trực tiếp với bộ phận booking để được tư vấn chi tiết và giữ chỗ sớm.
     </p>
 
+    <!-- ================= CTA BUTTONS ================= -->
     <div class="booking-cta">
-      <a href="tel:0778307889" class="cta-btn call">📞 Gọi Hotline</a>
-      <a href="https://zalo.me/0778307889" target="_blank" class="cta-btn zalo">💬 Chat Zalo</a>
+      <a href="tel:0899996977" class="cta-btn call">
+        📞 Gọi Hotline
+      </a>
+
+      <a href="https://zalo.me/0899996977" target="_blank" class="cta-btn zalo">
+        💬 Chat Zalo
+      </a>
     </div>
 
     <p class="booking-note">
-      Hotline / Zalo: <strong>0778 307 889</strong> <br>
+      Hotline / Zalo: <strong>0899 996 977</strong><br>
       Thời gian hoạt động: 19:00 – 04:00 hằng ngày
     </p>
+
   </div>
 </section>
 
-<script>
-  document.getElementById("bookingForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.querySelector('input[name="name"]').value.trim();
-    const phone = document.querySelector('input[name="phone"]').value.trim();
-    const time = document.querySelector('input[name="time"]').value.trim();
-    const note = document.querySelector('textarea[name="note"]').value.trim();
-
-    const message =
-`📌 YÊU CẦU ĐẶT BÀN - THE WANN
-👤 Họ tên: ${name}
-📞 SĐT: ${phone}
-🕘 Ngày & giờ: ${time}
-📝 Yêu cầu thêm: ${note || "Không có"}`;
-
-    const zaloNumber = "0899996977";
-    const zaloLink = `https://zalo.me/${zaloNumber}?text=${encodeURIComponent(message)}`;
-
-    window.open(zaloLink, "_blank");
-  });
-</script>
-
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>Hotline / Zalo: 0899 996 977</p>
 </footer>
