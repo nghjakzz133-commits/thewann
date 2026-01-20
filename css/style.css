@@ -704,3 +704,65 @@ header, .header, .navbar{
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.12);
 }
+/* ===== BOOKING CTA LUXURY ===== */
+.booking-cta{
+  max-width:520px;
+  margin:40px auto 0;
+  padding:40px 28px;
+  background:radial-gradient(circle at top,#1a1a1a,#000);
+  border-radius:22px;
+  border:1px solid rgba(255,215,0,.25);
+  text-align:center;
+  box-shadow:0 40px 90px rgba(0,0,0,.9);
+}
+
+.booking-cta h2{
+  font-size:28px;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.booking-cta h2 span{
+  color:gold;
+}
+
+.booking-cta p{
+  font-size:15px;
+  opacity:.9;
+  margin-bottom:28px;
+}
+
+.cta-btn{
+  display:block;
+  width:100%;
+  padding:18px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  margin-bottom:16px;
+  font-size:16px;
+}
+
+.cta-btn.call{
+  background:linear-gradient(135deg,#ffb400,#ffdd88);
+  color:#000;
+}
+
+.cta-btn.zalo{
+  background:linear-gradient(135deg,#0068ff,#00a2ff);
+  color:#fff;
+}
+
+.cta-note{
+  margin-top:10px;
+  font-size:13px;
+  opacity:.7;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .booking-cta{
+    margin:24px 16px;
+    padding:32px 20px;
+  }
+}
