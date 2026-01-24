@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>THE WANN | Giới Thiệu</title>
+
+  <!-- SEO -->
+  <meta name="description" content="THE WANN – Nền tảng booking nightlife cao cấp tại TP.HCM. Đặt bàn club, lounge, bar nhanh chóng, giữ vị trí đẹp, dịch vụ VIP.">
+  <meta name="keywords" content="booking club, nightlife hcm, đặt bàn bar, lounge vip, the wann">
+  <meta property="og:title" content="THE WANN | Booking Nightlife Cao Cấp">
+  <meta property="og:description" content="Trải nghiệm nightlife sang trọng – nhanh – chuẩn vibe tại TP.HCM">
+  <meta property="og:image" content="assets/images/og.jpg">
 
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
+    body{ padding-bottom:70px; }
+
+    /* HERO */
     .about-hero{
       position: relative;
       height: 62vh;
@@ -88,11 +99,11 @@
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(0,0,0,0.35);
       color: #fff;
-      transition: .2s ease;
+      transition: .25s ease;
     }
 
     .about-btn:hover{
-      transform: translateY(-1px);
+      transform: translateY(-2px);
       box-shadow: 0 0 22px rgba(0,0,0,0.6);
     }
 
@@ -101,6 +112,13 @@
       color: #111;
       border: none;
       box-shadow: 0 0 28px rgba(212,167,61,0.22);
+      animation: pulse 2.4s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212,167,61,.55); }
+      70% { box-shadow: 0 0 0 16px rgba(212,167,61,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,167,61,0); }
     }
 
     /* CONTENT */
@@ -108,6 +126,15 @@
       padding: 38px 16px 110px;
       max-width: 1100px;
       margin: 0 auto;
+    }
+
+    .about-box{
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 22px;
+      padding: 20px 18px;
+      box-shadow: 0 0 35px rgba(0,0,0,0.55);
+      backdrop-filter: blur(8px);
     }
 
     .about-title{
@@ -131,39 +158,30 @@
       font-size: 15px;
     }
 
-    .about-box{
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 22px;
-      padding: 18px 16px;
-      box-shadow: 0 0 35px rgba(0,0,0,0.55);
-      backdrop-filter: blur(8px);
-    }
-
     .about-grid{
       display:grid;
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 14px;
       margin-top: 14px;
-    }
-
-    @media(min-width: 900px){
-      .about-grid{ grid-template-columns: repeat(3,1fr); }
-      .about-hero h1{ font-size: 50px; }
     }
 
     .about-card{
       border-radius: 18px;
-      padding: 16px 16px;
+      padding: 16px;
       background: rgba(0,0,0,0.35);
       border: 1px solid rgba(212,167,61,0.18);
+      transition: .25s ease;
+    }
+
+    .about-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 0 28px rgba(212,167,61,0.35);
     }
 
     .about-card h3{
       margin: 0 0 8px;
       color: #fff;
       font-weight: 900;
-      letter-spacing: 0.4px;
       font-size: 16px;
     }
 
@@ -174,9 +192,8 @@
       font-size: 14px;
     }
 
-    /* mini highlight */
     .about-highlight{
-      margin-top: 14px;
+      margin-top: 16px;
       display:flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -189,7 +206,11 @@
       border: 1px solid rgba(255,255,255,0.10);
       color: rgba(255,255,255,0.9);
       font-size: 13px;
-      letter-spacing: .3px;
+    }
+
+    @media(min-width:900px){
+      .about-grid{ grid-template-columns: repeat(3,1fr); }
+      .about-hero h1{ font-size: 52px; }
     }
   </style>
 </head>
@@ -199,7 +220,7 @@
 <!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
-    <h1 class="logo">THE WANN</h1>
+    <div class="logo">THE WANN</div>
     <img src="assets/images/logo.png" alt="The WANN Logo" class="header-logo">
     <nav class="navbar">
       <a href="index.html">Trang Chủ</a>
@@ -213,7 +234,7 @@
 
 <!-- HERO -->
 <section class="about-hero">
-  <video autoplay muted loop playsinline preload="auto">
+  <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg">
     <source src="assets/videos/hero.mp4" type="video/mp4">
   </video>
 
@@ -233,28 +254,31 @@
 <section class="about-main">
   <div class="about-box">
     <h2 class="about-title">Tại sao chọn <span>THE WANN</span>?</h2>
+
     <p class="about-desc">
-      THE WANN là nền tảng booking nightlife cao cấp, chuyên kết nối khách hàng với club, lounge, bar
-      và các sự kiện giải trí đẳng cấp. Tụi mình tập trung vào trải nghiệm sang – nhanh – chuẩn vibe,
-      giúp khách có bàn đẹp và được phục vụ chuyên nghiệp.
+      THE WANN là nền tảng booking nightlife cao cấp, kết nối khách hàng với club, lounge, bar
+      và các sự kiện giải trí đẳng cấp tại TP.HCM.
     </p>
 
     <div class="about-grid">
       <div class="about-card">
         <h3>✅ Xác nhận nhanh</h3>
-        <p>Nhận phản hồi nhanh qua Hotline/Zalo, hỗ trợ đặt bàn liền.</p>
+        <p>Phản hồi nhanh qua Hotline & Zalo, giữ bàn liền.</p>
       </div>
-
       <div class="about-card">
-        <h3>⭐ Giữ vị trí đẹp</h3>
-        <p>Ưu tiên bàn đẹp, phù hợp nhóm bạn / sinh nhật / khách VIP.</p>
+        <h3>⭐ Bàn đẹp – vị trí xịn</h3>
+        <p>Ưu tiên bàn đẹp cho nhóm bạn, sinh nhật, khách VIP.</p>
       </div>
-
       <div class="about-card">
-        <h3>🔥 Vibe chuẩn nightlife</h3>
-        <p>Không khí sang, âm nhạc chất, trải nghiệm đáng nhớ mỗi đêm.</p>
+        <h3>🔥 Chuẩn vibe nightlife</h3>
+        <p>Không gian sang – nhạc chất – trải nghiệm đáng nhớ.</p>
       </div>
     </div>
+
+    <p class="about-desc" style="margin-top:16px">
+      Hơn <strong>500+ lượt booking mỗi tháng</strong>, hợp tác cùng nhiều club & lounge hàng đầu.
+      THE WANN không chỉ đặt bàn – tụi mình đặt trải nghiệm.
+    </p>
 
     <div class="about-highlight">
       <div class="pill">🎉 Sinh nhật / Event</div>
@@ -267,25 +291,15 @@
 
 <!-- BOTTOM BAR -->
 <div class="bottom-bar">
-  <a href="https://maps.google.com/?q=Ho+Chi+Minh+City" target="_blank">
-    <span class="icon">📍</span>
-    <span>Bản đồ</span>
-  </a>
+  <a href="https://maps.google.com/?q=Ho+Chi+Minh+City" target="_blank">📍 Bản đồ</a>
+  <a href="https://zalo.me/0899996977" target="_blank">💬 Zalo</a>
+  <a href="tel:0899996977" class="hotline">📞 Hotline</a>
+  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">📘 Facebook</a>
+</div>
 
-  <a href="https://zalo.me/0899996977" target="_blank">
-    <span class="icon">💬</span>
-    <span>Zalo</span>
-  </a>
+</body>
+</html>
 
-  <a href="tel:0899996977" class="hotline">
-    <span class="icon">📞</span>
-    <span>Hotline</span>
-  </a>
-
-  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">
-    <span class="icon">📘</span>
-    <span>Facebook</span>
-  </a>
 </div>
 
 </body>
