@@ -1,179 +1,247 @@
 /* =========================================================
-   MENU PAGE — THE WANN
-   Standalone CSS (NO style.css)
+   THE WANN — MENU PAGE (FULL STANDALONE CSS)
 ========================================================= */
 
-/* ===== RESET + BASE ===== */
-*,
-*::before,
-*::after{
-  box-sizing: border-box;
+/* ================= RESET ================= */
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family: "Montserrat","Poppins",system-ui,-apple-system,Arial,sans-serif;
-  background:#000;
-  color: rgba(255,255,255,0.88);
-
-  padding-top: 96px;
-  padding-bottom: 120px;
+html, body{
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
-img{
-  max-width: 100%;
-  display: block;
-}
-
-/* ===== THEME ===== */
+/* ================= VARIABLES ================= */
 :root{
-  --gold: #d4af37;
+  --gold: #d4a73d;
   --gold2: #f7d77a;
+  --dark: #000;
+  --dark2: #0c0c0c;
+  --glass: rgba(255,255,255,0.04);
+
   --radius: 18px;
-  --radius2: 22px;
+  --radius-lg: 26px;
   --pill: 999px;
 }
 
-/* ===== HEADER (GIỮ NGUYÊN CẤU TRÚC) ===== */
+/* ================= HEADER ================= */
 .header{
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: linear-gradient(to bottom, rgba(0,0,0,.95), rgba(0,0,0,.7));
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  z-index: 1000;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .header-inner{
-  padding: 14px 20px 10px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo{
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
+.header-logo{
+  height: 34px;
+  margin-left: 10px;
+}
+
+/* ================= NAVBAR ================= */
 .navbar{
   display: flex;
-  gap: 8px;
-  margin-top: 8px;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.navbar a{
-  font-size: 13px;
-  font-weight: 900;
-  padding: 8px 12px;
-  border-radius: var(--pill);
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.06);
-}
-
-/* Ẩn logo ảnh nếu menu không cần */
-.header-logo{
-  display:none;
-}
-
-/* ===== MENU HERO ===== */
-.menu-hero{
-  text-align: center;
-  padding: 40px 16px 20px;
-}
-
-.menu-hero h1{
-  font-size: 34px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.menu-hero p{
-  margin-top: 6px;
-  font-size: 15px;
-  color: rgba(255,255,255,.7);
-}
-
-/* ===== MENU SECTION ===== */
-.menu-section{
-  padding: 30px 16px 10px;
-}
-
-.menu-grid{
-  max-width: 900px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
   gap: 14px;
 }
 
-.menu-grid img{
+.navbar a{
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: var(--pill);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: .25s ease;
+}
+
+.navbar a:hover{
+  color: #000;
+  background: linear-gradient(90deg,var(--gold2),var(--gold));
+}
+
+.navbar a.active{
+  color: #000;
+  background: linear-gradient(90deg,var(--gold2),var(--gold));
+  font-weight: 800;
+}
+
+/* ================= MENU MAIN ================= */
+.menu-main{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px 120px;
+}
+
+/* ================= HERO ================= */
+.menu-hero{
+  text-align: center;
+  padding: 60px 16px 50px;
+  margin-bottom: 40px;
+  background:
+    radial-gradient(circle at center, rgba(212,167,61,0.12), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+  border-radius: var(--radius-lg);
+}
+
+.menu-hero h1{
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.menu-hero p{
+  margin-top: 8px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ================= CTA ================= */
+.menu-cta{
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.menu-btn{
+  padding: 14px 26px;
+  border-radius: var(--pill);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: .25s ease;
+}
+
+.menu-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(0,0,0,0.6);
+}
+
+.menu-btn.primary{
+  background: linear-gradient(90deg,var(--gold2),var(--gold));
+  color: #111;
+  border: none;
+  box-shadow: 0 0 28px rgba(212,167,61,0.3);
+}
+
+/* ================= MENU CONTENT ================= */
+.menu-section{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.menu-title{
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.menu-desc{
+  margin: 10px auto 26px;
+  max-width: 720px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.8;
+}
+
+/* ================= MENU GRID ================= */
+.menu-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 18px;
+}
+
+.menu-item{
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: .35s ease;
+}
+
+.menu-item:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 35px rgba(212,167,61,0.35);
+}
+
+.menu-item img{
   width: 100%;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 16px 40px rgba(0,0,0,.55);
-  transition: .3s ease;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
-.menu-grid img:hover{
-  transform: scale(1.03);
-}
-
-/* ===== BOTTOM BAR ===== */
+/* ================= BOTTOM BAR ================= */
 .bottom-bar{
   position: fixed;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
-  z-index: 99999;
-
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-
-  padding: 10px 14px;
-  border-radius: var(--pill);
-
-  background: rgba(0,0,0,.75);
-  border: 1px solid rgba(255,255,255,.08);
+  justify-content: space-around;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .bottom-bar a{
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+  padding: 12px 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+}
 
-  padding: 10px 8px;
-  border-radius: var(--pill);
-  font-weight: 900;
-  background: rgba(255,255,255,.06);
+.bottom-bar .icon{
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
 }
 
 .bottom-bar a.hotline{
-  flex: 0 0 auto;
-  width: 64px;
-  height: 64px;
-  padding: 0;
-  background: linear-gradient(180deg, var(--gold2), var(--gold));
+  background: linear-gradient(90deg,var(--gold2),var(--gold));
   color: #111;
+  font-weight: 900;
 }
 
-.bottom-bar a.hotline span:last-child{
-  display:none;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  .menu-grid{
-    grid-template-columns: 1fr;
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px){
+  .navbar{
+    display: none;
   }
 
   .menu-hero h1{
-    font-size: 26px;
+    font-size: 34px;
   }
 }
