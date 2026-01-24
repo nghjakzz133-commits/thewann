@@ -1,0 +1,179 @@
+/* =========================================================
+   MENU PAGE — THE WANN
+   Standalone CSS (NO style.css)
+========================================================= */
+
+/* ===== RESET + BASE ===== */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Montserrat","Poppins",system-ui,-apple-system,Arial,sans-serif;
+  background:#000;
+  color: rgba(255,255,255,0.88);
+
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== THEME ===== */
+:root{
+  --gold: #d4af37;
+  --gold2: #f7d77a;
+  --radius: 18px;
+  --radius2: 22px;
+  --pill: 999px;
+}
+
+/* ===== HEADER (GIỮ NGUYÊN CẤU TRÚC) ===== */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: linear-gradient(to bottom, rgba(0,0,0,.95), rgba(0,0,0,.7));
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.header-inner{
+  padding: 14px 20px 10px;
+}
+
+.logo{
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.navbar{
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.navbar a{
+  font-size: 13px;
+  font-weight: 900;
+  padding: 8px 12px;
+  border-radius: var(--pill);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+/* Ẩn logo ảnh nếu menu không cần */
+.header-logo{
+  display:none;
+}
+
+/* ===== MENU HERO ===== */
+.menu-hero{
+  text-align: center;
+  padding: 40px 16px 20px;
+}
+
+.menu-hero h1{
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.menu-hero p{
+  margin-top: 6px;
+  font-size: 15px;
+  color: rgba(255,255,255,.7);
+}
+
+/* ===== MENU SECTION ===== */
+.menu-section{
+  padding: 30px 16px 10px;
+}
+
+.menu-grid{
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+}
+
+.menu-grid img{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 16px 40px rgba(0,0,0,.55);
+  transition: .3s ease;
+}
+
+.menu-grid img:hover{
+  transform: scale(1.03);
+}
+
+/* ===== BOTTOM BAR ===== */
+.bottom-bar{
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 99999;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 10px 14px;
+  border-radius: var(--pill);
+
+  background: rgba(0,0,0,.75);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.bottom-bar a{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px 8px;
+  border-radius: var(--pill);
+  font-weight: 900;
+  background: rgba(255,255,255,.06);
+}
+
+.bottom-bar a.hotline{
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  background: linear-gradient(180deg, var(--gold2), var(--gold));
+  color: #111;
+}
+
+.bottom-bar a.hotline span:last-child{
+  display:none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .menu-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .menu-hero h1{
+    font-size: 26px;
+  }
+}
