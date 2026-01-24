@@ -353,3 +353,95 @@ body{
     width: 100%;
   }
 }
+/* =========================================================
+   ENTERPRISE OPTIMIZATION
+   Goal:
+   - Doanh nghiệp rõ ràng
+   - Tin cậy – dễ đọc – premium
+   - Không phá nightlife vibe
+========================================================= */
+
+/* ===== GLOBAL REFINEMENT ===== */
+body{
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===== HERO REFINEMENT ===== */
+.hero-contact{
+  display: flex;
+  align-items: center;
+}
+
+.hero-contact .hero-content{
+  padding-left: clamp(16px, 6vw, 120px);
+}
+
+.hero-contact h1{
+  font-weight: 700;
+}
+
+.hero-contact p{
+  max-width: 520px;
+}
+
+/* ===== CONTACT CARD STRUCTURE ===== */
+.contact-card{
+  position: relative;
+}
+
+.contact-card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.00)
+  );
+}
+
+/* ===== TYPOGRAPHY HIERARCHY ===== */
+.contact-card h2{
+  font-weight: 600;
+}
+
+.contact-sub{
+  line-height: 1.7;
+}
+
+/* label */
+.contact-item strong{
+  font-weight: 600;
+}
+
+/* content */
+.contact-item p{
+  font-weight: 400;
+}
+
+/* ===== LINK TRUST STYLE ===== */
+.contact-item a{
+  font-weight: 500;
+}
+
+/* ===== CTA — DOANH NGHIỆP ===== */
+.contact-actions .btn{
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.contact-actions .btn-outline{
+  backdrop-filter: blur(4px);
+}
+
+/* ===== FOOTER ENTERPRISE ===== */
+footer{
+  padding: 24px 12px 40px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}
