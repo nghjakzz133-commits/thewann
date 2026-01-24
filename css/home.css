@@ -919,3 +919,60 @@ body{
     letter-spacing: 0.28em;
   }
 }
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0)
+  );
+  backdrop-filter: blur(6px);
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at center,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.85)
+    );
+  z-index:1;
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+.hero-content h1{
+  font-size: clamp(44px, 6vw, 96px);
+  font-weight: 700;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 40px rgba(0,0,0,0.9),
+    0 0 80px rgba(0,0,0,0.8);
+}
+.hero-content p{
+  margin-top: 20px;
+  letter-spacing: 0.35em;
+  font-size: 14px;
+  opacity: 0.75;
+}
+.hero-cta{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 14px 34px;
+  letter-spacing: 0.2em;
+  backdrop-filter: blur(10px);
+}
+.hero-cta.secondary{
+  background: rgba(255,255,255,0.08);
+}
+.hero-cta:hover{
+  background: rgba(255,255,255,0.18);
+}
