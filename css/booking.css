@@ -205,3 +205,15 @@
   opacity: 1;
   transform: translateY(0);
 }
+.booking-card {
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+}
+.cta-btn.zalo:hover {
+  background: rgba(212,175,55,0.15);
+  box-shadow: 0 0 20px rgba(212,175,55,.3);
+}
+@media (max-width: 768px) {
+  .booking-cta {
+    flex-direction: column;
+  }
+}
