@@ -554,3 +554,27 @@ body{
     box-shadow: 0 18px 50px rgba(0,0,0,0.6);
   }
 }
+/* =========================================
+   MOBILE PREVIEW VIDEO – LANDSCAPE FIX
+========================================= */
+@media (max-width: 768px){
+
+  .preview-track{
+    animation: none;                  /* ❌ tắt auto scroll */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 16px 16px;
+    gap: 14px;
+  }
+
+  .preview-track video{
+    width: 88vw;                      /* gần full ngang */
+    aspect-ratio: 16 / 9;             /* ✅ ép video nằm ngang */
+    height: auto;
+    max-height: 260px;
+    scroll-snap-align: center;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+  }
+}
