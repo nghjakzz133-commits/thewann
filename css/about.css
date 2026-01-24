@@ -290,3 +290,6 @@ html,body{
   .about-grid{grid-template-columns:repeat(3,1fr);}
   .about-hero h1{font-size:52px;}
 }
+.header-logo{
+  display: none !important;
+}
