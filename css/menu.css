@@ -240,6 +240,24 @@ html, body{
   .navbar{
     display: none;
   }
+/* ===== DESKTOP LOGO FIX ===== */
+@media (min-width: 992px) {
+
+  .header{
+    position: relative;
+  }
+
+  .header-logo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 48px;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+}
 
   .menu-hero h1{
     font-size: 34px;
