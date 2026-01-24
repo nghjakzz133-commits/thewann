@@ -827,3 +827,54 @@ body{
     opacity: 0.85;
   }
 }
+/* ===== EXPERIENCE / ABOUT SECTION ===== */
+.experience-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 32px;
+}
+
+/* Title lớn */
+.experience-section h2 {
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+/* Sub title / headline */
+.experience-section .headline {
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+/* Nội dung chính */
+.experience-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 720px;
+  margin-bottom: 20px;
+  opacity: 0.75;
+}
+
+/* Divider mờ */
+.experience-divider {
+  width: 80px;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 48px 0;
+}
+
+/* Keywords */
+.experience-tags {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
