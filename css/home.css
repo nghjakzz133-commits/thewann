@@ -529,3 +529,28 @@ body{
   will-change: transform;
   backface-visibility: hidden;
 }
+/* =========================================
+   MOBILE VIDEO PREVIEW – FIX UGLY ISSUE
+========================================= */
+@media (max-width: 768px){
+
+  .hero-preview{
+    margin-top: 24px;
+  }
+
+  .preview-track{
+    animation: none;                 /* ❌ tắt auto scroll */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 16px 12px;
+  }
+
+  .preview-track video{
+    width: 86vw;                     /* ✅ gần full màn hình */
+    height: 60vh;                    /* ✅ xem đã mắt */
+    max-height: 520px;
+    scroll-snap-align: center;
+    border-radius: 22px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.6);
+  }
+}
