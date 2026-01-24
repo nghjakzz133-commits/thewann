@@ -309,3 +309,133 @@ footer{
   .hero-content h1{ font-size:28px; }
   .gallery-item{ min-width:240px; height:360px; }
 }
+/* =========================================================
+   HOME LUXURY UI UPGRADE
+   Safe: CSS-only, no layout break, mobile-friendly
+========================================================= */
+
+/* ===== TEXT SHARPEN (ANTI-BỆT CHỮ iOS) ===== */
+body{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===== HERO LIGHTING (CINEMA DEPTH) ===== */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(255,215,120,0.12), transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06), transparent 50%);
+  z-index:1;
+  pointer-events:none;
+}
+
+/* ===== CTA GOLD SHINE (PREMIUM, KHÔNG LỐ) ===== */
+.hero-cta{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-cta::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.35),
+    transparent 70%
+  );
+  opacity:0;
+  transform: translateX(-120%);
+}
+
+.hero-cta:hover::after{
+  opacity:1;
+  transform: translateX(120%);
+  transition: transform .9s ease, opacity .4s ease;
+}
+
+/* ===== HERO INFO BAR FLOAT (VIP FEEL) ===== */
+.hero-info-bar{
+  animation: infoFloat 6s ease-in-out infinite;
+}
+
+@keyframes infoFloat{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-6px); }
+}
+
+/* ===== GALLERY DEPTH + HOVER LUXURY ===== */
+.gallery-item{
+  position:relative;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.gallery-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(0,0,0,0.65)
+  );
+  opacity:.85;
+  pointer-events:none;
+}
+
+.gallery-item:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 26px 65px rgba(0,0,0,0.75);
+}
+
+/* ===== EXPERIENCE CARD – VIP CARD EFFECT ===== */
+.experience-item{
+  position:relative;
+  overflow:hidden;
+  transition: transform .35s ease;
+}
+
+.experience-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(212,175,55,0.22),
+    transparent 45%
+  );
+  opacity:0;
+  pointer-events:none;
+}
+
+.experience-item:hover::before{
+  opacity:1;
+  transition:.35s ease;
+}
+
+.experience-item:hover{
+  transform: translateY(-6px);
+}
+
+/* ===== BOTTOM BAR – SOFT GOLD GLOW ===== */
+.bottom-bar{
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.55),
+    0 0 18px rgba(212,175,55,0.15);
+}
+
+/* ===== SAFETY: DISABLE HEAVY EFFECT ON MOBILE ===== */
+@media (max-width: 768px){
+  .hero-info-bar{
+    animation: none;
+  }
+
+  .gallery-item:hover,
+  .experience-item:hover{
+    transform: none;
+  }
+}
