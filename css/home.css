@@ -878,3 +878,44 @@ body{
   text-transform: uppercase;
   opacity: 0.6;
 }
+/* =========================
+   HEADER BRAND – THE WANN
+========================= */
+.brand-logo{
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  letter-spacing: 0.28em;
+}
+
+.brand-the{
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.55;
+}
+
+.brand-wann{
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #e8d9a0 40%,
+    #ffffff 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 18px rgba(232,217,160,0.25),
+    0 0 40px rgba(0,0,0,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .brand-wann{
+    font-size: 22px;
+    letter-spacing: 0.28em;
+  }
+}
