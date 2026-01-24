@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>THE WANN | Thực Đơn</title>
-  <link rel="stylesheet" href="css/menu.css">
 
+  <!-- MENU CSS RIÊNG -->
+  <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="header">
   <div class="container header-inner">
     <h1 class="logo">THE WANN</h1>
@@ -18,44 +20,42 @@
       <a href="index.html">Trang Chủ</a>
       <a href="about.html">Giới Thiệu</a>
       <a href="gallery.html">Thư Viện</a>
-      <a href="menu.html">Thực Đơn</a>
+      <a href="menu.html" class="active">Thực Đơn</a>
       <a href="booking.html">Đặt Bàn</a>
       <a href="contact.html">Liên Hệ</a>
     </nav>
   </div>
 </header>
 
-<section id="menu" class="menu-section">
-  <h2 class="menu-title">THỰC ĐƠN</h2>
+<!-- ================= MENU MAIN ================= -->
+<main class="menu-main">
 
-  <div id="menuGrid" class="menu-grid"></div>
-</section>
+  <!-- HERO -->
+  <section class="menu-hero">
+    <h1>THỰC ĐƠN THE WANN</h1>
+    <p>Luxury Nightlife · Premium Menu · VIP Experience</p>
 
-<script>
-  const menuGrid = document.getElementById("menuGrid");
+    <div class="menu-cta">
+      <a href="tel:0899996977" class="menu-btn primary">📞 Gọi đặt bàn</a>
+      <a href="https://zalo.me/0899996977" target="_blank" class="menu-btn">💬 Nhắn Zalo</a>
+    </div>
+  </section>
 
-  // ✅ đổi số này đúng với ảnh cuối của mày
-  const start = 7734;
-  const end = 7802;
+  <!-- MENU CONTENT -->
+  <section class="menu-section">
+    <h2 class="menu-title">MENU & COMBO</h2>
+    <p class="menu-desc">
+      Danh sách combo – rượu – món ăn cao cấp, phục vụ cho nhóm bạn, sinh nhật và khách VIP.
+    </p>
 
-  for (let i = start; i <= end; i++) {
-    const file = `IMG_${i}.jpeg`;
-    const src = `./assets/images/menu/${file}`;
+    <div id="menuGrid" class="menu-grid">
+      <!-- JS sẽ inject ảnh menu vào đây -->
+    </div>
+  </section>
 
-    const a = document.createElement("a");
-    a.href = src;
-    a.target = "_blank";
+</main>
 
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = file;
-    img.loading = "lazy";
-
-    a.appendChild(img);
-    menuGrid.appendChild(a);
-  }
-</script>
-
+<!-- ================= BOTTOM BAR ================= -->
 <div class="bottom-bar">
   <a href="https://maps.google.com/?q=Ho+Chi+Minh+City" target="_blank">
     <span class="icon">📍</span>
@@ -77,6 +77,36 @@
     <span>Facebook</span>
   </a>
 </div>
+
+<!-- ================= MENU JS ================= -->
+<script>
+  const menuGrid = document.getElementById("menuGrid");
+
+  // 👉 chỉnh đúng số ảnh menu của m
+  const start = 7734;
+  const end = 7802;
+
+  for (let i = start; i <= end; i++) {
+    const file = `IMG_${i}.jpeg`;
+    const src = `assets/images/menu/${file}`;
+
+    const item = document.createElement("div");
+    item.className = "menu-item";
+
+    const link = document.createElement("a");
+    link.href = src;
+    link.target = "_blank";
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = file;
+    img.loading = "lazy";
+
+    link.appendChild(img);
+    item.appendChild(link);
+    menuGrid.appendChild(item);
+  }
+</script>
 
 </body>
 </html>
