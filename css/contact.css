@@ -203,3 +203,12 @@
     margin-top: 18px;
   }
 }
+.pulse{
+  animation: pulseGold 1.2s ease;
+}
+
+@keyframes pulseGold{
+  0%{ box-shadow: 0 0 0 rgba(212,175,55,0.0); }
+  50%{ box-shadow: 0 0 24px rgba(212,175,55,0.55); }
+  100%{ box-shadow: 0 0 0 rgba(212,175,55,0.0); }
+}
