@@ -1,9 +1,9 @@
 /* =====================================================
-   THE WANN – HOME PAGE (FINAL LUXURY BUILD)
-   Compatible 100% with current HTML
+   THE WANN – HOME PAGE (PRODUCTION / LUXURY)
+   Match 100% current HTML – Optimized for Lighthouse
 ===================================================== */
 
-/* ================= RESET / BASE ================= */
+/* ================= RESET ================= */
 *,
 *::before,
 *::after{ box-sizing:border-box }
@@ -38,8 +38,7 @@ body{
   top:0; left:0;
   width:100%;
   z-index:999;
-  background:
-    linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.55));
+  background:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.55));
   backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
@@ -53,7 +52,6 @@ body{
   justify-content:space-between;
 }
 
-/* Brand */
 .brand{
   display:flex;
   align-items:baseline;
@@ -75,7 +73,6 @@ body{
   text-shadow:0 0 30px rgba(212,175,55,.25);
 }
 
-/* Logo img */
 .header-logo{
   width:48px;
   filter:drop-shadow(0 8px 18px rgba(0,0,0,.6));
@@ -214,7 +211,7 @@ body{
   font-weight:800;
 }
 
-/* Preview */
+/* Preview videos */
 .hero-preview{
   margin-top:32px;
   overflow:hidden;
@@ -223,7 +220,6 @@ body{
 .preview-track{
   display:flex;
   gap:18px;
-  animation:scroll 28s linear infinite;
 }
 
 .preview-track video{
@@ -232,10 +228,6 @@ body{
   object-fit:cover;
   border-radius:18px;
   box-shadow:0 20px 50px rgba(0,0,0,.6);
-}
-
-@keyframes scroll{
-  to{ transform:translateX(-50%) }
 }
 
 /* ================= GALLERY ================= */
@@ -325,7 +317,6 @@ body{
 /* ================= MOBILE ================= */
 @media(max-width:768px){
   .preview-track{
-    animation:none;
     overflow-x:auto;
   }
   .preview-track video{
