@@ -1,95 +1,105 @@
-/* =========================================================
-   HOME PAGE – THE WANN
-   Only for: index.html
-========================================================= */
+/* =====================================================
+   THE WANN – HOME PAGE (FINAL LUXURY BUILD)
+   Compatible 100% with current HTML
+===================================================== */
 
-/* ================= RESET + BASE ================= */
+/* ================= RESET / BASE ================= */
 *,
 *::before,
-*::after{ box-sizing: border-box; }
+*::after{ box-sizing:border-box }
 
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior:smooth }
 
 body{
-  margin: 0;
-  font-family: "Montserrat","Poppins",system-ui,-apple-system,Arial,sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
-  color: rgba(255,255,255,0.88);
-
-  padding-top: calc(96px + env(safe-area-inset-top));
-  padding-bottom: calc(120px + env(safe-area-inset-bottom));
-
-  background:
-    radial-gradient(circle at 20% 0%, rgba(212,175,55,0.08), transparent 42%),
-    radial-gradient(circle at 90% 35%, rgba(247,215,122,0.05), transparent 55%),
-    radial-gradient(circle at 40% 120%, rgba(255,255,255,0.02), transparent 50%),
-    #000;
+  margin:0;
+  font-family:"Montserrat","Poppins",system-ui,sans-serif;
+  color:rgba(255,255,255,.9);
+  background:#000;
+  line-height:1.6;
+  overflow-x:hidden;
+  padding-top:96px;
+  padding-bottom:120px;
+  -webkit-font-smoothing:antialiased;
 }
-
-img,video{ max-width:100%; display:block; }
-
-a{ text-decoration:none; color:inherit; transition:.25s ease; }
 
 /* ================= THEME ================= */
 :root{
   --gold:#d4af37;
-  --gold2:#f7d77a;
-  --panel:rgba(15,15,18,.92);
-  --text:rgba(255,255,255,.9);
-  --muted:rgba(255,255,255,.62);
+  --gold-soft:#f7d77a;
+  --glass:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.12);
   --radius:18px;
-  --radius2:22px;
   --pill:999px;
 }
 
 /* ================= HEADER ================= */
-.header{
+.site-header{
   position:fixed;
-  inset:0 auto auto 0;
+  top:0; left:0;
   width:100%;
-  z-index:9999;
-  background:linear-gradient(to bottom,rgba(0,0,0,.96),rgba(0,0,0,.72));
+  z-index:999;
+  background:
+    linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.55));
+  backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.header-inner{ padding:14px 20px 10px; position:relative; }
-
-.logo{
-  font-size:24px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.header-logo{
-  position:absolute;
-  top:14px;
-  right:16px;
-  width:44px;
-  filter:drop-shadow(0 6px 18px rgba(0,0,0,.7));
-}
-
-.navbar{
+.header-inner{
+  max-width:1280px;
+  margin:auto;
+  padding:14px 20px;
   display:flex;
-  gap:8px;
-  margin-top:8px;
-  overflow-x:auto;
-  white-space:nowrap;
+  align-items:center;
+  justify-content:space-between;
 }
 
-.navbar::-webkit-scrollbar{ display:none; }
+/* Brand */
+.brand{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  letter-spacing:.35em;
+}
 
-.navbar a{
+.brand-the{
+  font-size:12px;
+  opacity:.55;
+}
+
+.brand-wann{
+  font-size:26px;
+  font-weight:800;
+  background:linear-gradient(90deg,#fff,var(--gold-soft),#fff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 30px rgba(212,175,55,.25);
+}
+
+/* Logo img */
+.header-logo{
+  width:48px;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.6));
+}
+
+/* Nav */
+.main-nav .nav-list{
+  display:flex;
+  gap:10px;
+  list-style:none;
+  padding:0; margin:0;
+}
+
+.main-nav a{
+  padding:8px 14px;
   font-size:13px;
-  font-weight:900;
-  padding:8px 12px;
+  font-weight:800;
   border-radius:var(--pill);
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.06);
+  background:var(--glass);
+  border:1px solid var(--border);
 }
 
-.navbar a:hover{
-  background:linear-gradient(90deg,var(--gold2),var(--gold));
+.main-nav a:hover{
+  background:linear-gradient(90deg,var(--gold-soft),var(--gold));
   color:#111;
 }
 
@@ -106,6 +116,7 @@ a{ text-decoration:none; color:inherit; transition:.25s ease; }
   width:100%;
   height:100%;
   object-fit:cover;
+  filter:brightness(.75) contrast(1.05);
 }
 
 .hero::after{
@@ -113,60 +124,63 @@ a{ text-decoration:none; color:inherit; transition:.25s ease; }
   position:absolute;
   inset:0;
   background:
-    radial-gradient(circle at 30% 15%, rgba(212,175,55,.14), transparent 45%),
-    linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.85));
+    radial-gradient(circle at 30% 20%,rgba(212,175,55,.18),transparent 45%),
+    linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.9));
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  text-align:center;
   top:50%;
   transform:translateY(-50%);
+  text-align:center;
   padding:0 20px;
 }
 
 .hero-content h1{
-  font-size:38px;
-  color:#fff;
-  letter-spacing:2px;
-  text-shadow:0 6px 22px rgba(0,0,0,.75);
+  font-size:clamp(44px,6vw,92px);
+  letter-spacing:.45em;
+  text-transform:uppercase;
+  text-shadow:0 10px 40px rgba(0,0,0,.9);
 }
 
 .hero-content p{
-  margin:10px 0 18px;
-  color:rgba(255,255,255,.78);
+  margin:18px 0 26px;
+  letter-spacing:.35em;
+  opacity:.8;
 }
 
+/* CTA */
 .hero-cta{
   display:inline-block;
-  padding:14px 28px;
+  padding:14px 34px;
   border-radius:var(--pill);
-  background:linear-gradient(90deg,#f7d77a,#d4a73d);
-  color:#111;
-  font-weight:900;
-  box-shadow:0 0 22px rgba(255,200,60,.25);
+  border:1px solid rgba(255,255,255,.4);
+  letter-spacing:.2em;
+  backdrop-filter:blur(10px);
 }
 
-/* ================= HERO INFO ================= */
+.hero-cta.secondary{
+  background:rgba(255,255,255,.08);
+}
+
+/* ================= INFO BAR ================= */
 .hero-info-bar{
+  max-width:960px;
+  margin:-40px auto 0;
   display:flex;
   justify-content:center;
-  gap:16px;
-  margin:-40px auto 0;
-  padding:14px 16px;
-  max-width:920px;
+  gap:24px;
+  padding:16px;
   background:rgba(0,0,0,.6);
   border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,.1);
+  border:1px solid var(--border);
 }
-
-.info-item{ text-align:center; }
 
 .info-label{
   font-size:11px;
   letter-spacing:2px;
-  color:rgba(255,255,255,.55);
+  opacity:.55;
 }
 
 .info-value{
@@ -175,804 +189,147 @@ a{ text-decoration:none; color:inherit; transition:.25s ease; }
 }
 
 /* ================= HERO EXTRAS ================= */
-.hero-extras{ padding:24px 16px 10px; }
+.hero-extras{
+  padding:40px 16px;
+  text-align:center;
+}
 
 .hero-usp{
-  text-align:center;
   font-weight:900;
-  margin-bottom:14px;
+  margin-bottom:20px;
 }
 
 .hero-trust{
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:14px;
   flex-wrap:wrap;
 }
 
-.hero-trust div{
-  padding:8px 12px;
+.hero-trust span{
+  padding:8px 14px;
   border-radius:var(--pill);
-  background:rgba(255,255,255,.06);
-  font-weight:900;
+  background:var(--glass);
   font-size:13px;
+  font-weight:800;
 }
 
+/* Preview */
 .hero-preview{
-  margin-top:16px;
-  border-radius:var(--radius);
+  margin-top:32px;
   overflow:hidden;
-  border:1px solid rgba(255,255,255,.08);
 }
 
 .preview-track{
   display:flex;
-  gap:10px;
-  padding:10px;
-  overflow-x:auto;
+  gap:18px;
+  animation:scroll 28s linear infinite;
 }
 
-.preview-track::-webkit-scrollbar{ display:none; }
-
 .preview-track video{
-  width:76vw;
-  max-width:320px;
-  height:190px;
+  width:220px;
+  height:380px;
   object-fit:cover;
-  border-radius:14px;
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+
+@keyframes scroll{
+  to{ transform:translateX(-50%) }
 }
 
 /* ================= GALLERY ================= */
-.gallery-section{ padding-top:50px; }
+.gallery-section{
+  padding:100px 0 60px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
 
 .gallery-scroll{
   display:flex;
-  gap:20px;
+  gap:32px;
+  padding:0 40px;
   overflow-x:auto;
-  padding:0 20px 20px;
 }
 
-.gallery-scroll::-webkit-scrollbar{ display:none; }
-
-.gallery-item{
-  min-width:280px;
-  height:420px;
-  border-radius:20px;
-  overflow:hidden;
+.gallery-scroll img{
+  width:360px;
+  height:520px;
+  object-fit:cover;
+  border-radius:22px;
 }
 
 /* ================= EXPERIENCE ================= */
-.experience-section{ padding:70px 16px; }
-
-.experience-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+.experience-section{
+  max-width:1200px;
+  margin:auto;
+  padding:120px 32px;
 }
 
-.experience-item{
-  padding:18px 14px;
-  border-radius:var(--radius);
-  background:rgba(255,255,255,.04);
+.experience-section h2{
+  font-size:clamp(32px,4vw,56px);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.headline{
+  font-size:clamp(20px,2.2vw,26px);
+  opacity:.9;
+  margin-bottom:24px;
+}
+
+.experience-tags{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  font-size:13px;
+  letter-spacing:.15em;
+  opacity:.65;
 }
 
 /* ================= FOOTER ================= */
-footer{
-  padding:30px 20px;
+.footer{
   text-align:center;
+  padding:40px 20px;
   font-size:14px;
-  color:rgba(255,255,255,.55);
-  border-top:1px solid rgba(212,175,55,.2);
+  opacity:.6;
+  border-top:1px solid rgba(212,175,55,.25);
 }
 
 /* ================= BOTTOM BAR ================= */
 .bottom-bar{
   position:fixed;
-  left:14px;
-  right:14px;
-  bottom:14px;
+  left:14px; right:14px; bottom:14px;
   display:flex;
   gap:10px;
-  padding:10px 14px;
+  padding:10px;
   border-radius:var(--pill);
   background:rgba(0,0,0,.75);
+  box-shadow:
+    0 14px 40px rgba(0,0,0,.7),
+    0 0 24px rgba(212,175,55,.2);
 }
 
 .bottom-bar a{
   flex:1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:6px;
   padding:10px;
-  border-radius:var(--pill);
-  background:rgba(255,255,255,.06);
+  text-align:center;
   font-weight:900;
+  border-radius:var(--pill);
+  background:var(--glass);
 }
 
-.bottom-bar a.hotline{
-  width:64px;
-  height:64px;
-  flex:0 0 auto;
-  background:linear-gradient(180deg,var(--gold2),var(--gold));
-  color:#111;
-}
-
-.bottom-bar a.hotline span:last-child{ display:none; }
-
-/* ================= RESPONSIVE ================= */
-@media(max-width:900px){
-  .experience-grid{ grid-template-columns:1fr; }
-}
-
+/* ================= MOBILE ================= */
 @media(max-width:768px){
-  .hero-content h1{ font-size:28px; }
-  .gallery-item{ min-width:240px; height:360px; }
-}
-/* =========================================================
-   HOME LUXURY UI UPGRADE
-   Safe: CSS-only, no layout break, mobile-friendly
-========================================================= */
-
-/* ===== TEXT SHARPEN (ANTI-BỆT CHỮ iOS) ===== */
-body{
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-/* ===== HERO LIGHTING (CINEMA DEPTH) ===== */
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 70% 20%, rgba(255,215,120,0.12), transparent 45%),
-    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06), transparent 50%);
-  z-index:1;
-  pointer-events:none;
-}
-
-/* ===== CTA GOLD SHINE (PREMIUM, KHÔNG LỐ) ===== */
-.hero-cta{
-  position:relative;
-  overflow:hidden;
-}
-
-.hero-cta::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(255,255,255,0.35),
-    transparent 70%
-  );
-  opacity:0;
-  transform: translateX(-120%);
-}
-
-.hero-cta:hover::after{
-  opacity:1;
-  transform: translateX(120%);
-  transition: transform .9s ease, opacity .4s ease;
-}
-
-/* ===== HERO INFO BAR FLOAT (VIP FEEL) ===== */
-.hero-info-bar{
-  animation: infoFloat 6s ease-in-out infinite;
-}
-
-@keyframes infoFloat{
-  0%,100%{ transform: translateY(0); }
-  50%{ transform: translateY(-6px); }
-}
-
-/* ===== GALLERY DEPTH + HOVER LUXURY ===== */
-.gallery-item{
-  position:relative;
-  transition: transform .35s ease, box-shadow .35s ease;
-}
-
-.gallery-item::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    to bottom,
-    transparent 60%,
-    rgba(0,0,0,0.65)
-  );
-  opacity:.85;
-  pointer-events:none;
-}
-
-.gallery-item:hover{
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 26px 65px rgba(0,0,0,0.75);
-}
-
-/* ===== EXPERIENCE CARD – VIP CARD EFFECT ===== */
-.experience-item{
-  position:relative;
-  overflow:hidden;
-  transition: transform .35s ease;
-}
-
-.experience-item::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: radial-gradient(
-    circle at top right,
-    rgba(212,175,55,0.22),
-    transparent 45%
-  );
-  opacity:0;
-  pointer-events:none;
-}
-
-.experience-item:hover::before{
-  opacity:1;
-  transition:.35s ease;
-}
-
-.experience-item:hover{
-  transform: translateY(-6px);
-}
-
-/* ===== BOTTOM BAR – SOFT GOLD GLOW ===== */
-.bottom-bar{
-  box-shadow:
-    0 12px 30px rgba(0,0,0,0.55),
-    0 0 18px rgba(212,175,55,0.15);
-}
-
-/* ===== SAFETY: DISABLE HEAVY EFFECT ON MOBILE ===== */
-@media (max-width: 768px){
-  .hero-info-bar{
-    animation: none;
-  }
-
-  .gallery-item:hover,
-  .experience-item:hover{
-    transform: none;
-  }
-}
-/* ===============================
-   HERO VIDEO – FIX + UPGRADE
-================================ */
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: #000;
-}
-
-.hero video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  filter: brightness(0.75) contrast(1.05);
-}
-
-/* Overlay gradient cho sang + dễ đọc chữ */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at top, rgba(0,0,0,0.25), rgba(0,0,0,0.75)),
-    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
-  z-index: 2;
-}
-
-/* Content nổi trên video */
-.hero-content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  color: #fff;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 16px;
-}
-
-.hero-content h1 {
-  font-size: clamp(42px, 6vw, 80px);
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.hero-content p {
-  margin-top: 10px;
-  font-size: 16px;
-  letter-spacing: 3px;
-  opacity: 0.9;
-}
-/* ===============================
-   HERO PREVIEW VIDEO STRIP
-================================ */
-
-.hero-preview {
-  margin-top: 32px;
-  overflow: hidden;
-}
-
-.preview-track {
-  display: flex;
-  gap: 16px;
-  animation: previewScroll 25s linear infinite;
-}
-
-.preview-track video {
-  width: 220px;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
-  flex-shrink: 0;
-}
-
-@keyframes previewScroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-.hero video,
-.preview-track video {
-  will-change: transform;
-  backface-visibility: hidden;
-}
-/* =========================================
-   MOBILE VIDEO PREVIEW – FIX UGLY ISSUE
-========================================= */
-@media (max-width: 768px){
-
-  .hero-preview{
-    margin-top: 24px;
-  }
-
   .preview-track{
-    animation: none;                 /* ❌ tắt auto scroll */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 0 16px 12px;
+    animation:none;
+    overflow-x:auto;
   }
-
   .preview-track video{
-    width: 86vw;                     /* ✅ gần full màn hình */
-    height: 60vh;                    /* ✅ xem đã mắt */
-    max-height: 520px;
-    scroll-snap-align: center;
-    border-radius: 22px;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.6);
+    width:86vw;
+    height:60vh;
   }
-}
-/* =========================================
-   MOBILE PREVIEW VIDEO – LANDSCAPE FIX
-========================================= */
-@media (max-width: 768px){
-
-  .preview-track{
-    animation: none;                  /* ❌ tắt auto scroll */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 0 16px 16px;
-    gap: 14px;
-  }
-
-  .preview-track video{
-    width: 88vw;                      /* gần full ngang */
-    aspect-ratio: 16 / 9;             /* ✅ ép video nằm ngang */
-    height: auto;
-    max-height: 260px;
-    scroll-snap-align: center;
-    border-radius: 18px;
-    object-fit: cover;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
-  }
-}
-/* =========================================
-   DESKTOP LUXURY UPGRADE
-========================================= */
-@media (min-width: 1024px){
-
-  /* ===== HERO STAGE FEEL ===== */
-  .hero{
-    height: 100vh;
-  }
-
-  .hero-content h1{
-    font-size: 86px;
-    letter-spacing: 6px;
-  }
-
-  .hero-content p{
-    font-size: 18px;
-    letter-spacing: 4px;
-    margin-top: 18px;
-  }
-
-  /* ===== HERO PREVIEW – LED WALL STRIP ===== */
-  .hero-preview{
-    margin-top: 40px;
-    padding-bottom: 10px;
-  }
-
-  .preview-track{
-    gap: 22px;
-    padding: 0 40px;
-  }
-
-  .preview-track video{
-    width: 420px;
-    height: 240px;
-    border-radius: 20px;
-    transform: translateY(0);
-    transition: transform .45s ease, box-shadow .45s ease;
-  }
-
-  .preview-track video:hover{
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 30px 80px rgba(0,0,0,0.75);
-  }
-
-  /* ===== GALLERY – DEPTH & FOCUS ===== */
-  .gallery-scroll{
-    gap: 32px;
-    padding: 20px 60px 40px;
-  }
-
-  .gallery-item{
-    min-width: 360px;
-    height: 520px;
-  }
-
-  /* ===== EXPERIENCE – VIP GRID ===== */
-  .experience-section{
-    padding: 120px 80px;
-  }
-
-  .experience-title{
-    font-size: 64px;
-    letter-spacing: 4px;
-    margin-bottom: 30px;
-  }
-
-  .experience-desc{
-    max-width: 820px;
-    margin: 0 auto 60px;
-    font-size: 17px;
-    line-height: 1.8;
-    opacity: .85;
-  }
-
-  .experience-grid{
-    gap: 28px;
-  }
-
-  .experience-item{
-    padding: 34px 28px;
-    border-radius: 22px;
-  }
-
-  .experience-item h3{
-    font-size: 20px;
-    margin-top: 10px;
-  }
-
-  /* ===== OVERALL SPACING ===== */
-  section{
-    scroll-margin-top: 120px;
-  }
-}
-@media (min-width: 1024px){
-  .about::after{
-    content:"";
-    position:absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    height: 60%;
-    background:
-      radial-gradient(circle at center,
-        rgba(212,175,55,0.18),
-        transparent 65%);
-    pointer-events:none;
-  }
-
-  .about{
-    position: relative;
-    overflow: hidden;
-  }
-}
-/* =====================================================
-   EXPERIENCE – MAX LEVEL DESKTOP (CINEMATIC / LUXURY)
-   Safe: Desktop only – no HTML change
-===================================================== */
-@media (min-width: 1024px){
-
-  .experience-section{
-    padding: 140px 80px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Nền ánh sáng sân khấu */
-  .experience-section::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(212,175,55,0.18), transparent 45%),
-      radial-gradient(circle at 80% 60%, rgba(255,255,255,0.06), transparent 55%);
-    pointer-events:none;
-  }
-
-  .experience-inner{
-    max-width: 1280px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* ===== TITLE ===== */
-  .experience-title{
-    font-size: 72px;
-    letter-spacing: 6px;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .experience-title span{
-    display:block;
-    font-size: 18px;
-    letter-spacing: 6px;
-    color: var(--gold);
-    margin-top: 14px;
-  }
-
-  .experience-desc{
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 90px;
-    font-size: 18px;
-    line-height: 2;
-    opacity: 0.85;
-  }
-
-  /* ===== GRID VIP ===== */
-  .experience-grid{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
-  }
-
-  .experience-item{
-    position: relative;
-    padding: 48px 36px;
-    border-radius: 26px;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,0.06),
-        rgba(255,255,255,0.02)
-      );
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(6px);
-    transition: all .45s ease;
-  }
-
-  /* ánh vàng viền VIP */
-  .experience-item::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius: inherit;
-    background:
-      linear-gradient(
-        120deg,
-        transparent 30%,
-        rgba(212,175,55,0.35),
-        transparent 70%
-      );
-    opacity:0;
-    pointer-events:none;
-  }
-
-  .experience-item:hover::after{
-    opacity:1;
-  }
-
-  .experience-item:hover{
-    transform: translateY(-14px) scale(1.03);
-    box-shadow:
-      0 40px 90px rgba(0,0,0,0.75),
-      0 0 40px rgba(212,175,55,0.25);
-  }
-
-  .experience-item span{
-    font-size: 46px;
-    display:block;
-    margin-bottom: 22px;
-  }
-
-  .experience-item h3{
-    font-size: 22px;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
-  }
-
-  .experience-item p{
-    font-size: 15px;
-    line-height: 1.9;
-    opacity: 0.85;
-  }
-
-  /* ===== NOTE ===== */
-  .experience-note{
-    margin-top: 90px;
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold2);
-    opacity: 0.85;
-  }
-}
-/* ===== EXPERIENCE / ABOUT SECTION ===== */
-.experience-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 32px;
-}
-
-/* Title lớn */
-.experience-section h2 {
-  font-size: clamp(32px, 4vw, 56px);
-  line-height: 1.2;
-  letter-spacing: 0.08em;
-  margin-bottom: 32px;
-  text-transform: uppercase;
-}
-
-/* Sub title / headline */
-.experience-section .headline {
-  font-size: clamp(20px, 2.2vw, 26px);
-  line-height: 1.5;
-  margin-bottom: 24px;
-  opacity: 0.9;
-}
-
-/* Nội dung chính */
-.experience-section p {
-  font-size: 16px;
-  line-height: 1.8;
-  max-width: 720px;
-  margin-bottom: 20px;
-  opacity: 0.75;
-}
-
-/* Divider mờ */
-.experience-divider {
-  width: 80px;
-  height: 1px;
-  background: rgba(255,255,255,0.2);
-  margin: 48px 0;
-}
-
-/* Keywords */
-.experience-tags {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  font-size: 14px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  opacity: 0.6;
-}
-/* =========================
-   HEADER BRAND – THE WANN
-========================= */
-.brand-logo{
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-family: 'Montserrat', 'Poppins', sans-serif;
-  letter-spacing: 0.28em;
-}
-
-.brand-the{
-  font-size: 13px;
-  font-weight: 500;
-  opacity: 0.55;
-}
-
-.brand-wann{
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: 0.35em;
-  background: linear-gradient(
-    90deg,
-    #ffffff 0%,
-    #e8d9a0 40%,
-    #ffffff 80%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    0 0 18px rgba(232,217,160,0.25),
-    0 0 40px rgba(0,0,0,0.8);
-}
-
-/* MOBILE */
-@media (max-width: 768px){
-  .brand-wann{
-    font-size: 22px;
-    letter-spacing: 0.28em;
-  }
-}
-.header{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0)
-  );
-  backdrop-filter: blur(6px);
-}
-.hero::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at center,
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0.85)
-    );
-  z-index:1;
-}
-.hero-content{
-  position:relative;
-  z-index:2;
-}
-.hero-content h1{
-  font-size: clamp(44px, 6vw, 96px);
-  font-weight: 700;
-  letter-spacing: 0.45em;
-  text-transform: uppercase;
-  text-shadow:
-    0 0 40px rgba(0,0,0,0.9),
-    0 0 80px rgba(0,0,0,0.8);
-}
-.hero-content p{
-  margin-top: 20px;
-  letter-spacing: 0.35em;
-  font-size: 14px;
-  opacity: 0.75;
-}
-.hero-cta{
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.4);
-  color: #fff;
-  padding: 14px 34px;
-  letter-spacing: 0.2em;
-  backdrop-filter: blur(10px);
-}
-.hero-cta.secondary{
-  background: rgba(255,255,255,0.08);
-}
-.hero-cta:hover{
-  background: rgba(255,255,255,0.18);
 }
