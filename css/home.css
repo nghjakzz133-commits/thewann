@@ -430,3 +430,57 @@ body{
     height:60vh;
   }
 }
+/* ================= HEADER ALIGN FIX – LUXURY ================= */
+
+.header-inner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand trái */
+.brand,
+.brand-logo{
+  z-index: 2;
+}
+
+/* NAV phải */
+.navbar,
+.main-nav{
+  z-index: 2;
+}
+
+/* LOGO CENTER – ABSOLUTE */
+.header-logo{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter:
+    drop-shadow(0 10px 24px rgba(0,0,0,.6))
+    drop-shadow(0 0 18px rgba(212,175,55,.35));
+}
+
+/* Desktop spacing tinh tế */
+@media(min-width:1024px){
+  .brand,
+  .brand-logo{
+    margin-left: 6px;
+  }
+
+  .navbar,
+  .main-nav{
+    margin-right: 6px;
+  }
+}
+
+/* Mobile – ưu tiên logo */
+@media(max-width:768px){
+  .header-logo{
+    width: 44px;
+  }
+}
