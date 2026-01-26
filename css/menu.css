@@ -18,8 +18,8 @@ body {
   top: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
 }
 
 .header-inner {
@@ -31,7 +31,7 @@ body {
   justify-content: space-between;
 }
 
-/* ẨN LOGO IMAGE */
+/* ẨN LOGO IMAGE (giữ đúng vibe text brand) */
 .header-logo {
   display: none;
 }
@@ -41,12 +41,13 @@ body {
   font-size: 22px;
   letter-spacing: 4px;
   font-weight: 700;
+  color: #fff;
 }
 
 .logo::before {
   content: "THE ";
-  opacity: .6;
   font-weight: 400;
+  opacity: 0.6;
 }
 
 /* NAV */
@@ -58,10 +59,10 @@ body {
 .navbar a {
   text-decoration: none;
   color: #ddd;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 .navbar a:hover,
@@ -79,20 +80,21 @@ body {
   min-height: 90vh;
   padding: 120px 24px;
   text-align: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,.55), #0b0b0b),
-              url("../assets/images/menu/menu-hero.jpg") center/cover no-repeat;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.55), #0b0b0b),
+    url("../assets/images/menu/menu-hero.jpg") center/cover no-repeat;
 }
 
 .menu-hero h1 {
-  font-size: 48px;
+  font-size: 46px;
   letter-spacing: 6px;
 }
 
 .menu-hero p {
-  margin-top: 16px;
+  margin-top: 14px;
   font-size: 14px;
   letter-spacing: 2px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 /* CTA */
@@ -105,13 +107,13 @@ body {
 }
 
 .menu-btn {
-  padding: 14px 30px;
+  padding: 14px 32px;
   text-decoration: none;
   font-size: 14px;
   letter-spacing: 1px;
   border: 1px solid #cfa24a;
   color: #cfa24a;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .menu-btn.primary {
@@ -120,7 +122,7 @@ body {
 }
 
 .menu-btn:hover {
-  opacity: .85;
+  opacity: 0.85;
 }
 
 /* ================= MENU SECTION ================= */
@@ -133,12 +135,13 @@ body {
 .menu-title {
   font-size: 32px;
   margin-bottom: 12px;
+  letter-spacing: 2px;
 }
 
 .menu-desc {
   max-width: 700px;
   font-size: 15px;
-  opacity: .85;
+  opacity: 0.85;
   margin-bottom: 48px;
 }
 
@@ -152,13 +155,14 @@ body {
 .menu-item {
   overflow: hidden;
   border-radius: 6px;
+  background: #111;
 }
 
 .menu-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .6s ease;
+  transition: transform 0.6s ease;
 }
 
 .menu-item:hover img {
@@ -170,7 +174,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: rgba(0,0,0,.9);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
@@ -198,10 +202,11 @@ body {
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .navbar {
-    display: none; /* mobile dùng bottom bar */
+    display: none; /* Mobile dùng bottom bar */
   }
 
   .menu-hero h1 {
-    font-size: 34px;
+    font-size: 32px;
+    letter-spacing: 4px;
   }
 }
