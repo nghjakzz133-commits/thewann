@@ -360,3 +360,46 @@ body{
   text-align: center;
   font-size: 18px;
 }
+/* ===============================
+   MENU - BOTTOM BAR LIKE HOME
+================================ */
+.bottom-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background: rgba(0,0,0,0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-top: 1px solid rgba(255,255,255,0.12) !important;
+  padding: 12px 10px;
+}
+
+.bottom-bar a,
+.bottom-bar a:visited,
+.bottom-bar a:active{
+  color: rgba(255,255,255,0.85) !important;
+  text-decoration: none !important;
+  font-size: 11px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bottom-bar a:hover{
+  color: #d4af37 !important;
+}
+
+/* icon + text giống home */
+.bottom-bar .icon{
+  font-size: 14px;
+  line-height: 1;
+}
