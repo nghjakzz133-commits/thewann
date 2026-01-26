@@ -242,3 +242,21 @@
     grid-template-columns: 1fr;
   }
 }
+/* FORCE HEADER LIKE ABOUT (MENU PAGE) */
+.site-header{
+  background: rgba(0,0,0,0.85) !important;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+}
+
+.header-logo{
+  display: none !important;
+}
+
+.nav-list a{
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.nav-list a:hover{
+  color: #d4af37 !important;
+}
