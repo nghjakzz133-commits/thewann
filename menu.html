@@ -3,41 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>THE WANN | Thực Đơn</title>
 
-  <!-- SEO -->
-  <meta name="description" content="THE WANN – Premium Menu & Combo. Danh sách combo, rượu, món ăn cao cấp dành cho nhóm bạn, sinh nhật và khách VIP.">
-  <meta name="keywords" content="the wann menu, combo club, booking nightlife, menu vip, lounge hcm">
-
-  <!-- CSS -->
+  <!-- MENU CSS RIÊNG -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/core.css">
   <link rel="stylesheet" href="css/menu.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
-    <a href="index.html" class="brand" aria-label="The WANN homepage">
+    <a href="index.html" class="brand">
       <span class="brand-the">THE</span>
       <span class="brand-wann">WANN</span>
     </a>
 
-    <img src="assets/images/logo.png"
-         alt="The WANN Logo"
-         class="header-logo"
-         width="64" height="64"
-         loading="eager">
-
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="main-nav">
       <ul class="nav-list">
         <li><a href="index.html">Trang Chủ</a></li>
         <li><a href="about.html">Giới Thiệu</a></li>
         <li><a href="gallery.html">Thư Viện</a></li>
-        <li><a href="menu.html">Thực Đơn</a></li>
+        <li><a href="menu.html" class="active">Thực Đơn</a></li>
         <li><a href="booking.html">Đặt Bàn</a></li>
         <li><a href="contact.html">Liên Hệ</a></li>
       </ul>
@@ -46,50 +35,59 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="about-hero menu-hero">
-  <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg">
-    <source src="assets/videos/hero.mp4" type="video/mp4">
-  </video>
 
-  <div class="about-hero-content">
-    <img src="assets/images/logo.png" alt="Logo THE WANN" class="about-logo">
+<!-- ================= MENU MAIN ================= -->
+<main class="menu-main">
 
-    <h1>Thực Đơn THE WANN</h1>
-    <p>Luxury Nightlife • Premium Menu • VIP Experience</p>
+  <!-- HERO -->
+  <section class="menu-hero">
+    <h1>THỰC ĐƠN THE WANN</h1>
+    <p>Luxury Nightlife · Premium Menu · VIP Experience</p>
 
-    <div class="about-cta">
-      <a href="tel:0899996977" class="about-btn primary">📞 Gọi đặt bàn</a>
-      <a href="https://zalo.me/0899996977" target="_blank" class="about-btn">💬 Nhắn Zalo</a>
+    <div class="menu-cta">
+      <a href="tel:0899996977" class="menu-btn primary">📞 Gọi đặt bàn</a>
+      <a href="https://zalo.me/0899996977" target="_blank" class="menu-btn">💬 Nhắn Zalo</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTENT -->
-<section class="about-main menu-main">
-  <div class="about-box">
-    <h2 class="about-title">MENU & <span>COMBO</span></h2>
-
-    <p class="about-desc">
+  <!-- MENU CONTENT -->
+  <section class="menu-section">
+    <h2 class="menu-title">MENU & COMBO</h2>
+    <p class="menu-desc">
       Danh sách combo – rượu – món ăn cao cấp, phục vụ cho nhóm bạn, sinh nhật và khách VIP.
     </p>
 
-    <!-- giữ nguyên grid + JS inject -->
     <div id="menuGrid" class="menu-grid">
       <!-- JS sẽ inject ảnh menu vào đây -->
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BOTTOM BAR -->
+</main>
+
+<!-- ================= BOTTOM BAR ================= -->
 <div class="bottom-bar">
-  <a href="https://www.google.com/maps/search/?api=1&query=51+Bui+Thi+Xuan+Pham+Ngu+Lao+Quan+1+Ho+Chi+Minh" target="_blank">📍 Bản đồ</a>
-  <a href="https://zalo.me/0899996977" target="_blank">💬 Zalo</a>
-  <a href="tel:0899996977" class="hotline">📞 Hotline</a>
-  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">📘 Facebook</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=51+Bui+Thi+Xuan+Pham+Ngu+Lao+Quan+1+Ho+Chi+Minh" target="_blank">
+    <span class="icon">📍</span>
+    <span>Bản đồ</span>
+  </a>
+
+  <a href="https://zalo.me/0899996977" target="_blank">
+    <span class="icon">💬</span>
+    <span>Zalo</span>
+  </a>
+
+  <a href="tel:0899996977" class="hotline">
+    <span class="icon">📞</span>
+    <span>Hotline</span>
+  </a>
+
+  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">
+    <span class="icon">📘</span>
+    <span>Facebook</span>
+  </a>
 </div>
 
-<!-- MENU JS (GIỮ NGUYÊN) -->
+<!-- ================= MENU JS ================= -->
 <script>
   const menuGrid = document.getElementById("menuGrid");
 
