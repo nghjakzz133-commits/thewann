@@ -260,3 +260,35 @@
 .nav-list a:hover{
   color: #d4af37 !important;
 }
+/* MENU PAGE - make header same vibe as ABOUT (only on menu) */
+body{
+  background:#000;
+}
+
+.site-header{
+  background: rgba(0,0,0,.55) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+}
+
+.header-logo{
+  display: none !important; /* giống about */
+}
+
+.nav-list{
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+.nav-list a{
+  font-size: 11px !important;
+  letter-spacing: .18em !important;
+  color: rgba(255,255,255,.82) !important;
+  text-transform: uppercase;
+}
+
+.nav-list a:hover{
+  color:#d4af37 !important;
+}
