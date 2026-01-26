@@ -1,33 +1,69 @@
+/* ================= HEADER CORE ================= */
+.site-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRAND */
+.brand {
+  text-decoration: none;
+  font-family: serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.brand-the {
+  margin-right: 4px;
+}
+
+.brand-wann {
+  font-weight: bold;
+}
+
+/* NAV */
+.main-nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+}
+
+.main-nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  .site-header {
-    padding: 12px 0;
-  }
-
   .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 12px 16px;
   }
 
   .brand {
     font-size: 18px;
-    letter-spacing: 2px;
-    white-space: nowrap;
   }
 
-  .main-nav {
-    display: flex;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  .main-nav .nav-list {
+    gap: 14px;
     font-size: 13px;
-  }
-
-  .header-logo {
-    display: none; /* ẩn logo ảnh cho đồng bộ */
   }
 }
