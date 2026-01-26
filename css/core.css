@@ -1,22 +1,26 @@
 @media (max-width: 768px) {
-  .header {
+
+  .site-header {
     padding: 12px 0;
   }
 
   .header-inner {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
-  .logo {
+  .brand {
     font-size: 18px;
     letter-spacing: 2px;
     white-space: nowrap;
   }
 
-  .navbar {
+  .main-nav {
+    display: flex;
+  }
+
+  .nav-list {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -24,6 +28,6 @@
   }
 
   .header-logo {
-    display: none; /* ẩn logo ảnh cho giống home */
+    display: none; /* ẩn logo ảnh cho đồng bộ */
   }
 }
