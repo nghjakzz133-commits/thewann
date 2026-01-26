@@ -21,20 +21,33 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="site-header">
   <div class="container header-inner">
-    <div class="logo">THE WANN</div>
-   
-    <nav class="navbar">
-      <a href="index.html">Trang Chủ</a>
-      <a href="about.html">Giới Thiệu</a>
-      <a href="gallery.html">Thư Viện</a>
-      <a href="booking.html">Đặt Bàn</a>
-      <a href="contact.html">Liên Hệ</a>
+
+    <a href="index.html" class="brand" aria-label="The WANN homepage">
+      <span class="brand-the">THE</span>
+      <span class="brand-wann">WANN</span>
+    </a>
+
+    <img src="assets/images/logo.png"
+         alt="The WANN Logo"
+         class="header-logo"
+         width="64" height="64"
+         loading="eager">
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="about.html">Giới Thiệu</a></li>
+        <li><a href="gallery.html">Thư Viện</a></li>
+        <li><a href="menu.html">Thực Đơn</a></li>
+        <li><a href="booking.html">Đặt Bàn</a></li>
+        <li><a href="contact.html">Liên Hệ</a></li>
+      </ul>
     </nav>
+
   </div>
 </header>
-
 <!-- HERO -->
 <section class="about-hero">
   <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg">
