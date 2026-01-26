@@ -355,3 +355,26 @@ body {
     max-width: 280px;
   }
 }
+/* ABOUT - center buttons on mobile */
+@media (max-width: 768px) {
+  .about-cta,
+  .about-buttons,
+  .about-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .about-cta a,
+  .about-cta button,
+  .about-buttons a,
+  .about-buttons button,
+  .about-actions a,
+  .about-actions button {
+    width: min(360px, 92%);
+    margin: 0 auto;
+  }
+}
