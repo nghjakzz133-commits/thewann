@@ -1,6 +1,6 @@
 /* ===============================================
-   THE WANN - LUXURY NIGHTLIFE BOOKING
-   About Page Stylesheet (Match Home Style)
+   THE WANN – ABOUT PAGE
+   Luxury Nightlife • Dark • Gold • Premium
    =============================================== */
 
 /* ===== RESET & BASE ===== */
@@ -11,58 +11,46 @@
 }
 
 :root {
-  --color-primary: #000000;
+  --color-primary: #000;
   --color-secondary: #1a1a1a;
   --color-accent: #d4af37;
-  --color-text: #ffffff;
-  --color-text-muted: #cccccc;
-  --color-border: #333333;
+  --color-text: #fff;
+  --color-text-muted: #ccc;
+  --color-border: #333;
 
-  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   --font-heading: 'Playfair Display', Georgia, serif;
 
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.3);
+  --transition: all 0.3s ease;
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: var(--color-text);
   line-height: 1.6;
-  overflow-x: hidden;
   min-height: 100vh;
 }
 
+/* ===== CONTAINER ===== */
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* ===============================================
-   HEADER (Match Home)
-   =============================================== */
-.header {
+/* ===== HEADER ===== */
+.site-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 auto 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
-  padding: 15px 0;
-  transition: var(--transition-smooth);
-}
-
-.header:hover {
-  background: rgba(0, 0, 0, 0.95);
 }
 
 .header-inner {
@@ -70,364 +58,276 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  padding: 15px 0;
 }
 
-/* Logo text */
-.logo {
-  font-family: var(--font-heading);
-  font-size: 22px;
+/* Brand text */
+.brand {
+  text-decoration: none;
+  line-height: 1;
+}
+
+.brand-the {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--color-text-muted);
+}
+
+.brand-wann {
+  font-size: 28px;
+  font-weight: 700;
   letter-spacing: 2px;
   color: var(--color-accent);
-  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-  font-weight: 700;
-  line-height: 1;
-  transition: var(--transition-smooth);
+  text-shadow: 0 0 20px rgba(212,175,55,0.5);
 }
 
-.logo:hover {
-  transform: translateY(-2px);
-}
-
-/* Header Logo Image */
+/* ❌ Logo hình header: ẩn cho đúng vibe */
 .header-logo {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  filter: brightness(1.1);
-  transition: var(--transition-smooth);
+  display: none;
 }
 
-.header-logo:hover {
-  filter: brightness(1.3) drop-shadow(0 0 10px var(--color-accent));
-  transform: scale(1.05);
+/* Navigation */
+.main-nav {
+  flex: 1;
 }
 
-/* Navbar */
-.navbar {
+.nav-list {
   display: flex;
-  align-items: center;
-  gap: 35px;
   justify-content: flex-end;
-  flex-wrap: wrap;
+  gap: 32px;
+  list-style: none;
 }
 
-.navbar a {
+.nav-list a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 8px 0;
   position: relative;
-  transition: var(--transition-smooth);
+  transition: var(--transition);
 }
 
-.navbar a::after {
+.nav-list a::after {
   content: '';
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: -6px;
   width: 0;
   height: 2px;
   background: var(--color-accent);
   transition: width 0.3s ease;
 }
 
-.navbar a:hover {
+.nav-list a:hover {
   color: var(--color-accent);
 }
 
-.navbar a:hover::after {
+.nav-list a:hover::after {
   width: 100%;
 }
 
-/* ===============================================
-   ABOUT HERO (Video Background)
-   =============================================== */
+/* ===== HERO ===== */
 .about-hero {
   position: relative;
   height: 100vh;
-  min-height: 650px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/* Video background */
 .about-hero video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 50% auto auto 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.55);
   z-index: 1;
 }
 
-/* Overlay gradient */
 .about-hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.75) 100%
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.8)
   );
   z-index: 2;
 }
 
-/* Content */
 .about-hero-content {
   position: relative;
   z-index: 3;
   text-align: center;
-  max-width: 900px;
   padding: 0 20px;
-  animation: fadeInUp 1s ease-out;
+  max-width: 800px;
+  animation: fadeUp 1s ease;
 }
 
-/* About logo */
+/* Hero logo */
 .about-logo {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-  margin-bottom: 16px;
-  filter: brightness(1.15) drop-shadow(0 0 15px rgba(212, 175, 55, 0.35));
-  transition: var(--transition-smooth);
+  width: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 30px rgba(212,175,55,0.5));
 }
 
-.about-logo:hover {
-  transform: scale(1.05);
-  filter: brightness(1.25) drop-shadow(0 0 18px rgba(212, 175, 55, 0.6));
-}
-
+/* Hero text */
 .about-hero-content h1 {
   font-family: var(--font-heading);
-  font-size: clamp(42px, 7vw, 82px);
-  font-weight: 700;
-  margin-bottom: 18px;
-  line-height: 1.1;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+  font-size: clamp(42px, 7vw, 80px);
   letter-spacing: 2px;
+  margin-bottom: 16px;
 }
 
 .about-hero-content p {
-  font-size: clamp(14px, 2.6vw, 20px);
-  margin-bottom: 34px;
-  color: var(--color-text-muted);
-  letter-spacing: 3px;
+  font-size: 16px;
+  letter-spacing: 4px;
   text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
 }
 
-/* CTA Buttons */
+/* CTA */
 .about-cta {
   display: flex;
-  gap: 18px;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .about-btn {
-  display: inline-block;
-  padding: 16px 40px;
+  padding: 14px 36px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: var(--transition-smooth);
-  border: 2px solid var(--color-accent);
   color: var(--color-text);
-  background: transparent;
-}
-
-.about-btn:hover {
-  transform: translateY(-3px);
-  background: rgba(212, 175, 55, 0.12);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+  border: 2px solid var(--color-accent);
+  transition: var(--transition);
 }
 
 .about-btn.primary {
   background: var(--color-accent);
   color: var(--color-primary);
-  border-color: var(--color-accent);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
 }
 
-.about-btn.primary:hover {
-  background: #ffffff;
-  color: var(--color-primary);
-  box-shadow: 0 10px 35px rgba(212, 175, 55, 0.55);
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212,175,55,0.4);
 }
 
-/* ===============================================
-   ABOUT MAIN CONTENT
-   =============================================== */
+/* ===== MAIN CONTENT ===== */
 .about-main {
-  padding: 90px 20px;
-  background: var(--color-primary);
-  border-top: 1px solid var(--color-border);
+  padding: 120px 20px;
+  background: var(--color-secondary);
 }
 
-/* Main card box */
 .about-box {
-  max-width: 1050px;
+  max-width: 900px;
   margin: 0 auto;
-  background: rgba(26, 26, 26, 0.6);
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  padding: 50px 35px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
-/* Title */
 .about-title {
   font-family: var(--font-heading);
-  font-size: clamp(30px, 5vw, 52px);
-  text-align: center;
-  margin-bottom: 28px;
-  color: var(--color-text);
-  letter-spacing: 1px;
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 30px;
 }
 
 .about-title span {
   color: var(--color-accent);
 }
 
-/* Desc text */
 .about-desc {
-  font-size: clamp(16px, 2vw, 19px);
+  font-size: 17px;
   color: var(--color-text-muted);
-  line-height: 1.85;
-  text-align: center;
-  max-width: 850px;
-  margin: 0 auto 20px;
+  margin-bottom: 40px;
+  line-height: 1.8;
 }
 
-/* Feature Grid */
+/* Grid cards */
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .about-card {
-  background: rgba(0, 0, 0, 0.45);
+  background: #000;
   border: 1px solid var(--color-border);
-  border-radius: 14px;
-  padding: 26px 22px;
-  transition: var(--transition-smooth);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-}
-
-.about-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(212, 175, 55, 0.55);
-  box-shadow: 0 18px 50px rgba(212, 175, 55, 0.18);
+  padding: 30px 24px;
+  border-radius: 16px;
+  transition: var(--transition);
 }
 
 .about-card h3 {
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
   color: var(--color-accent);
+  margin-bottom: 12px;
+  font-size: 18px;
 }
 
 .about-card p {
   font-size: 14px;
   color: var(--color-text-muted);
-  line-height: 1.7;
 }
 
-/* Highlight pill group */
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(212,175,55,0.25);
+}
+
+/* Highlight pills */
 .about-highlight {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-top: 26px;
 }
 
 .pill {
-  padding: 12px 26px;
+  padding: 10px 24px;
   border: 1px solid var(--color-accent);
   border-radius: 50px;
   font-size: 13px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: var(--color-accent);
-  transition: var(--transition-smooth);
-  background: rgba(0, 0, 0, 0.25);
 }
 
-.pill:hover {
-  background: var(--color-accent);
-  color: var(--color-primary);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
-}
-
-/* ===============================================
-   BOTTOM BAR (Match Home)
-   =============================================== */
+/* ===== BOTTOM BAR ===== */
 .bottom-bar {
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   z-index: 999;
   display: flex;
   justify-content: space-around;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0,0,0,0.95);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--color-border);
   padding: 12px 10px;
 }
 
 .bottom-bar a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  text-decoration: none;
   color: var(--color-text);
+  text-decoration: none;
   font-size: 11px;
-  transition: var(--transition-smooth);
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-align: center;
+  transition: var(--transition);
 }
 
 .bottom-bar a:hover {
   color: var(--color-accent);
-  background: rgba(212, 175, 55, 0.1);
-  transform: translateY(-2px);
 }
 
-.bottom-bar a.hotline {
-  color: var(--color-accent);
-}
-
-/* Make room for bottom bar */
-body {
-  padding-bottom: 70px;
-}
-
-/* ===============================================
-   ANIMATIONS
-   =============================================== */
-@keyframes fadeInUp {
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -438,90 +338,20 @@ body {
   }
 }
 
-/* ===============================================
-   RESPONSIVE
-   =============================================== */
-@media (max-width: 1024px) {
-  .navbar {
-    gap: 20px;
-  }
-
-  .navbar a {
-    font-size: 13px;
-  }
-
-  .about-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .header-inner {
+  .nav-list {
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navbar {
-    width: 100%;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 10px;
-  }
-
-  .navbar a {
-    font-size: 12px;
+    gap: 16px;
   }
 
   .about-cta {
     flex-direction: column;
-    align-items: center;
   }
 
   .about-btn {
     width: 100%;
-    max-width: 320px;
-  }
-
-  .about-box {
-    padding: 38px 22px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pill {
-    width: 100%;
-    max-width: 340px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-logo {
-    width: 48px;
-    height: 48px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .about-logo {
-    width: 90px;
-    height: 90px;
-  }
-
-  .about-hero-content p {
-    font-size: 13px;
-  }
-
-  .bottom-bar {
-    padding: 10px 5px;
-  }
-
-  .bottom-bar a {
-    font-size: 10px;
-    padding: 6px 8px;
+    max-width: 280px;
   }
 }
