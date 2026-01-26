@@ -292,3 +292,31 @@ body{
 .nav-list a:hover{
   color:#d4af37 !important;
 }
+/* FIX BRAND COLOR (THE WANN) - MENU ONLY */
+.site-header .brand,
+.site-header .brand *{
+  color: #fff !important;
+}
+
+.site-header .brand-the{
+  color: rgba(255,255,255,.75) !important;
+}
+
+.site-header .brand-wann{
+  color: #d4af37 !important;
+  text-shadow: 0 0 20px rgba(212,175,55,.45) !important;
+}
+/* FIX CTA BUTTON POSITION */
+.menu-hero{
+  padding: 110px 20px 60px !important;
+}
+
+.menu-cta{
+  margin-top: 22px !important;
+}
+
+@media (max-width: 768px){
+  .menu-btn{
+    width: min(360px, 92%) !important;
+  }
+}
