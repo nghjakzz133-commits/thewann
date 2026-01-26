@@ -106,3 +106,18 @@
     border-radius: 14px;
   }
 }
+/* MENU - force header same vibe like ABOUT */
+.site-header{
+  background: rgba(0,0,0,0.85) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #333;
+}
+
+.header-logo{
+  display: none !important;
+}
+
+.nav-list{
+  justify-content: flex-end !important;
+  gap: 32px !important;
+}
