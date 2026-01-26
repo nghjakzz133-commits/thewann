@@ -1,160 +1,107 @@
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ===============================
+   MENU PAGE – THE WANN
+   =============================== */
 
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #0b0b0b;
-  color: #eaeaea;
-  line-height: 1.7;
-}
-
-/* ================= HEADER ================= */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(10px);
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* ẨN LOGO IMAGE (giữ đúng vibe text brand) */
-.header-logo {
-  display: none;
-}
-
-/* BRAND TEXT */
-.logo {
-  font-size: 22px;
-  letter-spacing: 4px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.logo::before {
-  content: "THE ";
-  font-weight: 400;
-  opacity: 0.6;
-}
-
-/* NAV */
-.navbar {
-  display: flex;
-  gap: 28px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #ddd;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: #cfa24a;
-}
-
-/* ================= MAIN ================= */
+/* tránh đè core */
 .menu-main {
-  padding-top: 90px;
+  background: #000;
+  color: #eee;
 }
 
 /* ================= HERO ================= */
 .menu-hero {
   min-height: 90vh;
-  padding: 120px 24px;
+  padding: 140px 20px 80px; /* chừa chỗ cho header fixed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+
   background:
-    linear-gradient(to bottom, rgba(0,0,0,.55), #0b0b0b),
-    url("../assets/images/menu/menu-hero.jpg") center/cover no-repeat;
+    linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.9)),
+    radial-gradient(circle at top, rgba(180,140,60,.15), transparent 60%);
 }
 
 .menu-hero h1 {
-  font-size: 46px;
-  letter-spacing: 6px;
+  font-size: clamp(32px, 6vw, 56px);
+  letter-spacing: .2em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .menu-hero p {
-  margin-top: 14px;
   font-size: 14px;
-  letter-spacing: 2px;
-  opacity: 0.8;
+  letter-spacing: .25em;
+  color: #aaa;
+  margin-bottom: 36px;
 }
 
 /* CTA */
 .menu-cta {
-  margin-top: 36px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu-btn {
-  padding: 14px 32px;
+  padding: 14px 28px;
+  border: 1px solid #c9a24d;
+  color: #c9a24d;
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-  border: 1px solid #cfa24a;
-  color: #cfa24a;
-  transition: all 0.3s;
-}
-
-.menu-btn.primary {
-  background: #cfa24a;
-  color: #000;
+  letter-spacing: .15em;
+  font-size: 13px;
+  transition: all .3s ease;
 }
 
 .menu-btn:hover {
-  opacity: 0.85;
+  background: #c9a24d;
+  color: #000;
+}
+
+.menu-btn.primary {
+  background: #c9a24d;
+  color: #000;
+}
+
+.menu-btn.primary:hover {
+  filter: brightness(1.1);
 }
 
 /* ================= MENU SECTION ================= */
 .menu-section {
+  padding: 100px 20px;
   max-width: 1200px;
   margin: auto;
-  padding: 100px 24px;
 }
 
 .menu-title {
-  font-size: 32px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: .25em;
   margin-bottom: 12px;
-  letter-spacing: 2px;
 }
 
 .menu-desc {
-  max-width: 700px;
-  font-size: 15px;
-  opacity: 0.85;
-  margin-bottom: 48px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  max-width: 720px;
+  margin: 0 auto 60px;
 }
 
 /* ================= GRID ================= */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 24px;
 }
 
 .menu-item {
+  position: relative;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #111;
 }
 
@@ -162,7 +109,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  display: block;
+  transition: transform .6s ease;
 }
 
 .menu-item:hover img {
@@ -173,40 +121,45 @@ body {
 .bottom-bar {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,.9);
+  border-top: 1px solid rgba(255,255,255,.08);
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  z-index: 200;
+  z-index: 999;
 }
 
 .bottom-bar a {
-  text-decoration: none;
-  color: #ddd;
+  color: #aaa;
   font-size: 12px;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-.bottom-bar .icon {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 4px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .bottom-bar a.hotline {
-  color: #cfa24a;
+  color: #c9a24d;
 }
 
-/* ================= RESPONSIVE ================= */
+.bottom-bar a:hover {
+  color: #fff;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .navbar {
-    display: none; /* Mobile dùng bottom bar */
+  .menu-hero {
+    padding-top: 120px;
   }
 
   .menu-hero h1 {
-    font-size: 32px;
-    letter-spacing: 4px;
+    letter-spacing: .15em;
+  }
+
+  .menu-grid {
+    gap: 16px;
   }
 }
