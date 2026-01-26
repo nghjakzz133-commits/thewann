@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 0;
+  }
+
+  .header-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .header-logo {
+    display: none; /* ẩn logo ảnh cho giống home */
+  }
+}
