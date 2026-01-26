@@ -67,3 +67,100 @@
     font-size: 13px;
   }
 }
+/* ================================
+   MOBILE HEADER - SYNC ALL PAGES
+================================ */
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+/* same spacing all pages */
+.site-header .header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px;
+}
+
+/* logo left */
+.site-header .brand{
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header .brand-the{
+  font-size: 14px;
+  letter-spacing: .25em;
+  opacity: .85;
+}
+
+.site-header .brand-wann{
+  font-size: 22px;
+  letter-spacing: .08em;
+  font-weight: 700;
+}
+
+/* logo image center (nếu dùng) */
+.site-header .header-logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+/* nav right */
+.site-header .main-nav{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-header .nav-list{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header .nav-list a{
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+/* FIX: đẩy nội dung xuống để không bị header đè */
+body{
+  padding-top: 74px;
+}
+
+/* mobile tối ưu cho tất cả trang */
+@media (max-width: 768px){
+  .site-header .header-inner{
+    padding: 12px 12px;
+  }
+
+  .site-header .nav-list{
+    gap: 12px;
+  }
+
+  .site-header .nav-list a{
+    font-size: 11px;
+    letter-spacing: .18em;
+  }
+}
