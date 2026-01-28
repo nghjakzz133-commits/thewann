@@ -18,3 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+const isTikTok = navigator.userAgent.toLowerCase().includes('tiktok');
+
+if (isTikTok) {
+  document.querySelectorAll('a[href^="tel:"], a[href^="zalo:"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      alert('TikTok không hỗ trợ gọi trực tiếp.\nVui lòng mở link bằng Safari/Chrome.');
+    });
+  });
+}
