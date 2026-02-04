@@ -865,3 +865,25 @@ body {
   border-left: none;
   border-top: none;
 }
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+
+/* Gom brand + logo thành 1 cụm bên trái */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Đưa logo đứng ngay sau chữ */
+.header-logo {
+  order: 2;
+  margin-left: 8px;
+}
+
+/* Đảm bảo chữ đứng trước logo */
+.brand {
+  order: 1;
+}
