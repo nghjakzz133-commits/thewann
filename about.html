@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
 
-  <title>THE WANN | Giới Thiệu</title>
+  <title>The WANN | Giới Thiệu</title>
 
   <!-- SEO -->
-  <meta name="description" content="THE WANN – Nền tảng booking nightlife cao cấp tại TP.HCM. Đặt bàn club, lounge, bar nhanh chóng, giữ vị trí đẹp, dịch vụ VIP.">
-  <meta name="keywords" content="booking club, nightlife hcm, đặt bàn bar, lounge vip, the wann">
-  <meta property="og:title" content="THE WANN | Booking Nightlife Cao Cấp">
-  <meta property="og:description" content="Trải nghiệm nightlife sang trọng – nhanh – chuẩn vibe tại TP.HCM">
-  <meta property="og:image" content="assets/images/og.jpg">
-<link rel="stylesheet" href="css/core.css">
-  <link rel="stylesheet" href="/css/about.css">
+  <meta name="description" content="THE WANN – Nền tảng booking nightlife cao cấp tại TP.HCM. Đặt bàn club, lounge, bar nhanh chóng, dịch vụ VIP.">
+  <meta property="og:title" content="The WANN | Luxury Nightlife Booking">
+  <meta property="og:description" content="Trải nghiệm nightlife sang trọng – chuẩn vibe – dịch vụ cao cấp">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta property="og:locale" content="vi_VN">
 
-
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER (100% HOME) ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
@@ -32,15 +32,23 @@
     <img src="assets/images/logo.png"
          alt="The WANN Logo"
          class="header-logo"
-         width="64" height="64"
+         width="64"
+         height="64"
          loading="eager">
 
-    <nav class="main-nav" aria-label="Main navigation">
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav">
       <ul class="nav-list">
         <li><a href="index.html">Trang Chủ</a></li>
-        <li><a href="about.html">Giới Thiệu</a></li>
+        <li><a href="about.html" class="active">Giới Thiệu</a></li>
         <li><a href="gallery.html">Thư Viện</a></li>
         <li><a href="menu.html">Thực Đơn</a></li>
+        <li><a href="events.html">Sự Kiện</a></li>
         <li><a href="booking.html">Đặt Bàn</a></li>
         <li><a href="contact.html">Liên Hệ</a></li>
       </ul>
@@ -48,76 +56,65 @@
 
   </div>
 </header>
-<!-- HERO -->
-<section class="about-hero">
-  <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg">
-    <source src="assets/videos/hero.mp4" type="video/mp4">
+
+<!-- ================= HERO ================= -->
+<section class="hero hero--sub">
+  <video autoplay muted loop playsinline preload="auto"
+         poster="assets/images/poster/hero.jpg">
+    <source src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov" type="video/mp4">
   </video>
 
-  <div class="about-hero-content">
-    <img src="assets/images/logo.png" alt="Logo THE WANN" class="about-logo">
+  <div class="hero-content">
     <h1>Về THE WANN</h1>
     <p>Luxury Nightlife • Booking • Experience</p>
 
-    <div class="about-cta">
-      <a href="tel:0899996977" class="about-btn primary">📞 Gọi đặt bàn</a>
-      <a href="https://zalo.me/0899996977" target="_blank" class="about-btn">💬 Nhắn Zalo</a>
+    <div class="hero-actions">
+      <a href="tel:0899996977" class="hero-cta">Gọi đặt bàn</a>
+      <a href="https://zalo.me/0899996977" class="hero-cta secondary">Chat Zalo</a>
     </div>
   </div>
 </section>
 
-<!-- CONTENT -->
-<section class="about-main">
-  <div class="about-box">
-    <h2 class="about-title">Tại sao chọn <span>THE WANN</span>?</h2>
+<!-- ================= CONTENT ================= -->
+<section class="experience-section">
+  <h2>TẠI SAO CHỌN THE WANN?</h2>
 
-    <p class="about-desc">
-      THE WANN là nền tảng booking nightlife cao cấp, kết nối khách hàng với club, lounge, bar
-      và các sự kiện giải trí đẳng cấp tại TP.HCM.
-    </p>
+  <p class="headline">
+    Không chỉ đặt bàn<br>
+    Chúng tôi đặt trải nghiệm cho bạn.
+  </p>
 
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>✅ Xác nhận nhanh</h3>
-        <p>Phản hồi nhanh qua Hotline & Zalo, giữ bàn liền.</p>
-      </div>
-      <div class="about-card">
-        <h3>⭐ Bàn đẹp – vị trí xịn</h3>
-        <p>Ưu tiên bàn đẹp cho nhóm bạn, sinh nhật, khách VIP.</p>
-      </div>
-      <div class="about-card">
-        <h3>🔥 Chuẩn vibe nightlife</h3>
-        <p>Không gian sang – nhạc chất – trải nghiệm đáng nhớ.</p>
-      </div>
-    </div>
+  <p>
+    THE WANN là nền tảng booking nightlife cao cấp, kết nối khách hàng với
+    club, lounge, bar và các sự kiện giải trí đẳng cấp tại TP.HCM.
+  </p>
 
-    <p class="about-desc" style="margin-top:16px">
-      Hơn <strong>500+ lượt booking mỗi tháng</strong>, hợp tác cùng nhiều club & lounge hàng đầu.
-      THE WANN không chỉ đặt bàn – tụi mình đặt trải nghiệm.
-    </p>
-
-    <div class="about-highlight">
-      <div class="pill">🎉 Sinh nhật / Event</div>
-      <div class="pill">🥂 VIP Service</div>
-      <div class="pill">🎶 DJ / Performance</div>
-      <div class="pill">📍 TP.HCM</div>
-    </div>
+  <div class="experience-tags">
+    <span>Xác nhận nhanh</span>
+    <span>Bàn đẹp – vị trí xịn</span>
+    <span>Chuẩn vibe nightlife</span>
+    <span>VIP Service</span>
   </div>
+
+  <p style="margin-top:24px">
+    Hơn <strong>500+ lượt booking mỗi tháng</strong>, hợp tác cùng nhiều club & lounge hàng đầu.
+    THE WANN không dành cho số đông – mà cho những đêm đáng nhớ.
+  </p>
 </section>
 
-<!-- BOTTOM BAR -->
-<div class="bottom-bar">
-  <a href="https://www.google.com/maps/search/?api=1&query=51+Bui+Thi+Xuan+Pham+Ngu+Lao+Quan+1+Ho+Chi+Minh" target="_blank">📍 Bản đồ</a>
-  <a href="https://zalo.me/0899996977" target="_blank">💬 Zalo</a>
-  <a href="tel:0899996977" class="hotline">📞 Hotline</a>
-  <a href="https://www.facebook.com/share/16c7bFb5EL/?mibextid=wwXIfr" target="_blank">📘 Facebook</a>
-</div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>© 2026 THE WANN. All rights reserved.</p>
+</footer>
 
-<script src="js/about.js"></script>
-</body>
-</html>
+<!-- ================= BOTTOM BAR ================= -->
+<nav class="bottom-bar">
+  <a href="https://www.google.com/maps?q=51+Bùi+Thị+Xuân,+Quận+1,+TP.HCM">📍 Bản đồ</a>
+  <a href="https://zalo.me/0899996977">💬 Zalo</a>
+  <a href="tel:0899996977">📞 Hotline</a>
+  <a href="https://www.facebook.com/share/16c7bFb5EL/">📘 Facebook</a>
+</nav>
 
-</div>
-
+<script src="js/main.js" defer></script>
 </body>
 </html>
