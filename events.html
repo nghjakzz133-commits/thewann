@@ -1069,11 +1069,12 @@
       <div class="event-cta">
   <a href="tel:0899996977" class="btn">📞 Đặt Bàn Ngay</a>
   <a href="https://zalo.me/0899996977" class="btn btn-outline">💬 Chat Zalo VIP</a>
-  <a target="_blank"
-     href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/events.html"
-     class="btn btn-outline">
-     🔗 Chia sẻ Facebook
-  </a>
+<button type="button"
+        class="btn btn-outline"
+        onclick="shareEvent()">
+  📤 Chia sẻ sự kiện
+</button>
+
 </div>
 </div>
     </div>
@@ -1363,6 +1364,25 @@
     }, 100);
   });
 </script>
+<script>
+function shareEvent() {
+  const url = 'https://thewann.club/events.html';
+
+  if (navigator.share) {
+    navigator.share({
+      title: 'MẢNH MÁ KHAI XUÂN – THE WANN',
+      text: 'Guest Singer Bảo Yến Rosie | 06.02.2026',
+      url: url
+    });
+  } else {
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
+      '_blank'
+    );
+  }
+}
+</script>
+
 
 </body>
 </html>
