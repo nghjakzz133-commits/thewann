@@ -167,6 +167,40 @@
 
   </div>
 </section>
+  <section class="lux-booking">
+  <div class="lux-wrap">
+    <div class="lux-head">
+      <h2>ĐẶT BÀN VIP</h2>
+      <p>Giữ chỗ đẹp • Ưu đãi riêng • Xác nhận nhanh</p>
+    </div>
+
+    <form class="lux-form" onsubmit="submitBooking(event)">
+      <div class="lux-grid">
+        <input type="text" placeholder="Họ & tên" required>
+        <input type="date" required>
+
+        <select id="contactType" onchange="toggleContact()" required>
+          <option value="">Khách muốn được liên hệ qua</option>
+          <option value="phone">Số điện thoại</option>
+          <option value="zalo">Zalo</option>
+        </select>
+
+        <input type="tel" id="phoneField" placeholder="Nhập số điện thoại" style="display:none;">
+        <input type="text" id="zaloField" placeholder="Nhập Zalo / số Zalo" style="display:none;">
+      </div>
+
+      <textarea placeholder="Yêu cầu thêm (VIP, sinh nhật, set rượu...)"></textarea>
+
+      <button type="submit" class="lux-btn">
+        GIỮ BÀN NGAY
+      </button>
+
+      <div class="lux-note">
+        Xác nhận trong vài phút sau khi gửi
+      </div>
+    </form>
+  </div>
+</section>
 <!-- ================= INFO BAR ================= -->
 <section class="hero-info-bar">
   <div class="info-item">
