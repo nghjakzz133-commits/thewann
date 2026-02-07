@@ -1538,8 +1538,11 @@ function submitBooking(event) {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
 
-  fetch("https://script.google.com/macros/s/AKfycbwFH7SlhqwkT7ZkvakOovueeNoJHvln5wVJEPMwH8AtkiON2Z479UclgyEErkpyfze0g/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwFH7SlhqwkT7ZkvakOovueeNoJHvln5wVJEPMwH8AtkiON2Z479UclgyEErkpxyfeOg/exec", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify({
       name: data.name,
       phone: data.phone,
@@ -1547,17 +1550,13 @@ function submitBooking(event) {
       contact_type: data.contact_type,
       zalo: data.zalo || "",
       message: data.message || ""
-    }),
-    headers: {
-      "Content-Type": "application/json"
-    }
+    })
   })
   .then(res => res.text())
   .then(res => {
     alert("✅ Đặt bàn thành công! Nhân viên sẽ liên hệ sớm.");
     event.target.reset();
 
-    // nếu vẫn muốn mở Zalo thì giữ
     if (data.contact_type === "zalo") {
       window.open("https://zalo.me/0899996977", "_blank");
     }
@@ -1567,6 +1566,7 @@ function submitBooking(event) {
     console.error(err);
   });
 }
+
 
   // ===== SMOOTH SCROLL =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
