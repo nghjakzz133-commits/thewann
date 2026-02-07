@@ -1083,3 +1083,82 @@ body {
     padding: 22px;
   }
 }
+.lux-booking{
+  background: linear-gradient(180deg,#0b0b0f,#12121a);
+  padding:80px 20px;
+  color:#fff;
+}
+.lux-wrap{
+  max-width:900px;
+  margin:auto;
+  background:#111;
+  border:1px solid rgba(212,175,55,.25);
+  border-radius:18px;
+  padding:50px;
+  box-shadow:0 0 40px rgba(212,175,55,.08);
+}
+.lux-head{text-align:center;margin-bottom:35px;}
+.lux-head h2{
+  font-size:34px;
+  letter-spacing:2px;
+  margin-bottom:10px;
+  color:#d4af37;
+}
+.lux-head p{opacity:.8;}
+
+.lux-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.lux-form input,
+.lux-form select,
+.lux-form textarea{
+  width:100%;
+  padding:16px;
+  background:#0c0c12;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  color:#fff;
+  font-size:15px;
+}
+.lux-form textarea{
+  margin-top:16px;
+  min-height:110px;
+}
+.lux-form input:focus,
+.lux-form select:focus,
+.lux-form textarea:focus{
+  outline:none;
+  border-color:#d4af37;
+  box-shadow:0 0 0 1px rgba(212,175,55,.3);
+}
+.lux-btn{
+  width:100%;
+  margin-top:22px;
+  padding:18px;
+  border:none;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:1px;
+  background:linear-gradient(90deg,#cfae3c,#f5d77a);
+  color:#111;
+  cursor:pointer;
+  transition:.25s;
+}
+.lux-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(212,175,55,.35);
+}
+.lux-note{
+  text-align:center;
+  margin-top:12px;
+  font-size:13px;
+  opacity:.7;
+}
+
+@media(max-width:640px){
+  .lux-grid{grid-template-columns:1fr;}
+  .lux-wrap{padding:30px 20px;}
+}
