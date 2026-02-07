@@ -166,38 +166,51 @@
     </div>
 
   </div>
-</section>
-  <section class="lux-booking">
-  <div class="lux-wrap">
-    <div class="lux-head">
-      <h2>ĐẶT BÀN VIP</h2>
-      <p>Giữ chỗ đẹp • Ưu đãi riêng • Xác nhận nhanh</p>
-    </div>
+<section class="vip-booking">
+  <div class="vip-overlay"></div>
 
-    <form class="lux-form" onsubmit="submitBooking(event)">
-      <div class="lux-grid">
-        <input type="text" placeholder="Họ & tên" required>
+  <div class="vip-inner">
+    <h2>ĐẶT BÀN VIP</h2>
+    <p>Nhanh tay giữ view đẹp nhất tối nay</p>
+
+    <form class="vip-form" onsubmit="submitBooking(event)">
+
+      <div class="field">
+        <label>HỌ & TÊN *</label>
+        <input type="text" required>
+      </div>
+
+      <div class="field">
+        <label>ĐIỆN THOẠI *</label>
+        <input type="tel" required>
+      </div>
+
+      <div class="field">
+        <label>NGÀY *</label>
         <input type="date" required>
+      </div>
 
+      <div class="field">
+        <label>KHÁCH MUỐN LIÊN HỆ QUA *</label>
         <select id="contactType" onchange="toggleContact()" required>
-          <option value="">Khách muốn được liên hệ qua</option>
-          <option value="phone">Số điện thoại</option>
+          <option value="">Chọn hình thức</option>
+          <option value="phone">Gọi điện</option>
           <option value="zalo">Zalo</option>
         </select>
-
-        <input type="tel" id="phoneField" placeholder="Nhập số điện thoại" style="display:none;">
-        <input type="text" id="zaloField" placeholder="Nhập Zalo / số Zalo" style="display:none;">
       </div>
 
-      <textarea placeholder="Yêu cầu thêm (VIP, sinh nhật, set rượu...)"></textarea>
-
-      <button type="submit" class="lux-btn">
-        GIỮ BÀN NGAY
-      </button>
-
-      <div class="lux-note">
-        Xác nhận trong vài phút sau khi gửi
+      <div class="field" id="zaloBox" style="display:none;">
+        <label>ZALO</label>
+        <input type="text">
       </div>
+
+      <div class="field">
+        <label>NỘI DUNG</label>
+        <textarea rows="4"></textarea>
+      </div>
+
+      <button class="vip-btn">BOOK NOW</button>
+
     </form>
   </div>
 </section>
