@@ -1532,44 +1532,41 @@
       toggle.classList.remove('active');
     });
   });
+function submitBooking(event) {
+  event.preventDefault();
 
-  // ===== VIP BOOKING FORM =====
-  function toggleContact() {
-    const type = document.getElementById('contactType').value;
-    const zaloBox = document.getElementById('zaloBox');
-    
-    if (type === 'zalo') {
-      zaloBox.style.display = 'block';
-    } else {
-      zaloBox.style.display = 'none';
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  fetch("https://script.google.com/macros/s/AKfycbwFH7SlhqwkT7ZkvakOovueeNoJHvln5wVJEPMwH8AtkiON2Z479UclgyEErkpyfze0g/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      name: data.name,
+      phone: data.phone,
+      date: data.date,
+      contact_type: data.contact_type,
+      zalo: data.zalo || "",
+      message: data.message || ""
+    }),
+    headers: {
+      "Content-Type": "application/json"
     }
-  }
-
-  function submitBooking(event) {
-    event.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    
-    // Build message for Zalo
-    let message = `Đặt bàn mới từ website:\n`;
-    message += `Tên: ${data.name}\n`;
-    message += `SĐT: ${data.phone}\n`;
-    message += `Ngày: ${data.date}\n`;
-    message += `Liên hệ qua: ${data.contact_type}\n`;
-    if (data.zalo) message += `Zalo: ${data.zalo}\n`;
-    if (data.message) message += `Ghi chú: ${data.message}`;
-    
-    // Show success message
-    alert('Cảm ơn bạn đã đặt bàn! Chúng tôi sẽ liên hệ ngay.');
-    
-    // Open Zalo
-    window.open('https://zalo.me/0899996977', '_blank');
-    
-    // Reset form
+  })
+  .then(res => res.text())
+  .then(res => {
+    alert("✅ Đặt bàn thành công! Nhân viên sẽ liên hệ sớm.");
     event.target.reset();
-  }
+
+    // nếu vẫn muốn mở Zalo thì giữ
+    if (data.contact_type === "zalo") {
+      window.open("https://zalo.me/0899996977", "_blank");
+    }
+  })
+  .catch(err => {
+    alert("❌ Có lỗi, thử lại giúp mình");
+    console.error(err);
+  });
+}
 
   // ===== SMOOTH SCROLL =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
