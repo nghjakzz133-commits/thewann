@@ -1532,40 +1532,24 @@
       toggle.classList.remove('active');
     });
   });
-function doPost(e) {
-  try {
-    var data = e.parameter; // ⬅️ CHÌA KHÓA Ở ĐÂY
+function submitBooking(event) {
+  event.preventDefault();
 
-    var sheet = SpreadsheetApp
-      .openById("11qHF0ahD1U10E09Wa-7lM6R9laqM8WH4Z6PXHT-vDx8")
-      .getSheetByName("Sheet1");
+  const formData = new FormData(event.target);
 
-    sheet.appendRow([
-      new Date(),
-      data.name || "",
-      data.phone || "",
-      data.date || "",
-      data.contact_type || "",
-      data.message || ""
-    ]);
-
-    MailApp.sendEmail(
-      "nghjakzz133@gmail.com",
-      "🔔 THE WANN | Có khách đặt bàn VIP",
-      `Tên: ${data.name}
-Phone: ${data.phone}
-Ngày: ${data.date}
-Liên hệ: ${data.contact_type}
-Nội dung: ${data.message || "Không có"}`
-    );
-
-    return ContentService
-      .createTextOutput("OK")
-      .setMimeType(ContentService.MimeType.TEXT);
-
-  } catch (err) {
-    return ContentService.createTextOutput("ERROR: " + err);
-  }
+  fetch("https://script.google.com/macros/s/AKfycbwGxXwwFioo2Q37sj95Y0VWD1qtASQiRc-MTbXU3EACAro3kcY1G70hYggJx9ka67Vw0w/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(res => {
+    alert("✅ Đặt bàn thành công! Nhân viên sẽ liên hệ sớm.");
+    event.target.reset();
+  })
+  .catch(err => {
+    alert("❌ Có lỗi, thử lại giúp mình");
+    console.error(err);
+  });
 }
 
 
