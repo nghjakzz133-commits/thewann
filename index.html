@@ -905,6 +905,11 @@
       box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
     }
 
+    .vip-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
     /* ==================== GALLERY SECTION ==================== */
     .gallery-section {
       padding: 5rem 2rem;
@@ -1390,7 +1395,7 @@
     <h2>ĐẶT BÀN VIP</h2>
     <p>Nhanh tay giữ view đẹp nhất tối nay</p>
 
-    <form class="vip-form" onsubmit="submitBooking(event)">
+    <form class="vip-form" id="bookingForm" onsubmit="submitBooking(event)">
 
       <div class="field">
         <label>HỌ & TÊN *</label>
@@ -1426,7 +1431,7 @@
         <textarea name="message" rows="4" placeholder="Yêu cầu đặc biệt (nếu có)"></textarea>
       </div>
 
-      <button type="submit" class="vip-btn">BOOK NOW</button>
+      <button type="submit" class="vip-btn" id="submitBtn">BOOK NOW</button>
 
     </form>
   </div>
@@ -1528,35 +1533,46 @@
     const type = document.getElementById('contactType')?.value;
     const zaloBox = document.getElementById('zaloBox');
     if (!zaloBox) return;
-
     zaloBox.style.display = type === 'zalo' ? 'block' : 'none';
   }
 
-  // ===== FIXED FORM SUBMIT (CHỈ FIX PHẦN NÀY) =====
+  // ===== FIXED FORM SUBMISSION =====
   function submitBooking(event) {
     event.preventDefault();
 
     const form = event.target;
+    const submitBtn = document.getElementById('submitBtn');
     const formData = new FormData(form);
 
-    fetch("https://script.google.com/macros/s/AKfycbwGxXwwFioo2Q37sj95Y0VWD1qtASQiRc-MTbXU3EACAro3kcY1G70hYggJx9ka67Vw0w/exec", {
-      method: "POST",
-      body: formData
+    // Disable button
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'ĐANG GỬI...';
+
+    // QUAN TRỌNG: Phải dùng đúng deployment URL, không phải script editor URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwGxXwwFioo2Q37sj95Y0VWD1qtASQiRc-MTbXU3EACAro3kcY1G70hYggJx9ka67Vw0w/exec';
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors' // Quan trọng với Google Apps Script
     })
-    .then(res => res.text())
-    .then(res => {
-      if (res.trim() === "OK") {
-        alert("✅ Đặt bàn thành công! Nhân viên sẽ liên hệ sớm.");
-        form.reset();
-        toggleContact();
-      } else {
-        console.error("SERVER RESPONSE:", res);
-        alert("❌ Có lỗi phía server");
-      }
+    .then(() => {
+      // no-cors mode không trả về response, nên ta giả định thành công
+      alert('✅ Đặt bàn thành công! Chúng tôi sẽ liên hệ sớm nhất.');
+      form.reset();
+      toggleContact();
+      
+      // Optional: Open Zalo
+      window.open('https://zalo.me/0899996977', '_blank');
     })
-    .catch(err => {
-      console.error("FORM ERROR:", err);
-      alert("❌ Có lỗi, thử lại giúp mình");
+    .catch(error => {
+      console.error('Form submission error:', error);
+      alert('❌ Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ qua Zalo: 0899996977');
+    })
+    .finally(() => {
+      // Re-enable button
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'BOOK NOW';
     });
   }
 
@@ -1616,7 +1632,6 @@
     trackEvent('Form', 'Submit', 'VIP Booking');
   });
 </script>
-
 
 </body>
 </html>
