@@ -1189,7 +1189,58 @@
         height: 50px;
       }
     }
-  </style>
+ .vip-cta-group {
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.vip-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #fff;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transition: all .3s ease;
+}
+
+.vip-cta span {
+  font-size: 28px;
+}
+
+.vip-cta strong {
+  font-size: 16px;
+  display: block;
+}
+
+.vip-cta small {
+  font-size: 13px;
+  opacity: .85;
+}
+
+/* Màu từng CTA */
+.vip-cta.fb {
+  background: linear-gradient(135deg, #1877f2, #0f5fd6);
+}
+
+.vip-cta.zalo {
+  background: linear-gradient(135deg, #0068ff, #0099ff);
+}
+
+.vip-cta.hotline {
+  background: linear-gradient(135deg, #ff8a00, #ff3d00);
+}
+
+/* Hover xịn */
+.vip-cta:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+ </style>
 </head>
 
 <body>
@@ -1393,49 +1444,47 @@
 
   <div class="vip-inner">
     <h2>ĐẶT BÀN VIP</h2>
-    <p>Nhanh tay giữ view đẹp nhất tối nay</p>
+    <p>Chọn cách liên hệ nhanh nhất với bạn</p>
 
-    <form class="vip-form" id="bookingForm" onsubmit="submitBooking(event)">
+    <div class="vip-cta-group">
+      <a 
+        href="https://www.facebook.com/ManhDeluxe.ZeroToHero?mibextid=wwXIfr&rdid=6kTnFBzSN00rt6Gw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16c7bFb5EL%2F#" 
+        target="_blank"
+        class="vip-cta fb"
+      >
+        <span>💬</span>
+        <div>
+          <strong>Đặt bàn qua Facebook</strong>
+          <small>Chat fanpage – phản hồi nhanh</small>
+        </div>
+      </a>
 
-      <div class="field">
-        <label>HỌ & TÊN *</label>
-        <input type="text" name="name" required placeholder="Nhập họ tên của bạn">
-      </div>
+      <a 
+        href="https://zalo.me/0899996977" 
+        target="_blank"
+        class="vip-cta zalo"
+      >
+        <span>📱</span>
+        <div>
+          <strong>Đặt bàn qua Zalo</strong>
+          <small>Nhắn tin trực tiếp</small>
+        </div>
+      </a>
 
-      <div class="field">
-        <label>ĐIỆN THOẠI *</label>
-        <input type="tel" name="phone" required placeholder="Số điện thoại">
-      </div>
-
-      <div class="field">
-        <label>NGÀY *</label>
-        <input type="date" name="date" required>
-      </div>
-
-      <div class="field">
-        <label>KHÁCH MUỐN LIÊN HỆ QUA *</label>
-        <select id="contactType" name="contact_type" onchange="toggleContact()" required>
-          <option value="">Chọn hình thức</option>
-          <option value="phone">Gọi điện</option>
-          <option value="zalo">Zalo</option>
-        </select>
-      </div>
-
-      <div class="field" id="zaloBox" style="display:none;">
-        <label>ZALO</label>
-        <input type="text" name="zalo" placeholder="ID Zalo của bạn">
-      </div>
-
-      <div class="field">
-        <label>NỘI DUNG</label>
-        <textarea name="message" rows="4" placeholder="Yêu cầu đặc biệt (nếu có)"></textarea>
-      </div>
-
-      <button type="submit" class="vip-btn" id="submitBtn">BOOK NOW</button>
-
-    </form>
+      <a 
+        href="tel:0899996977" 
+        class="vip-cta hotline"
+      >
+        <span>📞</span>
+        <div>
+          <strong>Hotline: 089 999 6977</strong>
+          <small>Gọi ngay – giữ bàn liền</small>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
+
 
 <!-- ================= GALLERY ================= -->
 <section class="gallery-section">
