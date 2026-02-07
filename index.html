@@ -1532,39 +1532,40 @@
       toggle.classList.remove('active');
     });
   });
-function submitBooking(event) {
-  event.preventDefault();
+function doPost(e) {
+  try {
+    var data = e.parameter; // ⬅️ CHÌA KHÓA Ở ĐÂY
 
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData);
+    var sheet = SpreadsheetApp
+      .openById("11qHF0ahD1U10E09Wa-7lM6R9laqM8WH4Z6PXHT-vDx8")
+      .getSheetByName("Sheet1");
 
-  fetch("https://script.google.com/macros/s/AKfycbwFH7SlhqwkT7ZkvakOovueeNoJHvln5wVJEPMwH8AtkiON2Z479UclgyEErkpxyfeOg/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      name: data.name,
-      phone: data.phone,
-      date: data.date,
-      contact_type: data.contact_type,
-      zalo: data.zalo || "",
-      message: data.message || ""
-    })
-  })
-  .then(res => res.text())
-  .then(res => {
-    alert("✅ Đặt bàn thành công! Nhân viên sẽ liên hệ sớm.");
-    event.target.reset();
+    sheet.appendRow([
+      new Date(),
+      data.name || "",
+      data.phone || "",
+      data.date || "",
+      data.contact_type || "",
+      data.message || ""
+    ]);
 
-    if (data.contact_type === "zalo") {
-      window.open("https://zalo.me/0899996977", "_blank");
-    }
-  })
-  .catch(err => {
-    alert("❌ Có lỗi, thử lại giúp mình");
-    console.error(err);
-  });
+    MailApp.sendEmail(
+      "nghjakzz133@gmail.com",
+      "🔔 THE WANN | Có khách đặt bàn VIP",
+      `Tên: ${data.name}
+Phone: ${data.phone}
+Ngày: ${data.date}
+Liên hệ: ${data.contact_type}
+Nội dung: ${data.message || "Không có"}`
+    );
+
+    return ContentService
+      .createTextOutput("OK")
+      .setMimeType(ContentService.MimeType.TEXT);
+
+  } catch (err) {
+    return ContentService.createTextOutput("ERROR: " + err);
+  }
 }
 
 
