@@ -36,3 +36,15 @@ if (isTikTok) {
     toggle.classList.toggle('active');
     nav.classList.toggle('active');
   });
+function toggleContact(){
+  const type = document.getElementById("contactType").value;
+  document.getElementById("phoneField").style.display =
+    type === "phone" ? "block" : "none";
+  document.getElementById("zaloField").style.display =
+    type === "zalo" ? "block" : "none";
+}
+
+function submitBooking(e){
+  e.preventDefault();
+  alert("Đã gửi yêu cầu giữ bàn — sẽ liên hệ xác nhận ngay!");
+}
