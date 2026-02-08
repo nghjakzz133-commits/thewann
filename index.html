@@ -1296,6 +1296,111 @@
   margin: 0 auto;
   opacity: 0.9;
 }
+.promotion-discount {
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 16px 0 20px;
+  color: #d4af37;
+}
+
+.promotion-discount strong {
+  font-size: 36px;
+}
+.promotion-card {
+  padding: 28px 24px;
+  border-radius: 20px;
+  background: radial-gradient(circle at top, #1a1206, #000);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.promotion-list li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+/* ===== PROMOTION FOMO CARD ===== */
+.promotion-card {
+  position: relative;
+  max-width: 420px;
+  margin: 48px auto;
+  padding: 32px 26px 28px;
+  border-radius: 20px;
+  background: radial-gradient(
+    120% 120% at 50% 0%,
+    rgba(255, 200, 80, 0.12),
+    rgba(0, 0, 0, 0.85) 60%
+  );
+  border: 1px solid rgba(255, 200, 80, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(255, 200, 80, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Badge */
+.promotion-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #111;
+  background: linear-gradient(135deg, #f6c86e, #d9a441);
+  margin-bottom: 18px;
+}
+
+/* Title */
+.promotion-card h3 {
+  font-size: 22px;
+  line-height: 1.35;
+  color: #f5d27a;
+  margin-bottom: 16px;
+}
+
+/* Discount highlight */
+.promotion-discount {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #f5c451;
+  margin-bottom: 22px;
+}
+
+.promotion-discount strong {
+  font-size: 34px;
+}
+
+/* List */
+.promotion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.promotion-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.promotion-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f5c451;
+  font-weight: 700;
+}
+
+/* Note */
+.promotion-note {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.55);
+  border-left: 3px solid rgba(245,196,81,0.6);
+  padding-left: 12px;
+}
  </style>
 </head>
 
@@ -1366,53 +1471,6 @@
     </div>
   </div>
 </section>
-
-<!-- ================= INFO BAR ================= -->
-<section class="hero-info-bar">
-  <div class="info-item">
-    <span class="info-label">OPEN</span>
-    <span class="info-value">17:00 – Late Night</span>
-  </div>
-  <div class="info-item">
-    <span class="info-label">MUSIC</span>
-    <span class="info-value">House • HipHop • EDM</span>
-  </div>
-  <div class="info-item">
-    <span class="info-label">DRESS CODE</span>
-    <span class="info-value">Elegant / Sexy / Luxury</span>
-  </div>
-</section>
-
-<!-- ================= HERO EXTRAS ================= -->
-<section class="hero-extras">
-
-  <p class="hero-usp">
-    VIP TABLE • DJ GUEST • PRIVATE ROOM • VIEW ĐẸP
-  </p>
-
-  <div class="hero-trust">
-    <span>★ 5.0 Google</span>
-    <span>👥 5.000+ khách / tháng</span>
-    <span>🍾 VIP mỗi đêm</span>
-  </div>
-
-  <div class="hero-preview">
-    <div class="preview-track">
-      <img src="https://images.unsplash.com/photo-1770419358247-e1ff799c3811?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Club" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1770418539112-de82a04fee9b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Night" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1770419453586-01f27c318373?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN VIP" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1770419772599-dcb7ee4d1d18?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Experience" loading="lazy">
-      <!-- Duplicate for infinite scroll -->
-      <img src="https://images.unsplash.com/photo-1770420186712-6fbb6d937348?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Club" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1770418866984-dc13a1ae387a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Night" loading="lazy">
-    </div>
-  </div>
-
-  <blockquote class="hero-quote">
-    "Nơi mỗi đêm đều là một kỷ niệm đáng giá."
-  </blockquote>
-</section>
-
 <!-- ================= PROMOTION SECTION ================= -->
 <section id="promotion" class="promotion-section">
   <div class="container">
@@ -1511,6 +1569,53 @@
       <strong>không còn bàn đẹp</strong> vào giờ cao điểm.
     </p>
   </div>
+</section>
+
+
+<!-- ================= INFO BAR ================= -->
+<section class="hero-info-bar">
+  <div class="info-item">
+    <span class="info-label">OPEN</span>
+    <span class="info-value">17:00 – Late Night</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">MUSIC</span>
+    <span class="info-value">House • HipHop • EDM</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">DRESS CODE</span>
+    <span class="info-value">Elegant / Sexy / Luxury</span>
+  </div>
+</section>
+
+<!-- ================= HERO EXTRAS ================= -->
+<section class="hero-extras">
+
+  <p class="hero-usp">
+    VIP TABLE • DJ GUEST • PRIVATE ROOM • VIEW ĐẸP
+  </p>
+
+  <div class="hero-trust">
+    <span>★ 5.0 Google</span>
+    <span>👥 5.000+ khách / tháng</span>
+    <span>🍾 VIP mỗi đêm</span>
+  </div>
+
+  <div class="hero-preview">
+    <div class="preview-track">
+      <img src="https://images.unsplash.com/photo-1770419358247-e1ff799c3811?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Club" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1770418539112-de82a04fee9b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Night" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1770419453586-01f27c318373?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN VIP" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1770419772599-dcb7ee4d1d18?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Experience" loading="lazy">
+      <!-- Duplicate for infinite scroll -->
+      <img src="https://images.unsplash.com/photo-1770420186712-6fbb6d937348?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Club" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1770418866984-dc13a1ae387a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The WANN Night" loading="lazy">
+    </div>
+  </div>
+
+  <blockquote class="hero-quote">
+    "Nơi mỗi đêm đều là một kỷ niệm đáng giá."
+  </blockquote>
 </section>
 
 
