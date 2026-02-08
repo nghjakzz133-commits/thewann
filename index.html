@@ -1401,7 +1401,26 @@
   border-left: 3px solid rgba(245,196,81,0.6);
   padding-left: 12px;
 }
- </style>
+/* ===== FIX HEADER EAT BANNER ===== */
+body {
+  padding-top: 80px;
+}
+
+.site-header {
+  height: 80px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .site-header {
+    height: 70px;
+  }
+}
+
+</style>
 </head>
 
 <body>
