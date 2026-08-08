@@ -4,117 +4,769 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
-
-  <title>The WANN | Giới Thiệu</title>
-
-  <!-- SEO -->
-  <meta name="description" content="THE WANN – Nền tảng booking nightlife cao cấp tại TP.HCM. Đặt bàn club, lounge, bar nhanh chóng, dịch vụ VIP.">
-  <meta property="og:title" content="The WANN | Luxury Nightlife Booking">
-  <meta property="og:description" content="Trải nghiệm nightlife sang trọng – chuẩn vibe – dịch vụ cao cấp">
-  <meta property="og:image" content="assets/images/logo.png">
+ 
+  <!-- ================= BASIC SEO ================= -->
+  <title>Giới Thiệu | NEW THE WANN - Food & Club Đẳng Cấp Sài Gòn</title>
+  <meta name="description" content="NEW THE WANN - Câu chuyện phía sau viên ngọc mới ở trái tim Sài Gòn. Khám phá concept Food & Club, không gian 500-600 khách, và triết lý phục vụ đẳng cấp tại 74-76 Nam Kỳ Khởi Nghĩa, Q.1.">
+  <meta name="keywords" content="NEW THE WANN, giới thiệu, câu chuyện thương hiệu, Food & Club Sài Gòn, club sang trọng Q1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thewann.pages.dev/about.html">
+ 
+  <!-- ================= OPEN GRAPH ================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEW THE WANN">
+  <meta property="og:title" content="Giới Thiệu – NEW THE WANN">
+  <meta property="og:description" content="Câu chuyện phía sau viên ngọc mới ở trái tim Sài Gòn. Food & Club - Không gian Luxury 500-600 khách.">
+  <meta property="og:url" content="https://thewann.pages.dev/about.html">
+  <meta property="og:image" content="https://thewann.pages.dev/assets/images/og-cover.jpg">
   <meta property="og:locale" content="vi_VN">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/home.css">
+ 
+  <!-- ================= STRUCTURED DATA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "NightClub",
+      "name": "NEW THE WANN",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "74-76 Nam Kỳ Khởi Nghĩa",
+        "addressLocality": "Quận 1",
+        "addressRegion": "TP.HCM",
+        "addressCountry": "VN"
+      },
+      "telephone": "+84899996977"
+    }
+  }
+  </script>
+ 
+  <!-- ================= FONTS ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+ 
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F4E4C1;
+      --gold-dark: #B8941F;
+      --black: #000000;
+      --dark: #0a0a0a;
+      --dark-2: #151515;
+      --white: #ffffff;
+      --gray: #999999;
+      --red: #ff0055;
+      --purple: #9D4EDD;
+ 
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-title: 'Bebas Neue', sans-serif;
+    }
+ 
+    body {
+      font-family: var(--font-body);
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+      padding-top: 80px;
+      padding-bottom: 70px;
+    }
+ 
+    html { scroll-behavior: smooth; }
+ 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+ 
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+ 
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+ 
+    /* ==================== ANIMATED BACKGROUND ==================== */
+    .animated-bg {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+      opacity: 0.15;
+      background:
+        radial-gradient(circle at 20% 50%, var(--gold) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, var(--purple) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, var(--red) 0%, transparent 50%);
+      animation: bgPulse 15s ease-in-out infinite;
+    }
+    @keyframes bgPulse {
+      0%, 100% { opacity: 0.15; transform: scale(1); }
+      50% { opacity: 0.25; transform: scale(1.1); }
+    }
+ 
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; width: 100%; }
+ 
+    /* ==================== HEADER (shared) ==================== */
+    .site-header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      height: 80px; display: flex; align-items: center;
+      background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+      transition: all 0.3s ease;
+    }
+    .site-header.scrolled {
+      height: 70px; background: rgba(0, 0, 0, 0.95);
+      box-shadow: 0 5px 30px rgba(212, 175, 55, 0.3);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; line-height: 1; transition: transform 0.3s ease; }
+    .brand:hover { transform: scale(1.05); }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-new { font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.35em; color: var(--gold-light); font-weight: 300; }
+    .brand-wann { font-family: var(--font-title); font-size: 2rem; letter-spacing: 0.1em; color: var(--white); font-weight: 900; text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+    .header-logo { width: 50px; height: 50px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)); animation: logoFloat 3s ease-in-out infinite; }
+    @keyframes logoFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+ 
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 10px; z-index: 1001; }
+    .menu-toggle span { width: 30px; height: 3px; background: var(--gold); transition: all 0.3s ease; border-radius: 2px; }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+ 
+    .main-nav ul { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+    .main-nav a {
+      color: var(--white); text-decoration: none; font-weight: 500; font-size: 0.85rem;
+      letter-spacing: 0.08em; text-transform: uppercase; position: relative; padding: 0.5rem 0; transition: color 0.3s ease;
+    }
+    .main-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.3s ease; }
+    .main-nav a:hover { color: var(--gold); }
+    .main-nav a:hover::after { width: 100%; }
+    .main-nav a.active { color: var(--gold); }
+    .main-nav a.active::after { width: 100%; }
+ 
+    .nav-cta {
+      display: inline-block; padding: 0.65rem 1.4rem; margin-left: 0.5rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--black) !important; border-radius: 30px; font-weight: 700 !important;
+      letter-spacing: 0.05em; transition: all 0.3s ease;
+    }
+    .nav-cta::after { display: none; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212,175,55,0.4); color: var(--black) !important; }
+ 
+    /* ==================== MARQUEE ==================== */
+    .marquee-band {
+      background: var(--gold); color: var(--black); overflow: hidden; white-space: nowrap;
+      border-top: 1px solid rgba(0,0,0,0.15); border-bottom: 1px solid rgba(0,0,0,0.15);
+      position: relative; z-index: 3;
+    }
+    .marquee-track { display: inline-flex; animation: marqueeScroll 28s linear infinite; will-change: transform; }
+    .marquee-track span { display: inline-flex; align-items: center; font-family: var(--font-title); font-size: 1.1rem; letter-spacing: 0.2em; padding: 0.9rem 2rem; text-transform: uppercase; }
+    .marquee-track span::after { content: '✦'; margin-left: 2rem; font-size: 0.8rem; }
+    @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+ 
+    /* ==================== ABOUT HERO ==================== */
+    .about-hero {
+      position: relative; min-height: 78vh; display: flex; align-items: center; justify-content: center;
+      overflow: hidden; padding: 6rem 2rem 5rem;
+      background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1600&q=80') center/cover;
+    }
+    .about-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.92) 100%);
+      z-index: 1;
+    }
+    .about-hero-content { position: relative; z-index: 2; text-align: center; max-width: 920px; animation: fadeInUp 1s ease-out; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+ 
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.5rem; margin-bottom: 1.5rem;
+      background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 30px; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold-light); text-transform: uppercase;
+    }
+    .about-hero-content h1 {
+      font-family: var(--font-display); font-size: clamp(2.1rem, 5.5vw, 3.8rem); font-weight: 800;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      text-shadow: 0 0 80px rgba(212, 175, 55, 0.5); line-height: 1.3;
+    }
+    .about-hero-content p.lede {
+      font-size: clamp(1rem, 2vw, 1.2rem); color: #ddd; max-width: 680px; margin: 0 auto; line-height: 1.9; font-weight: 300;
+    }
+ 
+    /* ==================== SECTION SHARED ==================== */
+    .eyebrow { display: block; text-align: center; font-size: 0.8rem; letter-spacing: 0.35em; color: var(--gold-dark); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
+    .section-title { font-family: var(--font-title); font-size: clamp(2rem, 5vw, 3.2rem); text-align: center; letter-spacing: 0.08em; margin-bottom: 1rem; color: var(--white); text-shadow: 0 0 30px rgba(212, 175, 55, 0.3); }
+    .section-title span { color: var(--gold); }
+    .section-sub { text-align: center; color: var(--gray); max-width: 720px; margin: 0 auto 3.5rem; font-size: 1.02rem; line-height: 1.85; }
+ 
+    /* ==================== STORY (split) ==================== */
+    .story-section { padding: 6rem 2rem; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+    .story-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+    .story-media { position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 4/5; border: 1px solid rgba(212,175,55,0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.5); }
+    .story-media img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); }
+    .story-media .media-badge {
+      position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 14px; padding: 1.2rem 1.5rem;
+    }
+    .media-badge .num { font-family: var(--font-title); font-size: 2.2rem; color: var(--gold); line-height: 1; }
+    .media-badge .lbl { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gold-light); text-transform: uppercase; margin-top: 0.3rem; }
+ 
+    .story-copy h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--white); margin-bottom: 1.4rem; line-height: 1.35; }
+    .story-copy h2 span { color: var(--gold); }
+    .story-copy p { color: var(--gray); font-size: 1rem; line-height: 1.95; margin-bottom: 1.2rem; }
+    .story-copy p strong { color: var(--gold-light); font-weight: 600; }
+ 
+    /* ==================== STATS BAR ==================== */
+    .stats-bar {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+      max-width: 1200px; margin: 4rem auto 0; padding: 3rem 2rem;
+      background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 24px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: var(--font-title); font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--gold); text-shadow: 0 0 30px rgba(212,175,55,0.4); line-height: 1; }
+    .stat-lbl { font-size: 0.78rem; letter-spacing: 0.15em; color: var(--gray); text-transform: uppercase; margin-top: 0.6rem; }
+ 
+    /* ==================== PILLARS ==================== */
+    .pillars-section { padding: 6rem 2rem; background: var(--black); }
+    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.8rem; max-width: 1200px; margin: 0 auto; }
+    .pillar-card {
+      background: radial-gradient(120% 120% at 50% 0%, rgba(212,175,55,0.08), rgba(0,0,0,0.85) 60%);
+      border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 20px; padding: 2.4rem 1.8rem;
+      transition: all 0.4s ease; text-align: center;
+    }
+    .pillar-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 20px 60px rgba(212, 175, 55, 0.25); }
+    .pillar-icon { font-size: 2.4rem; margin-bottom: 1.2rem; display: block; }
+    .pillar-card h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 0.8rem; }
+    .pillar-card p { color: var(--gray); font-size: 0.92rem; line-height: 1.7; }
+ 
+    /* ==================== TIMELINE ==================== */
+    .timeline-section { padding: 6rem 2rem; background: linear-gradient(180deg, var(--black) 0%, var(--dark) 100%); }
+    .timeline { max-width: 800px; margin: 0 auto; position: relative; padding-left: 2.5rem; }
+    .timeline::before { content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(180deg, var(--gold) 0%, rgba(212,175,55,0.15) 100%); }
+    .timeline-item { position: relative; padding-bottom: 3rem; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -2.5rem; top: 4px; width: 14px; height: 14px; border-radius: 50%;
+      background: var(--gold); box-shadow: 0 0 0 4px rgba(212,175,55,0.15), 0 0 20px rgba(212,175,55,0.6);
+    }
+    .timeline-year { font-family: var(--font-title); font-size: 1.6rem; color: var(--gold); letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+    .timeline-item h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--white); margin-bottom: 0.5rem; }
+    .timeline-item p { color: var(--gray); font-size: 0.92rem; line-height: 1.75; max-width: 600px; }
+ 
+    /* ==================== VIBE / TEAM ==================== */
+    .vibe-section { padding: 6rem 2rem; background: var(--black); }
+    .vibe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.6rem; max-width: 1200px; margin: 0 auto; }
+    .vibe-card { border-radius: 18px; overflow: hidden; position: relative; height: 340px; border: 1px solid rgba(212,175,55,0.15); transition: all 0.4s ease; }
+    .vibe-card img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.78); transition: all 0.5s ease; }
+    .vibe-card:hover img { transform: scale(1.06); filter: brightness(0.95); }
+    .vibe-card:hover { border-color: var(--gold); box-shadow: 0 20px 50px rgba(212,175,55,0.25); }
+    .vibe-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.4rem; background: linear-gradient(0deg, rgba(0,0,0,0.95) 0%, transparent 100%); }
+    .vibe-info .tag { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; }
+    .vibe-info h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--white); margin-top: 0.3rem; }
+ 
+    /* ==================== VALUES / QUOTE ==================== */
+    .quote-section {
+      position: relative; padding: 6rem 2rem; text-align: center;
+      background: url('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=1600&q=80') center/cover;
+    }
+    .quote-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.87); backdrop-filter: blur(4px); }
+    .quote-inner { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
+    .quote-mark { font-family: var(--font-display); font-size: 4.5rem; color: var(--gold); line-height: 1; opacity: 0.6; }
+    .quote-inner p.quote-text {
+      font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 2rem); font-style: italic;
+      color: var(--gold-light); line-height: 1.6; margin: 1rem 0 1.5rem;
+    }
+    .quote-inner .quote-attr { color: var(--gray); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; }
+ 
+    /* ==================== TESTIMONIALS ==================== */
+    .testimonials-section { padding: 6rem 2rem; background: var(--dark); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+    .testimonial-card { background: var(--dark-2); border: 1px solid rgba(212,175,55,0.15); border-radius: 18px; padding: 2.2rem; transition: all 0.3s ease; }
+    .testimonial-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+    .stars { color: var(--gold); letter-spacing: 3px; margin-bottom: 1rem; font-size: 0.95rem; }
+    .testimonial-card p.quote { color: #ddd; font-size: 0.95rem; line-height: 1.75; font-style: italic; margin-bottom: 1.2rem; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
+    .avatar-initial { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--black); display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--font-title); }
+    .testimonial-author .name { font-weight: 600; color: var(--white); font-size: 0.9rem; display: block; }
+    .testimonial-author .role { color: var(--gray); font-size: 0.78rem; }
+ 
+    /* ==================== MAP + LOCATION ==================== */
+    .location-section { padding: 6rem 2rem; background: var(--black); }
+    .location-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: stretch; }
+    .location-copy { display: flex; flex-direction: column; justify-content: center; }
+    .location-copy h3 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--gold-light); margin-bottom: 1.2rem; }
+    .location-copy p { color: var(--gray); font-size: 0.98rem; line-height: 1.9; margin-bottom: 1.5rem; }
+    .location-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 1.8rem; }
+    .location-list li { display: flex; gap: 0.8rem; align-items: flex-start; color: #ddd; font-size: 0.92rem; }
+    .location-list li::before { content: '✦'; color: var(--gold); flex-shrink: 0; }
+    .map-frame { border-radius: 20px; overflow: hidden; border: 1px solid rgba(212,175,55,0.2); min-height: 340px; }
+    .map-frame iframe { width: 100%; height: 100%; min-height: 340px; border: 0; filter: grayscale(0.3) invert(0.92) contrast(0.9); }
+ 
+    /* ==================== CTA / BOOKING ==================== */
+    .booking-section { position: relative; padding: 6rem 2rem; background: url('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=1600') center/cover; }
+    .booking-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.88); backdrop-filter: blur(5px); }
+    .booking-inner { position: relative; z-index: 1; max-width: 650px; margin: 0 auto; text-align: center; }
+    .booking-inner h2 { font-family: var(--font-title); font-size: clamp(2rem, 5vw, 2.8rem); color: var(--gold); letter-spacing: 0.1em; margin-bottom: 1rem; text-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
+    .booking-inner > p { font-size: 1.1rem; color: var(--gold-light); margin-bottom: 3rem; }
+    .booking-cta-group { display: grid; gap: 16px; }
+    .booking-cta { display: flex; align-items: center; gap: 16px; padding: 18px 22px; border-radius: 14px; text-decoration: none; color: #fff; backdrop-filter: blur(6px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); transition: all 0.3s ease; }
+    .booking-cta span.icon { font-size: 28px; }
+    .booking-cta strong { font-size: 16px; display: block; }
+    .booking-cta small { font-size: 13px; opacity: 0.85; }
+    .booking-cta.zalo { background: linear-gradient(135deg, #0068ff, #0099ff); }
+    .booking-cta.hotline { background: linear-gradient(135deg, #ff8a00, #ff3d00); }
+    .booking-cta.fb { background: linear-gradient(135deg, #1877f2, #0f5fd6); }
+    .booking-cta:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 18px 40px rgba(0,0,0,0.35); }
+ 
+    /* ==================== FOOTER (shared) ==================== */
+    .footer { padding: 4rem 2rem 2rem; background: var(--dark-2); border-top: 1px solid rgba(212, 175, 55, 0.2); }
+    .footer-grid { max-width: 1200px; margin: 0 auto 2.5rem; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2.5rem; }
+    .footer-brand p { color: var(--gray); font-size: 0.85rem; margin-top: 1rem; max-width: 280px; line-height: 1.7; }
+    .footer-col h5 { font-family: var(--font-title); letter-spacing: 0.1em; color: var(--gold); font-size: 1rem; margin-bottom: 1rem; text-transform: uppercase; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col a { color: var(--gray); text-decoration: none; font-size: 0.88rem; transition: color 0.3s ease; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-social { display: flex; gap: 0.8rem; margin-top: 1rem; }
+    .footer-social a { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(212,175,55,0.3); display: flex; align-items: center; justify-content: center; color: var(--gold); text-decoration: none; transition: all 0.3s ease; font-size: 1rem; }
+    .footer-social a:hover { background: var(--gold); color: var(--black); transform: translateY(-3px); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p { color: var(--gray); font-size: 0.82rem; }
+ 
+    /* ==================== BOTTOM BAR ==================== */
+    .bottom-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); display: flex; justify-content: space-around; padding: 1rem; z-index: 999; border-top: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.5); }
+    .bottom-bar a { color: var(--gold); text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.3s ease; padding: 0.5rem 1rem; border-radius: 20px; }
+    .bottom-bar a:hover { background: rgba(212, 175, 55, 0.2); transform: translateY(-3px); }
+ 
+    /* ==================== FAB ==================== */
+    .fab { position: fixed; bottom: 100px; right: 30px; width: 60px; height: 60px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5); cursor: pointer; z-index: 998; animation: bounce 2s ease-in-out infinite; transition: all 0.3s ease; text-decoration: none; }
+    .fab:hover { transform: scale(1.1); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.7); }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .fab::before { content: '☎️'; font-size: 1.8rem; }
+ 
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .story-grid, .location-grid { grid-template-columns: 1fr; }
+      .story-media { max-width: 480px; margin: 0 auto; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+ 
+    @media (max-width: 768px) {
+      body { padding-top: 70px; }
+      .menu-toggle { display: flex; }
+      .main-nav { position: fixed; top: 70px; left: -100%; width: 100%; height: calc(100vh - 70px); background: rgba(0, 0, 0, 0.98); backdrop-filter: blur(20px); transition: left 0.3s ease; padding: 2rem; overflow-y: auto; }
+      .main-nav.active { left: 0; }
+      .main-nav ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { margin-left: 0; }
+      .about-hero { min-height: 60vh; padding: 5rem 1.2rem 3rem; }
+      .stats-bar { grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 2rem 1.2rem; }
+      .timeline { padding-left: 2rem; }
+      .booking-cta-group { gap: 12px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .bottom-bar { flex-wrap: wrap; gap: 0.5rem; }
+      .bottom-bar a { font-size: 0.75rem; padding: 0.5rem; }
+      .fab { bottom: 80px; right: 20px; width: 50px; height: 50px; }
+    }
+  </style>
 </head>
-
+ 
 <body>
-
-<!-- ================= HEADER (100% HOME) ================= -->
+ 
+<!-- ===== ANIMATED BACKGROUND ===== -->
+<div class="animated-bg"></div>
+ 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
-
-    <a href="index.html" class="brand" aria-label="The WANN homepage">
-      <span class="brand-the">THE</span>
-      <span class="brand-wann">WANN</span>
+ 
+    <a href="index.html" class="brand" aria-label="NEW THE WANN homepage">
+      <img src="assets/images/logo.png" alt="" class="header-logo" width="50" height="50"
+           loading="eager" onerror="this.style.display='none'">
+      <span class="brand-text">
+        <span class="brand-new">NEW</span>
+        <span class="brand-wann">THE WANN</span>
+      </span>
     </a>
-
-    <img src="assets/images/logo.png"
-         alt="The WANN Logo"
-         class="header-logo"
-         width="64"
-         height="64"
-         loading="eager">
-
-    <button class="menu-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
+ 
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
     </button>
-
-    <nav class="main-nav">
+ 
+    <nav class="main-nav" aria-label="Primary">
       <ul class="nav-list">
-        <li><a href="index.html">Trang Chủ</a></li>
-        <li><a href="about.html" class="active">Giới Thiệu</a></li>
-        <li><a href="gallery.html">Thư Viện</a></li>
-        <li><a href="menu.html">Thực Đơn</a></li>
-        <li><a href="events.html">Sự Kiện</a></li>
-        <li><a href="booking.html">Đặt Bàn</a></li>
-        <li><a href="contact.html">Liên Hệ</a></li>
+        <li><a href="index.html" data-page="index.html">Trang Chủ</a></li>
+        <li><a href="about.html" data-page="about.html">Giới Thiệu</a></li>
+        <li><a href="menu.html" data-page="menu.html">Thực Đơn</a></li>
+        <li><a href="events.html" data-page="events.html">Sự Kiện</a></li>
+        <li><a href="gallery.html" data-page="gallery.html">Không Gian</a></li>
+        <li><a href="contact.html" data-page="contact.html">Liên Hệ</a></li>
+        <li><a href="booking.html" data-page="booking.html" class="nav-cta">Đặt Lịch</a></li>
       </ul>
     </nav>
-
+ 
   </div>
 </header>
-
-<!-- ================= HERO ================= -->
-<section class="hero hero--sub">
-  <video autoplay muted loop playsinline preload="auto"
-         poster="assets/images/poster/hero.jpg">
-    <source src="https://pub-52cf7508df4b4c109b66a730e3ab5569.r2.dev/1111-01.mov" type="video/mp4">
-  </video>
-
-  <div class="hero-content">
-    <h1>Về THE WANN</h1>
-    <p>Luxury Nightlife • Booking • Experience</p>
-
-    <div class="hero-actions">
-      <a href="tel:0899996977" class="hero-cta">Gọi đặt bàn</a>
-      <a href="https://zalo.me/0899996977" class="hero-cta secondary">Chat Zalo</a>
+ 
+<!-- ================= MARQUEE ================= -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Food & Club</span><span>Sự Kiện Đẳng Cấp</span><span>74–76 Nam Kỳ Khởi Nghĩa, Q.1</span><span>500–600 Khách</span>
+    <span>Food & Club</span><span>Sự Kiện Đẳng Cấp</span><span>74–76 Nam Kỳ Khởi Nghĩa, Q.1</span><span>500–600 Khách</span>
+  </div>
+</div>
+ 
+<!-- ================= ABOUT HERO ================= -->
+<section class="about-hero">
+  <div class="about-hero-content">
+    <div class="hero-badge">🛡️ NEW THE WANN ✨</div>
+    <h1>Câu Chuyện Phía Sau<br>Viên Ngọc Mới</h1>
+    <p class="lede">Từ một cái tên đã quen thuộc với giới nightlife Sài Gòn, THE WANN bước sang trang mới — lớn hơn, tinh tế hơn, và giàu bản sắc hơn — dưới diện mạo NEW THE WANN tại địa chỉ mới giữa lòng Quận 1.</p>
+  </div>
+</section>
+ 
+<!-- ================= STORY ================= -->
+<section class="story-section" id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-media">
+        <img src="https://i.postimg.cc/DypgzGdY/TW-4631.jpg" alt="Không gian NEW THE WANN" loading="lazy">
+        <div class="media-badge">
+          <div class="num">2026</div>
+          <div class="lbl">Năm Tái Định Vị Thương Hiệu</div>
+        </div>
+      </div>
+      <div class="story-copy">
+        <span class="eyebrow" style="text-align:left; margin-bottom:0.6rem;">Hành Trình</span>
+        <h2>Không chỉ đổi tên —<br><span>chúng tôi đổi cả cuộc chơi</span></h2>
+        <p>NEW THE WANN ra đời từ một quyết định táo bạo: giữ lại tinh thần đã làm nên tên tuổi THE WANN trong cộng đồng nightlife Sài Gòn, nhưng nâng toàn bộ trải nghiệm lên một tầm cao mới — cả về quy mô, thiết kế lẫn khái niệm vận hành.</p>
+        <p>Chúng tôi chuyển về địa chỉ mới tại <strong>74–76 Nam Kỳ Khởi Nghĩa, Quận 1</strong> — vị trí vàng giữa trung tâm thành phố — và định hình lại thành một không gian <strong>Food & Club</strong> đúng nghĩa: nơi ẩm thực tinh tế và văn hóa club đêm giao thoa trong cùng một trải nghiệm liền mạch.</p>
+        <p>Sức chứa được mở rộng lên <strong>500–600 khách</strong>, đủ lớn cho những sự kiện quy mô, nhưng vẫn giữ được cảm giác riêng tư, sang trọng mà khách hàng của THE WANN đã luôn yêu thích.</p>
+      </div>
+    </div>
+ 
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-num" data-count="600">0</div><div class="stat-lbl">Khách Tối Đa</div></div>
+      <div class="stat-item"><div class="stat-num" data-count="1">0</div><div class="stat-lbl">Vị Trí Vàng Q.1</div></div>
+      <div class="stat-item"><div class="stat-num" data-count="4">0</div><div class="stat-lbl">Loại Hình Sự Kiện</div></div>
+      <div class="stat-item"><div class="stat-num" data-count="7">0</div><div class="stat-lbl">Đêm Hoạt Động / Tuần</div></div>
     </div>
   </div>
 </section>
-
-<!-- ================= CONTENT ================= -->
-<section class="experience-section">
-  <h2>TẠI SAO CHỌN THE WANN?</h2>
-
-  <p class="headline">
-    Không chỉ đặt bàn<br>
-    Chúng tôi đặt trải nghiệm cho bạn.
-  </p>
-
-  <p>
-    THE WANN là nền tảng booking nightlife cao cấp, kết nối khách hàng với
-    club, lounge, bar và các sự kiện giải trí đẳng cấp tại TP.HCM.
-  </p>
-
-  <div class="experience-tags">
-    <span>Xác nhận nhanh</span>
-    <span>Bàn đẹp – vị trí xịn</span>
-    <span>Chuẩn vibe nightlife</span>
-    <span>VIP Service</span>
+ 
+<!-- ================= PILLARS ================= -->
+<section class="pillars-section" id="pillars">
+  <div class="container">
+    <span class="eyebrow">Triết Lý Vận Hành</span>
+    <h2 class="section-title">4 TRỤ CỘT <span>CỦA THE WANN</span></h2>
+    <p class="section-sub">Mỗi chi tiết tại NEW THE WANN đều được xây dựng quanh bốn giá trị cốt lõi — không thỏa hiệp.</p>
+ 
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <span class="pillar-icon">📍</span>
+        <h3>Vị Trí Vàng</h3>
+        <p>Trung tâm Quận 1, dễ tìm dễ đến. Một địa chỉ mà khi nhắc tới, ai cũng biết ngay đó là "chỗ sang".</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">🏛️</span>
+        <h3>Không Gian Xứng Tầm</h3>
+        <p>Thiết kế Luxury – Riêng tư – Sang trọng, linh hoạt cho mọi quy mô từ tiệc gia đình đến gala 600 khách.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">🍽️</span>
+        <h3>Ẩm Thực Tinh Hoa</h3>
+        <p>Thực đơn Food & Club được chọn lọc kỹ lưỡng, kết hợp fine-dining với văn hóa tiệc đêm.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">🎧</span>
+        <h3>Trải Nghiệm Khác Biệt</h3>
+        <p>Âm thanh ánh sáng chuẩn quốc tế, đội ngũ vận hành chuyên nghiệp trong từng khoảnh khắc.</p>
+      </div>
+    </div>
   </div>
-
-  <p style="margin-top:24px">
-    Hơn <strong>500+ lượt booking mỗi tháng</strong>, hợp tác cùng nhiều club & lounge hàng đầu.
-    THE WANN không dành cho số đông – mà cho những đêm đáng nhớ.
-  </p>
 </section>
-
+ 
+<!-- ================= TIMELINE ================= -->
+<section class="timeline-section" id="timeline">
+  <div class="container">
+    <span class="eyebrow">Dấu Mốc</span>
+    <h2 class="section-title">HÀNH TRÌNH <span>PHÁT TRIỂN</span></h2>
+    <p class="section-sub">Từ một điểm đến quen thuộc đến viên ngọc mới của giới nightlife Sài Gòn.</p>
+ 
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">Giai Đoạn Đầu</div>
+        <h4>THE WANN Nightclub & Bar</h4>
+        <p>Xây dựng tên tuổi trong cộng đồng nightlife Sài Gòn với phong cách dark luxury, DJ quốc tế và cộng đồng khách hàng trung thành.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Quyết Định</div>
+        <h4>Tái Định Vị Thương Hiệu</h4>
+        <p>Nhận thấy nhu cầu về một không gian lớn hơn, đa chức năng hơn — kết hợp ẩm thực và giải trí trong cùng một địa điểm.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2026</div>
+        <h4>Ra Mắt NEW THE WANN</h4>
+        <p>Chuyển về địa chỉ mới 74–76 Nam Kỳ Khởi Nghĩa, Q.1 với diện mạo Food & Club, sức chứa 500–600 khách và concept "Sự Kiện Đẳng Cấp".</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Hiện Tại</div>
+        <h4>Điểm Đến Của Mọi Sự Kiện</h4>
+        <p>Từ sinh nhật, gala, tiệc công ty đến ra mắt sản phẩm — NEW THE WANN trở thành lựa chọn hàng đầu cho những cuộc vui đẳng cấp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= VIBE / SPACE ================= -->
+<section class="vibe-section" id="vibe">
+  <div class="container">
+    <span class="eyebrow">Cảm Nhận Không Gian</span>
+    <h2 class="section-title">MỘT KHÔNG GIAN, <span>NHIỀU SẮC THÁI</span></h2>
+    <p class="section-sub">Ban ngày là Food, ban đêm là Club — cùng một không gian, hai trải nghiệm trọn vẹn.</p>
+ 
+    <div class="vibe-grid">
+      <div class="vibe-card">
+        <img src="https://i.postimg.cc/nzLrMX1R/3R1A9269.jpg" alt="Không gian ăn uống" loading="lazy">
+        <div class="vibe-info"><span class="tag">Food</span><h4>Fine-Dining Đẳng Cấp</h4></div>
+      </div>
+      <div class="vibe-card">
+        <img src="https://i.postimg.cc/3NmkQP1Z/QM-8485.jpg" alt="Sàn nhảy và DJ" loading="lazy">
+        <div class="vibe-info"><span class="tag">Club</span><h4>Sàn Nhảy & DJ Quốc Tế</h4></div>
+      </div>
+      <div class="vibe-card">
+        <img src="https://i.postimg.cc/8cxnjX28/IMG-7999.jpg" alt="Khu VIP riêng tư" loading="lazy">
+        <div class="vibe-info"><span class="tag">VIP</span><h4>Khu Vực Riêng Tư</h4></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= QUOTE ================= -->
+<section class="quote-section">
+  <div class="quote-overlay"></div>
+  <div class="quote-inner">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Đến đây không chỉ để ăn, không chỉ để nhảy — mà là để "sang trang" cho mọi cuộc vui.</p>
+    <div class="quote-attr">— Triết Lý NEW THE WANN</div>
+  </div>
+</section>
+ 
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials-section">
+  <div class="container">
+    <span class="eyebrow">Khách Hàng Nói Gì</span>
+    <h2 class="section-title">FEEDBACK <span>THỰC TẾ</span></h2>
+    <p class="section-sub">Những cảm nhận chân thật từ khách hàng đã trải nghiệm và tổ chức sự kiện tại NEW THE WANN.</p>
+ 
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Không gian sang trọng, âm thanh ánh sáng chuẩn club quốc tế. Tiệc sinh nhật của công ty mình được khen tấp nập.</p>
+        <div class="testimonial-author"><span class="avatar-initial">H</span><span><span class="name">Chị Hương</span><span class="role">Tổ chức tiệc công ty</span></span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Vị trí trung tâm Q1 cực kỳ tiện, đội ngũ tư vấn nhiệt tình, phản hồi Zalo nhanh trong vài phút.</p>
+        <div class="testimonial-author"><span class="avatar-initial">M</span><span><span class="name">Anh Minh</span><span class="role">Ra mắt sản phẩm</span></span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Sức chứa lớn mà vẫn giữ được cảm giác riêng tư. Đồ ăn ngon, phục vụ chuyên nghiệp từ đầu đến cuối.</p>
+        <div class="testimonial-author"><span class="avatar-initial">L</span><span><span class="name">Chị Linh</span><span class="role">Gala cuối năm</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= LOCATION ================= -->
+<section class="location-section" id="location">
+  <div class="container">
+    <span class="eyebrow">Tìm Đến Chúng Tôi</span>
+    <h2 class="section-title">TRUNG TÂM <span>QUẬN 1</span></h2>
+    <p class="section-sub">Vị trí thuận tiện, dễ tìm — chỉ vài phút từ mọi điểm nổi bật của Sài Gòn.</p>
+ 
+    <div class="location-grid">
+      <div class="location-copy">
+        <h3>74–76 Nam Kỳ Khởi Nghĩa, Q.1</h3>
+        <p>Nằm ngay trục đường trung tâm, NEW THE WANN dễ dàng tiếp cận từ mọi hướng — thuận tiện cho khách di chuyển bằng ô tô riêng, taxi hay đặt xe công nghệ.</p>
+        <ul class="location-list">
+          <li>Bãi đỗ xe riêng cho khách VIP</li>
+          <li>Cách trung tâm Quận 1 chỉ vài phút di chuyển</li>
+          <li>Dễ dàng kết nối với các khách sạn lớn trong khu vực</li>
+          <li>Lối vào riêng tư dành cho tiệc và sự kiện đặc biệt</li>
+        </ul>
+        <div class="teaser-cta-wrap">
+          <a href="https://www.google.com/maps?q=74-76+Nam+Kỳ+Khởi+Nghĩa,+Quận+1,+TP.HCM" target="_blank" rel="noopener" class="link-cta" style="display:inline-flex; align-items:center; gap:0.6rem; color:var(--gold); text-decoration:none; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; font-size:0.9rem; border-bottom:1px solid var(--gold); padding-bottom:4px;">Chỉ Đường Trên Google Maps →</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=74-76+Nam+Kỳ+Khởi+Nghĩa,+Quận+1,+TP.HCM&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ NEW THE WANN"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= BOOKING / CONTACT ================= -->
+<section class="booking-section" id="booking">
+  <div class="booking-overlay"></div>
+  <div class="booking-inner">
+    <h2>SẴN SÀNG CHO SỰ KIỆN CỦA BẠN?</h2>
+    <p>Liên hệ ngay để được tư vấn không gian phù hợp cho sự kiện của bạn.</p>
+ 
+    <div class="booking-cta-group">
+      <a href="tel:0899996977" class="booking-cta hotline">
+        <span class="icon">📞</span>
+        <span><strong>Gọi Hotline</strong><small>0899 996 977 – Tư vấn nhanh</small></span>
+      </a>
+      <a href="https://zalo.me/0899996977" class="booking-cta zalo">
+        <span class="icon">💬</span>
+        <span><strong>Chat Zalo</strong><small>Phản hồi trong 5 phút</small></span>
+      </a>
+      <a href="https://www.facebook.com/share/16c7bFb5EL/" class="booking-cta fb">
+        <span class="icon">📘</span>
+        <span><strong>Nhắn Facebook</strong><small>Xem thêm hình ảnh & feedback khách</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+ 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <p>© 2026 THE WANN. All rights reserved.</p>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="brand-wann" style="font-family:var(--font-title); color:var(--white); letter-spacing:0.1em;">THE WANN</span>
+      <p>Food & Club đẳng cấp giữa trung tâm Sài Gòn. Không gian Luxury – Riêng tư – Sang trọng cho mọi sự kiện.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/16c7bFb5EL/" aria-label="Facebook">📘</a>
+        <a href="https://zalo.me/0899996977" aria-label="Zalo">💬</a>
+        <a href="tel:0899996977" aria-label="Hotline">📞</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Khám Phá</h5>
+      <ul>
+        <li><a href="about.html">Giới Thiệu</a></li>
+        <li><a href="menu.html">Thực Đơn</a></li>
+        <li><a href="events.html">Sự Kiện</a></li>
+        <li><a href="gallery.html">Không Gian</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Liên Hệ</h5>
+      <ul>
+        <li><a href="booking.html">Đặt Lịch</a></li>
+        <li><a href="contact.html">Liên Hệ</a></li>
+        <li><a href="tel:0899996977">0899 996 977</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Địa Chỉ</h5>
+      <ul>
+        <li style="color:var(--gray); font-size:0.88rem; line-height:1.6;">74–76 Nam Kỳ Khởi Nghĩa,<br>Quận 1, TP.HCM</li>
+        <li><a href="https://www.google.com/maps?q=74-76+Nam+Kỳ+Khởi+Nghĩa,+Quận+1,+TP.HCM" target="_blank" rel="noopener">Xem Bản Đồ →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 NEW THE WANN. All rights reserved.</p>
+    <p>74–76 Nam Kỳ Khởi Nghĩa, Quận 1, TP.HCM</p>
+  </div>
 </footer>
-
+ 
 <!-- ================= BOTTOM BAR ================= -->
-<nav class="bottom-bar">
-  <a href="https://www.google.com/maps?q=51+Bùi+Thị+Xuân,+Quận+1,+TP.HCM">📍 Bản đồ</a>
+<nav class="bottom-bar" aria-label="Quick actions">
+  <a href="https://www.google.com/maps?q=74-76+Nam+Kỳ+Khởi+Nghĩa,+Quận+1,+TP.HCM">📍 Bản đồ</a>
   <a href="https://zalo.me/0899996977">💬 Zalo</a>
   <a href="tel:0899996977">📞 Hotline</a>
   <a href="https://www.facebook.com/share/16c7bFb5EL/">📘 Facebook</a>
 </nav>
-
-<script src="js/main.js" defer></script>
+ 
+<!-- ================= FLOATING ACTION BUTTON ================= -->
+<a href="tel:0899996977" class="fab" title="Gọi ngay" aria-label="Gọi ngay"></a>
+ 
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = (location.pathname.split('/').pop() || 'index.html');
+    document.querySelectorAll('.main-nav a[data-page]').forEach(link => {
+      if (link.getAttribute('data-page') === currentPage) link.classList.add('active');
+    });
+  });
+ 
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.pageYOffset > 100);
+  });
+ 
+  function toggleMenu() {
+    const nav = document.querySelector('.main-nav');
+    const toggle = document.querySelector('.menu-toggle');
+    nav?.classList.toggle('active');
+    toggle?.classList.toggle('active');
+    if (toggle) toggle.setAttribute('aria-expanded', toggle.classList.contains('active'));
+  }
+ 
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.main-nav')?.classList.remove('active');
+      document.querySelector('.menu-toggle')?.classList.remove('active');
+    });
+  });
+ 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+ 
+  // Reveal-on-scroll for cards/sections
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+ 
+  document.querySelectorAll('.pillar-card, .vibe-card, .testimonial-card, .timeline-item, .booking-cta')
+    .forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'all 0.6s ease-out';
+      revealObserver.observe(el);
+    });
+ 
+  // Animated stat counters
+  const statEls = document.querySelectorAll('.stat-num[data-count]');
+  const countObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-count'), 10);
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(tick);
+      countObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+ 
+  statEls.forEach(el => countObserver.observe(el));
+</script>
+ 
 </body>
 </html>
