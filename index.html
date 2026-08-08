@@ -1574,7 +1574,97 @@
     btn.addEventListener('click', () => trackEvent('CTA', 'Click', btn.textContent || 'FAB'));
   });
 </script>
- 
+ <script>
+  const galleryImages = [
+    "assets/images/gallery/new/11a609a9be303f6e66219.jpg",
+    "assets/images/gallery/new/2cc5bdcb0a528b0cd2435.jpg",
+    "assets/images/gallery/new/83ffe9f05e69df37867813.jpg",
+    "assets/images/gallery/new/91df30de874706195f567.jpg",
+    "assets/images/gallery/new/95e41bebac722d2c74631.jpg",
+    "assets/images/gallery/new/a3a042aef53774692d263.jpg",
+    "assets/images/gallery/new/adfd1df2aa6b2b35727a12.jpg",
+    "assets/images/gallery/new/b5c415c5a25c23027a4d2.jpg",
+    "assets/images/gallery/new/d3f08bfc3c65bd3be4744.jpg",
+    "assets/images/gallery/new/de13481dff847eda279511.jpg",
+    "assets/images/gallery/new/e10afe05499cc8c2918d8.jpg",
+    "assets/images/gallery/new/f5e676e9c170402e196110.jpg",
+    "assets/images/gallery/new/fe876f7c16e4030197f6.jpg"
+  ];
+
+  let currentGalleryIndex = 0;
+
+  const lightbox = document.getElementById("galleryLightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxCounter = document.getElementById("lightboxCounter");
+
+  function openGallery(index) {
+    currentGalleryIndex = index;
+
+    lightboxImage.src = galleryImages[currentGalleryIndex];
+
+    lightboxCounter.textContent =
+      `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGallery() {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
+  }
+
+  function galleryNext() {
+    currentGalleryIndex =
+      (currentGalleryIndex + 1) % galleryImages.length;
+
+    updateGalleryImage();
+  }
+
+  function galleryPrev() {
+    currentGalleryIndex =
+      (currentGalleryIndex - 1 + galleryImages.length)
+      % galleryImages.length;
+
+    updateGalleryImage();
+  }
+
+  function updateGalleryImage() {
+    lightboxImage.src = galleryImages[currentGalleryIndex];
+
+    lightboxCounter.textContent =
+      `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+  }
+
+  /* Click nền đen để đóng */
+  lightbox.addEventListener("click", function(e) {
+    if (e.target === lightbox) {
+      closeGallery();
+    }
+  });
+
+  /* Keyboard */
+  document.addEventListener("keydown", function(e) {
+
+    if (!lightbox.classList.contains("active")) return;
+
+    if (e.key === "Escape") {
+      closeGallery();
+    }
+
+    if (e.key === "ArrowRight") {
+      galleryNext();
+    }
+
+    if (e.key === "ArrowLeft") {
+      galleryPrev();
+    }
+  });
+</script>
 </body>
 </html>
  
